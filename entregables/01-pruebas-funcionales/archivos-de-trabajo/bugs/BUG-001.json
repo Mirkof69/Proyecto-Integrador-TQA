@@ -1,0 +1,29 @@
+{
+  "tc": "TC-001",
+  "titulo": "El Panel Principal de recepción muestra 4 ventanas «Acceso Denegado» al iniciar sesión",
+  "modulo": "Panel Principal (dashboard) · rol recepción",
+  "severidad": "Media",
+  "prioridad": "Media",
+  "precondiciones": "Sistema en producción local (DEBUG=False). Cuenta de recepción activa (recep.flores@fetalmedical.bo).",
+  "pasos": [
+    "1 Abrir http://localhost:3000/login",
+    "2 Ingresar recep.flores@fetalmedical.bo y su contraseña vigente",
+    "3 Pulsar «Iniciar Sesión»",
+    "4 Esperar a que cargue el Panel Principal"
+  ],
+  "datos": "recep.flores@fetalmedical.bo / contraseña de la cuenta demo",
+  "esperado": "Entra al Panel Principal de su rol sin errores (RF-21; F01: «Con credenciales válidas el usuario entra al panel de su rol»).",
+  "obtenido": "Entra, pero se abren 4 ventanas superpuestas «⛔ Acceso Denegado — No tienes permisos suficientes para realizar esta acción.» que hay que cerrar una a una con «Aceptar».",
+  "evidencias": [
+    "evidencia_TC001_03.png",
+    "evidencia_TC001_04.png",
+    "evidencia_TC001_05.png"
+  ],
+  "frecuencia": "Siempre (7 de 7 ingresos con rol recepción)",
+  "notas": "En la red del navegador, el panel hace 4 peticiones que el servidor rechaza con 403 para recepción: GET /api/auditoria/?page=1&page_size=20 → «Solo médicos y administradores pueden consultar la auditoría.»; GET /api/reportes/alertas-medicas/activas/, GET /api/embarazos/?estado=activo&riesgo_embarazo=alto y GET /api/reportes/statistics/dashboard/ → «Recepción no tiene acceso a datos clínicos (...)». Causa probable: el panel no condiciona esas consultas al rol y el manejador global de 403 abre una ventana por cada una.",
+  "id": "BUG-001",
+  "estado": "Abierto",
+  "reportado_por": "",
+  "fecha": "18/10/2026",
+  "borrador": "borrador_TC-001.json"
+}

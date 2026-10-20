@@ -1,0 +1,22 @@
+{
+  "id": "TC-016",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:13",
+  "resultado": "PASS",
+  "que_ocurrio": "Controles Prenatales → «Nuevo Control», embarazo «G1 PAC-95FF654C - Rosa López Quispe · FUM 11/01/2026» (40+0). Se cargaron peso 68, PA 140/90, altura uterina 39, FCF 140, presentación Cefálica, movimientos «Presentes», edema «No», proteinuria «Negativa». El formulario mostró «⚠️ 1 Alerta(s) Clínica(s) Detectada(s) — 🔴 HIPERTENSIÓN ARTERIAL - Riesgo de preeclampsia». Al pulsar «Guardar Control»: «Control prenatal creado correctamente» y «Se detectaron 1 alerta(s) clínica(s)». En el listado, el control 140/90 aparece con la PA en rojo y en «Alertas» el triángulo rojo con «1». En el detalle: recuadro «1 Alerta(s) Médica(s) Detectada(s) — Hipertensión detectada — Valor: 140/90 — ALTO», recomendación «Hipertensión Arterial Detectada · URGENTE», PA 140/90 en rojo y FCF 140 en verde.",
+  "comparacion": "Coincide con lo esperado: con PA exactamente 140/90 el control se guarda y aparece la alerta de hipertensión; no hay alerta de FCF.",
+  "pasos": [
+    {"accion": "Nuevo control para la paciente (Controles Prenatales → «Nuevo Control», elegir el embarazo)", "estado": "PASS", "observado": "Formulario abierto con Rosa López Quispe, G1, 40 semanas + 0 días."},
+    {"accion": "Registrar PA 140/90 y FCF 140 y pulsar «Guardar Control»", "estado": "PASS", "observado": "«Control prenatal creado correctamente» y «Se detectaron 1 alerta(s) clínica(s)»."},
+    {"accion": "Revisar alertas del control", "estado": "PASS", "observado": "Listado: alerta roja «1». Detalle: «Hipertensión detectada — Valor: 140/90 — ALTO»."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC016_01.png", "descripcion": "Formulario con el embarazo elegido y la alerta «🔴 HIPERTENSIÓN ARTERIAL - Riesgo de preeclampsia»."},
+    {"archivo": "evidencia_TC016_02.png", "descripcion": "Valores cargados: PA 140/90, FCF 140, proteinuria Negativa."},
+    {"archivo": "evidencia_TC016_03.png", "descripcion": "Guardado: «Control prenatal creado correctamente» y «Se detectaron 1 alerta(s) clínica(s)»."},
+    {"archivo": "evidencia_TC016_04.png", "descripcion": "Listado: control 140/90 con la PA en rojo y alerta «1»."},
+    {"archivo": "evidencia_TC016_05.png", "descripcion": "Detalle: «1 Alerta(s) Médica(s) Detectada(s) — Hipertensión detectada — Valor: 140/90 — ALTO»."}
+  ],
+  "desviacion": "",
+  "observaciones": "Altura uterina 39 cm y peso 68 kg elegidos por el ejecutor (el diseño no los fija; ver TC-015). El formulario propuso «N° Control 1» aunque la paciente ya tenía el control n.º 1 de TC-015; ambos controles quedaron numerados 1 (el detalle muestra «Control Prenatal #1» con el contador «2»)."
+}

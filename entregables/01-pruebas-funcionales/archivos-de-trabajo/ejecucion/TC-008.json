@@ -1,0 +1,20 @@
+{
+  "id": "TC-008",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:57",
+  "resultado": "PASS",
+  "que_ocurrio": "Pacientes → «Nueva Paciente»: se cargaron Nombres «Ana», Apellido Paterno «Sinconsentimiento», Apellido Materno «Prueba», CI «9100801», Fecha de Nacimiento «10/05/1990»; los campos se aceptaron sin error. En el paso «Información Médica» se dejó sin marcar la casilla del consentimiento (Ley 164) y se pulsó «Registrar Paciente». El asistente no guardó: permaneció en el paso «Información Médica» y bajo la casilla apareció en rojo «Se requiere el consentimiento del paciente para registrar sus datos (Ley 164)»; no hubo mensaje de éxito. Se cerró el asistente y al buscar «9100801» en el listado se mostró «No hay pacientes registrados» (0 registros).",
+  "comparacion": "Coincide con lo esperado: sin consentimiento no se registra, el sistema explica el motivo y la CI no aparece en el listado.",
+  "pasos": [
+    {"accion": "Pacientes → «Nueva Paciente» y completar los datos (Ana Sinconsentimiento Prueba, CI 9100801)", "estado": "PASS", "observado": "Campos aceptados sin mensajes de error."},
+    {"accion": "Dejar el consentimiento sin marcar y pulsar «Registrar Paciente»", "estado": "PASS", "observado": "No guarda; mensaje «Se requiere el consentimiento del paciente para registrar sus datos (Ley 164)» bajo la casilla; el asistente sigue abierto."},
+    {"accion": "Cerrar el asistente y buscar «9100801» en el listado", "estado": "PASS", "observado": "Listado vacío: «No hay pacientes registrados»; contadores en 0."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC008_01.png", "descripcion": "Datos personales de Ana Sinconsentimiento Prueba (CI 9100801) cargados sin errores."},
+    {"archivo": "evidencia_TC008_02.png", "descripcion": "Al pulsar «Registrar Paciente» sin consentimiento: mensaje «Se requiere el consentimiento del paciente para registrar sus datos (Ley 164)»."},
+    {"archivo": "evidencia_TC008_03.png", "descripcion": "Búsqueda «9100801»: «No hay pacientes registrados»."}
+  ],
+  "desviacion": "",
+  "observaciones": "El diseño no fija la fecha de nacimiento para este caso; se usó 10/05/1990 (adulta, en el pasado) para que el único dato inválido fuera el consentimiento."
+}

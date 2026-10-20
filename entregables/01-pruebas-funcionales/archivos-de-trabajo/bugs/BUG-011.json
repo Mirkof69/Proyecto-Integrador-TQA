@@ -1,0 +1,33 @@
+{
+  "tc": "TC-027",
+  "titulo": "Tamaño de píxel 0 o negativo se cambia en silencio a 0,01 mm y se obtiene una circunferencia cefálica",
+  "modulo": "Análisis CNN (IA) · Ecografía (Redes entrenadas con ecografías reales)",
+  "severidad": "Media",
+  "prioridad": "Media",
+  "precondiciones": "Sesión de médico; servicio de IA en marcha; imagen válida de HC18 (147_HC.png).",
+  "pasos": [
+    "1 Análisis CNN (IA) → pestaña «Ecografía».",
+    "2 Subir 147_HC.png.",
+    "3 Escribir 0 en «Tamaño de píxel (mm)».",
+    "4 Pulsar «Analizar».",
+    "5 Repetir con -0.1."
+  ],
+  "datos": "Tamaño de píxel 0 y −0,1 mm.",
+  "esperado": "El campo rechaza el valor o aparece un mensaje claro de que el tamaño de píxel debe ser mayor que 0; no se produce ninguna medida.",
+  "obtenido": "El campo acepta «0» / «-0.1» sin marcar error y al salir lo cambia a «0.010» sin aviso. «Analizar» mide con 0,010: «Circunferencia 11.8 mm ± 7», con el aviso «12 mm está fuera del rango con el que se entrenó la red (45–350 mm). No se da edad gestacional.» Ningún mensaje sobre el tamaño de píxel.",
+  "evidencias": [
+    "evidencia_TC027_01.png",
+    "evidencia_TC027_02.png",
+    "evidencia_TC027_03.png",
+    "evidencia_TC027_04.png",
+    "evidencia_TC027_05.png",
+    "evidencia_TC027_06.png"
+  ],
+  "frecuencia": "Siempre",
+  "notas": "POST /api/ecografias/circunferencia-cefalica/ → 200 {\"circunferencia_cefalica_mm\":11.8, \"avisos\":[\"12 mm está fuera del rango...\"]}. Con 0,074836 la misma imagen da 88,2 mm; 88,2 × 0,010 / 0,074836 ≈ 11,8, lo que muestra que se envió 0,010. El campo se comporta como un control numérico con mínimo 0,01 que ajusta el valor al salir en vez de rechazarlo.",
+  "id": "BUG-011",
+  "estado": "Abierto",
+  "reportado_por": "",
+  "fecha": "18/10/2026",
+  "borrador": "borrador_TC-027.json"
+}

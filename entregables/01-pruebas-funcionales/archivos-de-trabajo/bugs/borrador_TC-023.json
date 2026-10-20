@@ -1,0 +1,19 @@
+{
+  "tc": "TC-023",
+  "titulo": "Peso del recién nacido fuera de rango se corrige solo al límite (299→300, 6001→6000) sin mensaje del rango",
+  "modulo": "Partos · Recién nacido",
+  "severidad": "Alta",
+  "prioridad": "Alta",
+  "precondiciones": "Sesión de médico (dra.garcia@fetalmedical.bo). Paciente Rosa López Quispe (CI 9100701) con embarazo activo de 40+0 semanas.",
+  "pasos": [
+    "1 Partos → «Registrar Nuevo Parto»; elegir el embarazo de Rosa López Quispe y tipo de evento «PARTO».",
+    "2 En «Datos del Recién Nacido» escribir Peso (g) = 299 y salir del campo.",
+    "3 Escribir Peso (g) = 6001 y salir del campo."
+  ],
+  "datos": "Peso 299 g y 6001 g (rango válido del requisito: 300–6.000 g).",
+  "esperado": "Los valores fuera de rango se rechazan con un mensaje que dice qué corregir (p. ej. «El peso debe estar entre 300 y 6.000 g») y el valor escrito no se sustituye por otro.",
+  "obtenido": "Con 299 solo aparece «Ingrese peso» mientras el cursor está en el campo; al salir, el valor cambia solo a 300 y el mensaje desaparece. Con 6001 no aparece ningún mensaje y al salir el valor cambia solo a 6000. Si el usuario guarda, se registra un peso distinto del que escribió sin que se le avise. Lo mismo ocurre con el Apgar (11 → 10, TC-024).",
+  "evidencias": ["evidencia_TC023_01.png", "evidencia_TC023_02.png", "evidencia_TC023_04.png", "evidencia_TC023_05.png"],
+  "frecuencia": "Siempre",
+  "notas": "El campo es numérico con límites aria-valuemin=300 y aria-valuemax=6000 y ajusta el valor al límite al perder el foco, en lugar de mostrar un error de validación."
+}

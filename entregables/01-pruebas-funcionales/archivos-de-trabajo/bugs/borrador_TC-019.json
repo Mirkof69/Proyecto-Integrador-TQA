@@ -1,0 +1,25 @@
+{
+  "tc": "TC-019",
+  "titulo": "IMC de exactamente 25,0 y 30,0 se clasifica en la categoría inferior (Normal y Sobrepeso)",
+  "modulo": "Calculadoras · IMC (rápida «IMC y Peso» y especializada «IMC y Ganancia Ponderal»)",
+  "severidad": "Media",
+  "prioridad": "Alta",
+  "precondiciones": "Sesión de médico (dra.garcia@fetalmedical.bo). Sistema en producción local.",
+  "pasos": [
+    "1 Menú Calculadoras → Calculadoras rápidas → pestaña «IMC y Peso».",
+    "2 Peso pregestacional 64, altura 160, peso actual 64, semanas 12 → «Calcular».",
+    "3 Repetir con 76.8 kg.",
+    "4 Repetir los mismos datos en Calculadoras especializadas → «IMC y Ganancia Ponderal» → «Calcular IMC y Ganancia»."
+  ],
+  "datos": "Talla 160 cm; pesos 64,0 kg (IMC 25,0) y 76,8 kg (IMC 30,0).",
+  "esperado": "Según la OMS (RF-17): IMC 25,0 → Sobrepeso; IMC 30,0 → Obesidad (y la ganancia recomendada de esa categoría).",
+  "obtenido": "Rápida: «25.00» «Normal» y «30.00» «Sobrepeso». Especializada: «25.0 kg/m²» «NORMAL» y «30.0 kg/m²» «SOBREPESO». La ganancia recomendada también sale de la categoría equivocada (11.5 - 16 kg y 7 - 11.5 kg).",
+  "evidencias": [
+    "evidencia_TC019_03.png",
+    "evidencia_TC019_04.png",
+    "evidencia_TC019_07.png",
+    "evidencia_TC019_08.png"
+  ],
+  "frecuencia": "Siempre",
+  "notas": "La respuesta guardada (POST /api/calculadoras/historial/ → 201) trae resultado_json {\"imc\":\"25.00\",\"categoria\":\"Normal\"}: el cálculo y la categoría se hacen en el navegador. Causa probable (sin ver el código): en coma flotante 64 / (1,6 × 1,6) = 24,999999999999996 y 76,8 / (1,6 × 1,6) = 29,999999999999993; la categoría se decidiría con ese valor sin redondear mientras la pantalla lo muestra redondeado como 25.00 / 30.00."
+}

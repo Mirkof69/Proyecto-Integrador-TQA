@@ -1,0 +1,22 @@
+{
+  "id": "TC-013",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:06",
+  "resultado": "PASS",
+  "que_ocurrio": "Embarazos (menú) → «Registrar Nuevo Embarazo» abrió el formulario «Apertura de Historia Obstétrica». En «Buscar Paciente (Mujer)» se escribió «9100701» y el buscador ofreció «Rosa López Quispe (CI: 9100701) - 31 años»; al elegirla no apareció ningún aviso (solo el texto de ayuda «Solo se muestran pacientes femeninos registrados»). Se ingresó la FUM «09/08/2026» (hoy − 70 días); el formulario calculó «EG: 10 semanas + 0 días» y FPP 16/05/2027. Al pulsar «Registrar Embarazo» el sistema no guardó: mostró el mensaje «Error del servidor: Datos inválidos» y el diálogo «⚠️ Datos Inválidos» con el texto «estado: ❌ Esta paciente ya tiene un embarazo activo (ID: 3290). Solo puede haber UN embarazo activo por paciente. Finalice el embarazo anterior antes de crear/activar otro.». Tras «Aceptar» y «Cancelar», el Directorio Obstétrico filtrado por «9100701» muestra 1 registro («Embarazos Activos 1 · Total registrados: 1»): FUM 11/01/26, FPP 18/10/26, 40s + 0d, ACTIVO.",
+  "comparacion": "Coincide con lo esperado en lo sustancial: el sistema avisa que la paciente ya tiene un embarazo activo, no guarda el segundo embarazo y la paciente conserva un único embarazo activo. Matiz: el aviso no aparece al elegir a la paciente sino al intentar guardar (ver observaciones).",
+  "pasos": [
+    {"accion": "Embarazos → «Registrar Nuevo Embarazo» y elegir a Rosa López Quispe", "estado": "PASS", "observado": "La paciente se ofrece en el buscador y se puede elegir sin aviso inmediato; el aviso de embarazo activo llega al intentar guardar (paso 2): «Esta paciente ya tiene un embarazo activo (ID: 3290). Solo puede haber UN embarazo activo por paciente…»."},
+    {"accion": "Ingresar FUM 09/08/2026 (hoy − 70 días) y pulsar «Registrar Embarazo»", "estado": "PASS", "observado": "No se guarda. Mensaje «Error del servidor: Datos inválidos» y diálogo «⚠️ Datos Inválidos — estado: ❌ Esta paciente ya tiene un embarazo activo (ID: 3290)…»."},
+    {"accion": "Revisar los embarazos de la paciente (Directorio Obstétrico, búsqueda 9100701)", "estado": "PASS", "observado": "1 registro, ACTIVO (FUM 11/01/26, 40s + 0d); «Total registrados: 1»."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC013_01.png", "descripcion": "«Apertura de Historia Obstétrica»: el buscador ofrece a Rosa López Quispe (CI 9100701)."},
+    {"archivo": "evidencia_TC013_02.png", "descripcion": "Paciente elegida sin aviso de embarazo activo en ese momento."},
+    {"archivo": "evidencia_TC013_03.png", "descripcion": "FUM 09/08/2026 ingresada antes de guardar."},
+    {"archivo": "evidencia_TC013_04.png", "descripcion": "Rechazo al guardar: «Esta paciente ya tiene un embarazo activo (ID: 3290). Solo puede haber UN embarazo activo por paciente…»."},
+    {"archivo": "evidencia_TC013_05.png", "descripcion": "Directorio Obstétrico filtrado por 9100701: un solo embarazo, activo."}
+  ],
+  "desviacion": "",
+  "observaciones": "El diseño admite «avisa que ya tiene un embarazo activo o no la ofrece»: el sistema sí avisa, pero recién al guardar, no al elegir a la paciente (se la ofrece como cualquier otra), por lo que el médico llena todo el formulario antes de enterarse. El aviso llega acompañado del mensaje «Error del servidor: Datos inválidos», que presenta una validación de negocio como si fuera un error del servidor, y del prefijo técnico «estado:». El formulario de «Registrar Nuevo Embarazo» del directorio (modal «Apertura de Historia Obstétrica») es distinto del que se abre desde la historia clínica («Nuevo Embarazo», usado en TC-012)."
+}

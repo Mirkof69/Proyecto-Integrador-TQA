@@ -1,0 +1,29 @@
+{
+  "tc": "TC-015",
+  "titulo": "Guardar un control con altura uterina fuera del rango esperado da «Error del Servidor» (HTTP 500) sin indicar el campo",
+  "modulo": "Controles prenatales · Registro",
+  "severidad": "Alta",
+  "prioridad": "Alta",
+  "precondiciones": "Sesión de médico (dra.garcia@fetalmedical.bo). Paciente Rosa López Quispe (CI 9100701) con embarazo activo de 40+0 semanas.",
+  "pasos": [
+    "1 Controles Prenatales → «Nuevo Control» y elegir el embarazo de Rosa López Quispe.",
+    "2 Cargar peso 68, PA 139/89, altura uterina 34, FCF 140, presentación Cefálica, movimientos Presentes, edema No, proteinuria Negativa.",
+    "3 Pulsar «Guardar Control»."
+  ],
+  "datos": "Altura uterina 34 cm con edad gestacional 40+0 semanas (el resto de valores normales).",
+  "esperado": "Si la altura uterina no es aceptable para la edad gestacional, el formulario debe rechazarla con un mensaje claro en el campo (p. ej. «Altura uterina de 34.0 cm muy baja para 40 semanas. Esperado: 38 a 42 cm.»), sin error del servidor; el formulario no muestra ningún error antes de enviar.",
+  "obtenido": "El servidor responde HTTP 500 («Server Error (500)») y la interfaz muestra dos diálogos: «🔥 Error del Servidor — Ocurrió un error interno en el servidor. Por favor, contacte a soporte técnico.» y «❌ Error al Guardar Control — Error desconocido». El control no se guarda y el usuario no sabe qué corregir.",
+  "evidencias": [
+    "evidencia_TC015_02.png",
+    "evidencia_TC015_03.png",
+    "evidencia_TC015_04.png",
+    "evidencia_TC015_05.png"
+  ],
+  "frecuencia": "Siempre (2 de 2)",
+  "notas": "Respuesta HTTP 500 a POST /api/controles/. El registro de errores del servidor (Backend/logs/errors.log, consultado solo en lectura) muestra que el modelo llama a full_clean() al guardar y lanza django.core.exceptions.ValidationError: {'altura_uterina': ['Altura uterina de 34.0 cm muy baja para 40 semanas. Esperado: 38 a 42 cm.']}, que no se traduce a 400.",
+  "id": "BUG-004",
+  "estado": "Abierto",
+  "reportado_por": "",
+  "fecha": "18/10/2026",
+  "borrador": "borrador_TC-015_b.json"
+}

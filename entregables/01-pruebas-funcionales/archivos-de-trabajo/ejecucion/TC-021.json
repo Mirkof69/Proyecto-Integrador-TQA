@@ -1,0 +1,50 @@
+{
+  "id": "TC-021",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:57",
+  "resultado": "FAIL",
+  "que_ocurrio": "Calculadoras rápidas → pestaña «Bishop»: combinación A → «Score 5/13», etiqueta «Cuello intermedio» y aviso «Probabilidad moderada de parto vaginal»; combinación B → «8/13», «Cuello favorable», «Alta probabilidad de parto vaginal». En Calculadoras especializadas → «Score de Bishop»: combinación A → «5 / 13», «CÉRVIX DESFAVORABLE» (mensaje emergente «Score Bishop: 5 - DESFAVORABLE»); combinación B → «8 / 13», «CÉRVIX FAVORABLE».",
+  "comparacion": "Las sumas son correctas (5 y 8) en ambas calculadoras. La interpretación del 8 (favorable) es correcta en ambas. La del 5 no coincide en la calculadora rápida: dice «Cuello intermedio» en lugar de desfavorable (≤ 5). La especializada sí lo interpreta como desfavorable, así que el sistema da dos interpretaciones distintas para el mismo puntaje.",
+  "pasos": [
+    {
+      "accion": "Menú Calculadoras → Calculadoras rápidas → pestaña «Bishop»; Dilatación «1-2 cm (1)», Borramiento «40-50% (1)», Estación «-2 (1)», Consistencia «Media (1)», Posición «Intermedia (1)»; «Calcular»",
+      "estado": "FAIL",
+      "observado": "«Score 5/13» · «Cuello intermedio» · «Probabilidad moderada de parto vaginal» (esperado: desfavorable)."
+    },
+    {
+      "accion": "Calcular con la combinación B: «3-4 cm (2)», «60-70% (2)», «-1, 0 (2)», «Blanda (2)», «Posterior (0)»",
+      "estado": "PASS",
+      "observado": "«Score 8/13» · «Cuello favorable» · «Alta probabilidad de parto vaginal»."
+    },
+    {
+      "accion": "Repetición en Calculadoras especializadas → «Score de Bishop» → «Abrir», combinación A («Calcular Score»)",
+      "estado": "PASS",
+      "observado": "«Puntaje Total 5 / 13» · «CÉRVIX DESFAVORABLE» · «Cérvix desfavorable. Alta probabilidad de falla de inducción y necesidad de cesárea (>40%).»"
+    },
+    {
+      "accion": "Calculadora especializada, combinación B",
+      "estado": "PASS",
+      "observado": "«Puntaje Total 8 / 13» · «CÉRVIX FAVORABLE» · «Cérvix favorable para inducción. Alta probabilidad de parto vaginal exitoso (>90%).»"
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC021_01.png",
+      "descripcion": "Calculadora rápida, combinación A: 5/13 «Cuello intermedio» (defecto)."
+    },
+    {
+      "archivo": "evidencia_TC021_02.png",
+      "descripcion": "Calculadora rápida, combinación B: 8/13 «Cuello favorable»."
+    },
+    {
+      "archivo": "evidencia_TC021_03.png",
+      "descripcion": "Calculadora especializada, combinación A: 5/13 «CÉRVIX DESFAVORABLE»."
+    },
+    {
+      "archivo": "evidencia_TC021_04.png",
+      "descripcion": "Calculadora especializada, combinación B: 8/13 «CÉRVIX FAVORABLE»."
+    }
+  ],
+  "desviacion": "La calculadora rápida interpreta un puntaje de Bishop 5 como «Cuello intermedio» / «Probabilidad moderada de parto vaginal», no como desfavorable; la especializada sí dice desfavorable para el mismo puntaje.",
+  "observaciones": "El diseño dice «posición media»: en la calculadora rápida la opción se llama «Intermedia (1)» y en la especializada «Media (1 punto)»; «estación −1/0» aparece como «-1, 0 (2)» y «-1 / 0 (2 puntos)». El botón de la especializada se llama «Calcular Score». En la calculadora rápida el porcentaje de la barra se muestra sin redondear («38.46153846153847%»). La calculadora especializada muestra «Probabilidad de Éxito 55 %» junto a «CÉRVIX DESFAVORABLE» y un «Historial de Evaluaciones» con 5 filas de pacientes con nombre y fechas de 2024 (p. ej. «18/12/2024 10:30 María García 40 9 Favorable») que no salieron de esta ejecución: parecen datos de demostración fijos (fuera del alcance de este caso; conviene revisarlo aparte). La calculadora rápida guardó ambos cálculos en el historial (POST /api/calculadoras/historial/ → 201, ids 5 y 6; el de 5 puntos con «interpretacion»: «Cuello intermedio»)."
+}

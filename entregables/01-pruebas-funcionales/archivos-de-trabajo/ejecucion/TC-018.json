@@ -1,0 +1,21 @@
+{
+  "id": "TC-018",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:18",
+  "resultado": "PASS",
+  "que_ocurrio": "Controles Prenatales → «Nuevo Control», embarazo de Rosa López Quispe (40+0). Se cargaron peso 68, PA 150/95, altura uterina 39, FCF 140, Cefálica, movimientos «Presentes», edema «No» y proteinuria «+ (30 mg/dL)». El formulario mostró «⚠️ 2 Alerta(s) Clínica(s) Detectada(s) — 🔴 HIPERTENSIÓN ARTERIAL - Riesgo de preeclampsia — ⚠️ PROTEINURIA POSITIVA». Al pulsar «Guardar Control»: «Control prenatal creado correctamente» y «Se detectaron 2 alerta(s) clínica(s)». En el listado la fila 150/95 muestra la PA en rojo, FCF 140 normal y el triángulo rojo con «2» (tooltip «2 alertas detectadas»). El detalle muestra «2 Alerta(s) Médica(s) Detectada(s): Hipertensión detectada — Valor: 150/95 — ALTO; Proteinuria positiva — Valor: positiva_1 — ALTO», con recomendaciones «Hipertensión Arterial Detectada · URGENTE» y «Proteinuria Positiva · IMPORTANTE»; no hay alerta de FCF.",
+  "comparacion": "Coincide con lo esperado: aparecen exactamente las alertas de las dos condiciones verdaderas (hipertensión y proteinuria) y ninguna de FCF.",
+  "pasos": [
+    {"accion": "Nuevo control con PA 150/95, proteinuria + y FCF 140; «Guardar Control»", "estado": "PASS", "observado": "«Control prenatal creado correctamente» / «Se detectaron 2 alerta(s) clínica(s)»."},
+    {"accion": "Revisar alertas", "estado": "PASS", "observado": "«Hipertensión detectada — 150/95 — ALTO» y «Proteinuria positiva — positiva_1 — ALTO»; sin alerta de FCF."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC018_01.png", "descripcion": "Formulario: «2 Alerta(s) Clínica(s) Detectada(s) — HIPERTENSIÓN ARTERIAL… / PROTEINURIA POSITIVA»."},
+    {"archivo": "evidencia_TC018_02.png", "descripcion": "Valores cargados: PA 150/95, FCF 140, proteinuria «+ (30 mg/dL)»."},
+    {"archivo": "evidencia_TC018_03.png", "descripcion": "Guardado: «Control prenatal creado correctamente» / «Se detectaron 2 alerta(s) clínica(s)»."},
+    {"archivo": "evidencia_TC018_04.png", "descripcion": "Listado: control 150/95 con «2 alertas detectadas»."},
+    {"archivo": "evidencia_TC018_05.png", "descripcion": "Detalle: alertas «Hipertensión detectada 150/95» y «Proteinuria positiva»; sin alerta de FCF."}
+  ],
+  "desviacion": "",
+  "observaciones": "La opción de proteinuria elegida fue «+ (30 mg/dL)» (el diseño dice «Positiva (+)»). El detalle muestra el valor interno «positiva_1» en lugar de «+ (30 mg/dL)» (detalle cosmético). Altura uterina 39 cm y peso 68 kg elegidos por el ejecutor."
+}

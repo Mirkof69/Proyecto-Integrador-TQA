@@ -1,0 +1,27 @@
+{
+  "tc": "TC-003",
+  "titulo": "Con la cuenta bloqueada por intentos fallidos, el login muestra «Acceso denegado. Contacte al administrador.» en vez de avisar del bloqueo temporal",
+  "modulo": "Autenticación · Bloqueo de cuenta (pantalla de login)",
+  "severidad": "Media",
+  "prioridad": "Alta",
+  "precondiciones": "Producción local (DEBUG=False). Usuario de recepción activo, sin intentos fallidos (tc003.bloqueo@pruebas.test, creado por admin.demo).",
+  "pasos": [
+    "1 Abrir /login",
+    "2 Iniciar sesión 5 veces seguidas con contraseña incorrecta",
+    "3 Iniciar sesión con la contraseña correcta"
+  ],
+  "datos": "tc003.bloqueo@pruebas.test; contraseñas Incorrecta-1…5; luego la contraseña correcta de la cuenta",
+  "esperado": "No entra y ve un mensaje de cuenta bloqueada temporalmente (RF-21 / RNF-17: 5 intentos → bloqueo de 15 minutos).",
+  "obtenido": "No entra, pero ve el aviso «Acceso denegado. Contacte al administrador.» y la ventana «⛔ Acceso Denegado — No tienes permisos suficientes para realizar esta acción.». Nada indica que sea un bloqueo ni que sea temporal; el 5.º intento tampoco avisa del bloqueo (muestra «Email o contraseña incorrectos.»).",
+  "evidencias": [
+    "evidencia_TC003_13.png",
+    "evidencia_TC003_14.png"
+  ],
+  "frecuencia": "Siempre (1 de 1; la respuesta del servidor es determinista)",
+  "notas": "El servidor sí informa el bloqueo: POST /api/usuarios/login/ responde HTTP 403 con {\"error\":\"Cuenta bloqueada. Intente en 895 segundos.\"}. La pantalla no lo muestra: para un 403 presenta un texto genérico de acceso denegado (y el manejador global de 403 abre además la ventana «No tienes permisos suficientes»). Causa probable: la interfaz espera otro código (p. ej. 423) u otro campo del cuerpo para el caso de bloqueo.",
+  "id": "BUG-002",
+  "estado": "Abierto",
+  "reportado_por": "",
+  "fecha": "18/10/2026",
+  "borrador": "borrador_TC-003.json"
+}

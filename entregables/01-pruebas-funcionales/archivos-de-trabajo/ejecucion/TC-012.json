@@ -1,0 +1,20 @@
+{
+  "id": "TC-012",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:03",
+  "resultado": "PASS",
+  "que_ocurrio": "Desde Pacientes → «Historia clínica de Rosa López Quispe» se pulsó «Iniciar Embarazo»: se abrió el formulario «Nuevo Embarazo» (/dashboard/embarazos/nuevo?paciente=3280) con la paciente ya elegida («Rosa López Quispe · CI 9100701 · PAC-95FF654C»), Gesta 1, tipo «Simple», riesgo «Bajo Riesgo», estado «Activo». Se escribió la FUM «11/01/2026» (hoy 18/10/2026 − 280 días) en «Fecha Ultima Menstruacion» y se confirmó con la tecla Enter, lo que envió el formulario: el sistema guardó el embarazo y volvió al «Directorio Obstétrico». La primera fila muestra «PAC-95FF654C - Rosa López Quispe · Gesta: 1 · FUM: 11/01/26 · FPP: 18/10/26 · 40s + 0d · Bajo Riesgo · ACTIVO». El «Resumen del Embarazo» (Detalle rápido) muestra «Edad Gestacional 40 semanas + 0 días», «Trimestre Actual 3º Trimestre», «Fecha Probable Parto 18 de octubre de 2026».",
+  "comparacion": "Coincide con lo esperado: embarazo registrado con EG 40 semanas 0 días y FPP igual a la fecha de ejecución (18/10/2026), según Naegele (FUM + 280 días).",
+  "pasos": [
+    {"accion": "Iniciar el embarazo de la paciente (Historia clínica → «Iniciar Embarazo»)", "estado": "PASS", "observado": "Se abre «Nuevo Embarazo» con Rosa López Quispe ya elegida."},
+    {"accion": "Ingresar la FUM 11/01/2026 (hoy − 280 días) y guardar", "estado": "PASS", "observado": "El embarazo quedó registrado (estado ACTIVO) y la pantalla volvió al Directorio Obstétrico. El guardado se disparó al pulsar Enter en el campo de la FUM (envío del formulario), no con el botón «Crear Embarazo»."},
+    {"accion": "Leer edad gestacional y FPP", "estado": "PASS", "observado": "Listado: «40s + 0d», FPP «18/10/26». Resumen: «40 semanas + 0 días», «Fecha Probable Parto 18 de octubre de 2026»."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC012_01.png", "descripcion": "Formulario «Nuevo Embarazo» abierto desde la historia clínica con Rosa López Quispe ya elegida."},
+    {"archivo": "evidencia_TC012_02.png", "descripcion": "Directorio Obstétrico: Rosa López Quispe, FUM 11/01/26, FPP 18/10/26, 40s + 0d, ACTIVO."},
+    {"archivo": "evidencia_TC012_03.png", "descripcion": "Resumen del Embarazo: Edad Gestacional 40 semanas + 0 días; Fecha Probable Parto 18 de octubre de 2026."}
+  ],
+  "desviacion": "",
+  "observaciones": "Al pulsar Enter dentro del campo de fecha de la FUM el formulario se envía y el embarazo se guarda de inmediato, sin pasar por el botón «Crear Embarazo» ni por los demás campos (comportamiento estándar de envío de formulario, pero puede provocar guardados accidentales). Por eso no hay captura del formulario lleno antes de guardar ni del mensaje de éxito; el registro guardado se comprobó en el listado, en el resumen y por la API (embarazo id 3290, FUM 2026-01-11, FPP 2026-10-18, EG «40+0», estado «activo»)."
+}

@@ -1,0 +1,21 @@
+{
+  "tc": "TC-015",
+  "titulo": "Control prenatal con PA 139/89 genera alerta «Pre-hipertensión» no prevista y el listado la muestra como «Sin alertas»",
+  "modulo": "Controles prenatales · Alertas clínicas",
+  "severidad": "Media",
+  "prioridad": "Media",
+  "precondiciones": "Sesión de médico (dra.garcia@fetalmedical.bo). Paciente Rosa López Quispe (CI 9100701) con embarazo activo de 40+0 semanas (TC-012).",
+  "pasos": [
+    "1 Controles Prenatales → «Nuevo Control».",
+    "2 En «Embarazo» elegir el de Rosa López Quispe (CI 9100701).",
+    "3 Cargar peso 68, PA sistólica 139, PA diastólica 89, altura uterina 39, FCF 140, presentación Cefálica, movimientos Presentes, edema No, proteinuria Negativa.",
+    "4 Observar el recuadro de alertas del formulario y pulsar «Guardar Control».",
+    "5 Revisar la columna «Alertas» del listado y el detalle del control."
+  ],
+  "datos": "PA 139/89 mmHg; FCF 140 lpm; proteinuria negativa; edema no; movimientos fetales presentes.",
+  "esperado": "Según RF-06 solo se alerta con PA ≥ 140/90, FCF fuera de 110–160, proteinuria positiva, edema severo o movimientos ausentes: con PA 139/89 y FCF 140 el control se guarda sin alertas.",
+  "obtenido": "El formulario muestra «⚠️ 1 Alerta(s) Clínica(s) Detectada(s) — ⚠️ Pre-hipertensión detectada»; al guardar aparece «Se detectaron 1 alerta(s) clínica(s)» y el control queda con la alerta {tipo: prehipertension, nivel: medio} en la API. Al mismo tiempo el listado muestra 0 alertas con el tooltip «Sin alertas» (tiene_alertas: false) y el detalle no muestra alertas: información contradictoria para el médico.",
+  "evidencias": ["evidencia_TC015_01.png", "evidencia_TC015_07.png", "evidencia_TC015_08.png", "evidencia_TC015_09.png"],
+  "frecuencia": "Siempre",
+  "notas": "Respuesta de GET /api/controles/?embarazo=3290 para el control 8072: \"alertas\": [{\"tipo\": \"prehipertension\", \"nivel\": \"medio\", \"mensaje\": \"Prehipertensión detectada\", \"valor\": \"139/89\"}], \"tiene_alertas\": false. La categoría «prehipertensión» no forma parte del requisito RF-06. En TC-017 se vio que incluso con PA 120/80 (normal) cada control guarda la alerta «Prehipertensión detectada — Valor: 120/80 — MEDIO», visible en el detalle de los controles que además tienen otra alerta (evidencia_TC017_10.png)."
+}

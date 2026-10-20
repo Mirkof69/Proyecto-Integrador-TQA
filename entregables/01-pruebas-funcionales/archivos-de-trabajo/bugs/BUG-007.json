@@ -1,0 +1,31 @@
+{
+  "tc": "TC-022",
+  "titulo": "Al registrar un examen de laboratorio con resultados, el examen se crea pero los resultados no se guardan (HTTP 400 «examen: Este campo es requerido.»)",
+  "modulo": "Laboratorio · Registro de resultados",
+  "severidad": "Alta",
+  "prioridad": "Alta",
+  "precondiciones": "Sesión de administrador (admin.demo@fetalmedical.bo). Paciente Rosa López Quispe (CI 9100701, PAC-95FF654C). Catálogo con Hemograma completo (HEM001), hemoglobina 12,00–16,00 g/dL.",
+  "pasos": [
+    "1 Laboratorio → «Nuevo Examen».",
+    "2 Paciente «Rosa López Quispe - PAC-95FF654C»; Tipo de Examen «Hemograma completo (HEM001)».",
+    "3 En la fila Hemoglobina escribir 12.0 (la etiqueta muestra «NORMAL»).",
+    "4 Pulsar «Guardar Examen».",
+    "5 Revisar el listado de Laboratorio e intentar «Ver detalle» o «Editar» el examen."
+  ],
+  "datos": "Hemoglobina 12.0 g/dL (también 11.9, 16.0, 16.1 y 6.9).",
+  "esperado": "El examen se guarda con su resultado y la hemoglobina queda evaluada contra el catálogo (12,0 normal; 11,9 y 16,1 anormal; 6,9 crítico), visible en el examen.",
+  "obtenido": "POST /api/laboratorios/examenes/ responde 201 (examen 3956) pero POST /api/laboratorios/resultados/ responde 400 {\"examen\":[\"Este campo es requerido.\"]}; la interfaz muestra «Error al guardar — Request failed with status code 400» y «⚠️ Datos Inválidos — examen: Este campo es requerido.». El examen queda «SOLICITADO · Sin resultados». En «Editar» la tabla de resultados aparece vacía («No hay registros para mostrar») y «Agregar Parámetro» no agrega filas, por lo que tampoco se pueden cargar después.",
+  "evidencias": [
+    "evidencia_TC022_01.png",
+    "evidencia_TC022_02.png",
+    "evidencia_TC022_03.png",
+    "evidencia_TC022_04.png"
+  ],
+  "frecuencia": "Siempre",
+  "notas": "Respuestas HTTP observadas en el navegador: 201 en /api/laboratorios/examenes/ y 400 {\"examen\":[\"Este campo es requerido.\"]} en /api/laboratorios/resultados/; la petición de resultados llega sin el id del examen recién creado. La evaluación en sí funciona: en el formulario la etiqueta cambia a NORMAL/ANORMAL/CRÍTICO correctamente y, cargando los mismos valores con «Importar Excel o CSV», el servidor los evalúa bien (verificado con GET /api/laboratorios/examenes/3957–3961/).\nRevisión: la carga manual falla pero la importación por CSV guarda los resultados (hay alternativa), por eso Alta y no Crítica.",
+  "id": "BUG-007",
+  "estado": "Abierto",
+  "reportado_por": "",
+  "fecha": "18/10/2026",
+  "borrador": "borrador_TC-022.json"
+}

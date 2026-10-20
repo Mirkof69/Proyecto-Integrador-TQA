@@ -1,0 +1,71 @@
+{
+  "id": "TC-019",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:55",
+  "resultado": "FAIL",
+  "que_ocurrio": "En Calculadoras → Calculadoras rápidas → pestaña «IMC y Peso», con talla 160 cm: 47,1 kg → IMC «18.40» «Bajo peso»; 47,4 kg → «18.52» «Normal»; 64,0 kg → «25.00» «Normal»; 76,8 kg → «30.00» «Sobrepeso». En Calculadoras especializadas → «IMC y Ganancia Ponderal» se repite lo mismo: «18.4 kg/m²» «BAJO PESO»; «18.5 kg/m²» «NORMAL»; «25.0 kg/m²» «NORMAL»; «30.0 kg/m²» «SOBREPESO».",
+  "comparacion": "Coinciden 18,4 → Bajo peso y 18,5 → Normal. No coinciden los límites 25,0 (esperado Sobrepeso, se muestra Normal) ni 30,0 (esperado Obesidad, se muestra Sobrepeso). Las dos calculadoras de IMC del sistema fallan igual.",
+  "pasos": [
+    {
+      "accion": "Menú Calculadoras → Calculadoras rápidas → pestaña «IMC y Peso»; peso pregestacional 47.1, altura 160, peso actual 47.1, semanas 12; «Calcular»",
+      "estado": "PASS",
+      "observado": "IMC «18.40» · etiqueta «Bajo peso» (mensaje «IMC calculado correctamente»)."
+    },
+    {
+      "accion": "Calcular con 47.4 / 160",
+      "estado": "PASS",
+      "observado": "IMC «18.52» · «Normal»."
+    },
+    {
+      "accion": "Calcular con 64.0 / 160",
+      "estado": "FAIL",
+      "observado": "IMC «25.00» · «Normal» (esperado Sobrepeso)."
+    },
+    {
+      "accion": "Calcular con 76.8 / 160",
+      "estado": "FAIL",
+      "observado": "IMC «30.00» · «Sobrepeso» (esperado Obesidad)."
+    },
+    {
+      "accion": "Repetición en Calculadoras especializadas → «IMC y Ganancia Ponderal» → «Abrir» (talla 160 cm, mismos pesos, 12 semanas; «Calcular IMC y Ganancia»)",
+      "estado": "FAIL",
+      "observado": "«18.4 kg/m²» «BAJO PESO»; «18.5 kg/m²» «NORMAL»; «25.0 kg/m²» «NORMAL»; «30.0 kg/m²» «SOBREPESO»: el mismo error en 25 y 30."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC019_01.png",
+      "descripcion": "Calculadora rápida: 47,1 kg / 160 cm → IMC 18.40 «Bajo peso» (correcto)."
+    },
+    {
+      "archivo": "evidencia_TC019_02.png",
+      "descripcion": "Calculadora rápida: 47,4 kg / 160 cm → IMC 18.52 «Normal» (correcto)."
+    },
+    {
+      "archivo": "evidencia_TC019_03.png",
+      "descripcion": "Calculadora rápida: 64 kg / 160 cm → IMC 25.00 clasificado «Normal» (defecto)."
+    },
+    {
+      "archivo": "evidencia_TC019_04.png",
+      "descripcion": "Calculadora rápida: 76,8 kg / 160 cm → IMC 30.00 clasificado «Sobrepeso» (defecto)."
+    },
+    {
+      "archivo": "evidencia_TC019_05.png",
+      "descripcion": "Calculadora especializada: 18.4 kg/m² «BAJO PESO»."
+    },
+    {
+      "archivo": "evidencia_TC019_06.png",
+      "descripcion": "Calculadora especializada: 18.5 kg/m² «NORMAL»."
+    },
+    {
+      "archivo": "evidencia_TC019_07.png",
+      "descripcion": "Calculadora especializada: 25.0 kg/m² «NORMAL» (defecto)."
+    },
+    {
+      "archivo": "evidencia_TC019_08.png",
+      "descripcion": "Calculadora especializada: 30.0 kg/m² «SOBREPESO» (defecto)."
+    }
+  ],
+  "desviacion": "IMC exactamente en 25,0 y 30,0 cae en la categoría inferior (Normal y Sobrepeso) en vez de Sobrepeso y Obesidad, en las dos calculadoras de IMC.",
+  "observaciones": "El diseño da la talla en metros (1,60 m); la interfaz pide centímetros, así que se ingresó 160. Los decimales se escribieron con punto (47.1), que es lo que acepta el campo. La calculadora rápida exige además peso actual y semanas: se usó peso actual = peso pregestacional y 12 semanas (no influyen en el IMC). El diseño dice «Calculadoras → IMC»: hay dos calculadoras de IMC (pestaña «IMC y Peso» de las rápidas y «IMC y Ganancia Ponderal» de las especializadas); se ejecutaron las dos. La calculadora rápida guarda cada cálculo en el historial (POST /api/calculadoras/historial/ → 201, ids 1–4, sin paciente); la categoría guardada es la misma que la mostrada: resultado_json {\"imc\":\"25.00\",\"categoria\":\"Normal\"}. Para 47,4 kg la pantalla muestra 18.52 (dos decimales; el diseño anticipaba 18,5)."
+}

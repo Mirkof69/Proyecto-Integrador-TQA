@@ -1,0 +1,21 @@
+{
+  "id": "TC-014",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:07",
+  "resultado": "PASS",
+  "que_ocurrio": "Embarazos → «Registrar Nuevo Embarazo» («Apertura de Historia Obstétrica»); se eligió «Elena Fechafutura Prueba (CI: 9101001) - 25 años» (paciente de TC-010, sin embarazo). En el calendario de «Fecha Última Menstruación (FUM)» el día 19/10/2026 (mañana) aparece habilitado y al pulsarlo queda elegido; también se aceptó escrito a mano. El formulario calculó FPP «26/07/2027» y mostró «EG: 0 semanas + 0 días», sin ningún mensaje de error en el campo. Al pulsar «Registrar Embarazo» el sistema no guardó: mensaje «Error del servidor: Datos inválidos» y diálogo «⚠️ Datos Inválidos» con «fecha_ultima_menstruacion: La Fecha de Última Menstruación no puede estar en el futuro.». Tras «Aceptar» y «Cancelar», el Directorio Obstétrico filtrado por «9101001» muestra «No hay embarazos registrados» (Total registrados: 0).",
+  "comparacion": "Coincide con lo esperado en lo sustancial: aparece un error de fecha («La Fecha de Última Menstruación no puede estar en el futuro.») y no se registra el embarazo. Matiz: el selector sí permite elegir mañana; el error aparece recién al guardar (ver observaciones).",
+  "pasos": [
+    {"accion": "Registrar embarazo para Elena Fechafutura Prueba con FUM = mañana (19/10/2026)", "estado": "PASS", "observado": "El calendario permite elegir el 19/10/2026 (no está deshabilitado) y el formulario calcula FPP 26/07/2027 y «EG: 0 semanas + 0 días» sin error en el campo. El error de fecha aparece al guardar (paso 2)."},
+    {"accion": "Pulsar «Registrar Embarazo»", "estado": "PASS", "observado": "No se registra. «Error del servidor: Datos inválidos» y diálogo «fecha_ultima_menstruacion: La Fecha de Última Menstruación no puede estar en el futuro.». Directorio filtrado por 9101001: «No hay embarazos registrados»."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC014_01.png", "descripcion": "FUM 19/10/2026 elegida desde el calendario (el día de mañana no está bloqueado); EG «0 semanas + 0 días», FPP 26/07/2027."},
+    {"archivo": "evidencia_TC014_02.png", "descripcion": "FUM 19/10/2026 escrita a mano en el campo, aceptada sin error."},
+    {"archivo": "evidencia_TC014_03.png", "descripcion": "Formulario completo antes de guardar, sin mensajes de error."},
+    {"archivo": "evidencia_TC014_04.png", "descripcion": "Rechazo al guardar: «La Fecha de Última Menstruación no puede estar en el futuro.»."},
+    {"archivo": "evidencia_TC014_05.png", "descripcion": "Directorio Obstétrico filtrado por 9101001: «No hay embarazos registrados»."}
+  ],
+  "desviacion": "",
+  "observaciones": "El diseño admite «el selector no la permite o aparece error de fecha»: el selector la permite y el error aparece al guardar, como respuesta del servidor. Inconsistencia de interfaz: el calendario de fecha de nacimiento del registro de pacientes sí bloquea los días futuros (TC-010), el de la FUM no; además, con FUM futura el formulario muestra «EG: 0 semanas + 0 días» en lugar de advertir. El rechazo llega con el mensaje «Error del servidor: Datos inválidos», que presenta una validación como error del servidor, y con el nombre técnico del campo («fecha_ultima_menstruacion:»). La verificación «no existe embarazo» se confirmó también por la API (0 embarazos para la paciente 3281)."
+}

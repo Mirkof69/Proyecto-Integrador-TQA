@@ -1,0 +1,53 @@
+{
+  "id": "TC-027",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:00",
+  "resultado": "FAIL",
+  "que_ocurrio": "Con la imagen válida 147_HC.png cargada, el campo «Tamaño de píxel (mm)» deja escribir «0» y «-0.1» sin marcarlos en rojo ni mostrar mensaje. Al salir del campo (o pulsar «Analizar») el valor se cambia solo, sin aviso, a «0.010» (el mínimo del campo). «Analizar» envía 0.010 y la pantalla da una medida: «Circunferencia 11.8 mm ± 7», «Edad gestacional — semanas», con el aviso «12 mm está fuera del rango con el que se entrenó la red (45–350 mm). No se da edad gestacional.» Lo mismo con −0,1. No hubo error del servidor (todas las respuestas HTTP 200).",
+  "comparacion": "Parcial. Ni 0 ni −0,1 llegan al servidor (el campo los sustituye) y no hay error del servidor, pero no hay rechazo con mensaje claro: el valor se reemplaza en silencio por 0,01 mm y se muestra una circunferencia cefálica (11,8 mm) para un tamaño de píxel que la usuaria no ingresó. El éxito exige que ningún tamaño de píxel imposible produzca una medida: tras ingresar 0 o −0,1 se obtiene una medida.",
+  "pasos": [
+    {
+      "accion": "Subir la imagen válida (147_HC.png) y escribir 0 en el tamaño de píxel",
+      "estado": "FAIL",
+      "observado": "El campo muestra «0» sin indicación de error; al salir del campo cambia a «0.010» sin mensaje."
+    },
+    {
+      "accion": "Pulsar «Analizar» con el 0 ingresado",
+      "estado": "FAIL",
+      "observado": "Se analiza con 0.010: «Circunferencia 11.8 mm ± 7», aviso «12 mm está fuera del rango con el que se entrenó la red (45–350 mm). No se da edad gestacional.» HTTP 200."
+    },
+    {
+      "accion": "Probar con −0,1 (escrito «-0.1»)",
+      "estado": "FAIL",
+      "observado": "Igual: el campo acepta «-0.1» al escribir, lo cambia a «0.010» al salir y «Analizar» devuelve «11.8 mm ± 7» con el mismo aviso; sin mensaje de rechazo; sin error del servidor."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC027_01.png",
+      "descripcion": "Campo con «0» escrito, sin indicación de error."
+    },
+    {
+      "archivo": "evidencia_TC027_02.png",
+      "descripcion": "Tras «Analizar»: el campo muestra «0.010» (cambiado solo) y aparece el aviso «12 mm está fuera del rango...»."
+    },
+    {
+      "archivo": "evidencia_TC027_03.png",
+      "descripcion": "Circunferencia cefálica «11.8 mm ± 7» obtenida tras ingresar 0."
+    },
+    {
+      "archivo": "evidencia_TC027_04.png",
+      "descripcion": "Campo con «-0.1» escrito, sin indicación de error (los resultados a la derecha son todavía los del intento con 0)."
+    },
+    {
+      "archivo": "evidencia_TC027_05.png",
+      "descripcion": "Tras «Analizar» con −0,1: el campo muestra «0.010» y el mismo aviso."
+    },
+    {
+      "archivo": "evidencia_TC027_06.png",
+      "descripcion": "Circunferencia cefálica «11.8 mm ± 7» obtenida tras ingresar −0,1."
+    }
+  ],
+  "desviacion": "Un tamaño de píxel 0 o negativo no se rechaza con mensaje: se sustituye en silencio por 0,01 mm y el sistema mide (CC 11,8 mm).",
+  "observaciones": "El diseño admite que el campo bloquee el valor como forma de rechazo; aquí el campo NO bloquea la escritura: la corrige al salir, sin decirlo, y con la corrección se produce una medida. Por eso se registra FAIL. La única advertencia que aparece se refiere a la CC fuera de rango, no al tamaño de píxel. Con el valor correcto (0.074836) la misma imagen da 88,2 mm (TC-025): 88,2 × 0,010 / 0,074836 ≈ 11,8, lo que confirma que se midió con 0,010. Los valores se escribieron con punto decimal («-0.1»). No se probó el valor directamente contra la API porque el caso no lo pide."
+}

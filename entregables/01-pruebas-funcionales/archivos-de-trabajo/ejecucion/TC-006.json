@@ -1,0 +1,70 @@
+{
+  "id": "TC-006",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:05",
+  "resultado": "PASS",
+  "que_ocurrio": "Como admin.demo: menú «Cargos y permisos» → «Nuevo cargo»; nombre «TC006 Obstetriz», rol en que se basa «Médico»; los 19 módulos del rol vienen marcados y se desmarcó «Laboratorio» («Partos y recién nacidos» quedó marcado). Guardar → aviso «Cargo creado» (HTTP 201); el detalle del cargo lista «Partos y recién nacidos» y no «Laboratorio». El formulario solo ofrece módulos del rol médico (Pacientes, Embarazos, Controles prenatales, Ecografías, Archivos de ecografía, Partos y recién nacidos, Laboratorio, Citas, Triaje, Antecedentes, Evoluciones, Notas de evolución, Vacunas, Calculadoras, Calculadoras avanzadas, Reportes, Inteligencia artificial, Consultorios · solo ver, Notificaciones): no ofrece Gestión de Usuarios, Cargos y permisos, Logs de Acceso ni Configuración, y el selector de rol base solo ofrece «Médico», «Enfermería», «Laboratorio», «Recepción» (no Administrador). En Gestión de Usuarios → Nuevo Usuario se creó tc006.obstetriz@pruebas.test con el cargo «TC006 Obstetriz (Médico)» (el rol quedó fijado por el cargo). Al iniciar sesión con él se pidió configurar el MFA (rol base médico en producción); se completó con el código TOTP y entró al Panel Principal como «Obstetriz Prueba TC006 / MEDICO». Su menú muestra «Partos» y no «Laboratorio». Con fetch desde esa sesión: GET /api/laboratorios/examenes/ → HTTP 403 «Su cargo «TC006 Obstetriz» no incluye el módulo Laboratorio. Pida al administrador que lo agregue si lo necesita.»; GET /api/partos/ → HTTP 200 (count 518).",
+  "comparacion": "Coincide con las tres reglas de la tabla de decisión: módulo del rol marcado → permitido (Partos visible, API 200); módulo del rol desmarcado → denegado (Laboratorio oculto, API 403); módulo fuera del rol → no ofrecido (el formulario no ofrece módulos de administrador).",
+  "pasos": [
+    {
+      "accion": "Cargos y permisos → Nuevo cargo; rol base Médico; desmarcar Laboratorio; Guardar",
+      "estado": "PASS",
+      "observado": "«Cargo creado»; el cargo TC006 Obstetriz tiene Partos y recién nacidos y no Laboratorio."
+    },
+    {
+      "accion": "Revisar si el formulario ofrece módulos de administrador",
+      "estado": "PASS",
+      "observado": "No se ofrecen Usuarios, Cargos/Roles, Logs ni Configuración; el rol base no puede ser Administrador."
+    },
+    {
+      "accion": "Crear un usuario con ese cargo e iniciar sesión con él",
+      "estado": "PASS",
+      "observado": "tc006.obstetriz@pruebas.test (tras configurar MFA) ve «Partos» y no ve «Laboratorio» en el menú."
+    },
+    {
+      "accion": "Consultar Laboratorio y Partos por la API con esa sesión",
+      "estado": "PASS",
+      "observado": "GET /api/laboratorios/examenes/ → 403; GET /api/partos/ → 200."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC006_01.png",
+      "descripcion": "Formulario «Nuevo cargo» con rol Médico: lista completa de módulos ofrecidos (solo módulos del rol médico), al desmarcar Laboratorio."
+    },
+    {
+      "archivo": "evidencia_TC006_02.png",
+      "descripcion": "Nombre «TC006 Obstetriz», rol Médico, Laboratorio desmarcado y Partos y recién nacidos marcado, antes de Guardar."
+    },
+    {
+      "archivo": "evidencia_TC006_03.png",
+      "descripcion": "Lista de cargos con «TC006 Obstetriz» guardado."
+    },
+    {
+      "archivo": "evidencia_TC006_04.png",
+      "descripcion": "Detalle del cargo: módulos con Partos y recién nacidos y sin Laboratorio."
+    },
+    {
+      "archivo": "evidencia_TC006_05.png",
+      "descripcion": "Selector «Rol en que se basa»: solo Médico, Enfermería, Laboratorio, Recepción (no Administrador). Se canceló sin guardar."
+    },
+    {
+      "archivo": "evidencia_TC006_06.png",
+      "descripcion": "«Nuevo Usuario» para tc006.obstetriz@pruebas.test con el cargo TC006 Obstetriz."
+    },
+    {
+      "archivo": "evidencia_TC006_07.png",
+      "descripcion": "El usuario en la lista con rol Médico y cargo TC006 Obstetriz."
+    },
+    {
+      "archivo": "evidencia_TC006_08.png",
+      "descripcion": "Sesión del usuario con el cargo: el menú muestra Partos y, en Estudios Auxiliares, no aparece Laboratorio."
+    },
+    {
+      "archivo": "evidencia_TC006_09.png",
+      "descripcion": "Resultado de la API impreso en la página: Laboratorio → 403 (mensaje del cargo), Partos → 200."
+    }
+  ],
+  "desviacion": "",
+  "observaciones": "Diferencias de nombre con el diseño: el menú dice «Cargos y permisos» (el diseño dice «Roles») y «Gestión de Usuarios» (el diseño dice «Usuarios»). El diseño no menciona que el usuario con cargo de rol base médico debe configurar MFA en su primer ingreso en producción; se configuró igual que en TC-004 (código TOTP calculado con el secreto mostrado). El cargo y el usuario de prueba quedan creados para limpieza posterior."
+}

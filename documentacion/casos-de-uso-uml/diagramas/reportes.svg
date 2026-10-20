@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="856" height="644" viewBox="0 0 856 644" font-family="Arial, Helvetica, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="190" y="40" width="636" height="590" fill="#f7f9fb" stroke="#3d5266" stroke-width="1.6"/>
+<text x="508" y="64" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1d2a36">Fetal Medical Bolivia · Reportes</text>
+<line x1="98.0" y1="256.0" x2="242.0" y2="126.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="256.0" x2="242.0" y2="264.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="256.0" x2="242.0" y2="402.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="532.0" x2="242.0" y2="540.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="80.0" y1="498.0" x2="80.0" y2="347.0" stroke="#1d2a36" stroke-width="1.5"/>
+<polygon points="86.7,346.3 80.0,334.0 73.3,346.3" fill="#fff" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="466.0" y1="126.0" x2="562.0" y2="126.0" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="552.1,130.8 562.0,126.0 552.1,121.2" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="480.5" y="103.0" width="67.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="514.0" y="114.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«include»</text>
+<line x1="466.0" y1="264.0" x2="562.0" y2="264.0" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="552.1,268.8 562.0,264.0 552.1,259.2" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="480.5" y="241.0" width="67.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="514.0" y="252.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«include»</text>
+<ellipse cx="354.0" cy="126.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="114.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-B0</text>
+<text x="354.0" y="129.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Consultar centro de</text>
+<text x="354.0" y="144.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">reportes</text>
+<ellipse cx="674.0" cy="126.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="122.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-B4</text>
+<text x="674.0" y="137.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Filtrar por período</text>
+<ellipse cx="354.0" cy="264.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="260.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-B1</text>
+<text x="354.0" y="275.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Exportar listado a Excel</text>
+<ellipse cx="674.0" cy="264.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="252.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-B5</text>
+<text x="674.0" y="267.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar en la</text>
+<text x="674.0" y="282.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">auditoría</text>
+<ellipse cx="354.0" cy="402.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="398.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-B2</text>
+<text x="354.0" y="413.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Generar reporte en PDF</text>
+<ellipse cx="354.0" cy="540.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="536.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-B3</text>
+<text x="354.0" y="551.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Consultar auditoría</text>
+<circle cx="80" cy="234.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="244.0" x2="80" y2="272.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="254.0" x2="96" y2="254.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="272.0" x2="68" y2="292.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="272.0" x2="92" y2="292.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="308.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Médico</text>
+<circle cx="80" cy="510.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="520.0" x2="80" y2="548.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="530.0" x2="96" y2="530.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="548.0" x2="68" y2="568.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="548.0" x2="92" y2="568.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="584.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Administrador</text>
+</svg>

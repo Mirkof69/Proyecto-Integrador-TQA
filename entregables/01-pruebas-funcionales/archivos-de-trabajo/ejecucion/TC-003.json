@@ -1,0 +1,90 @@
+{
+  "id": "TC-003",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:00",
+  "resultado": "FAIL",
+  "que_ocurrio": "admin.demo creó por la interfaz (Gestión de Usuarios → Nuevo Usuario) la recepción de prueba tc003.bloqueo@pruebas.test, activa. Paso 1: 4 intentos con Incorrecta-1…4 → 4 veces HTTP 401 y «Email o contraseña incorrectos.». Paso 2: con la contraseña correcta entró al panel («Bienvenido/a Prueba Bloqueo TC003», rol RECEPCION). Paso 3: «Cerrar Sesión» y 5 intentos con Incorrecta-1…5 → los 5 respondieron HTTP 401 y «Email o contraseña incorrectos.» (el 5.º no avisa del bloqueo). Paso 4: con la contraseña correcta NO entra: el servidor responde HTTP 403 {\"error\":\"Cuenta bloqueada. Intente en 895 segundos.\"}, pero la pantalla muestra el aviso «Acceso denegado. Contacte al administrador.» y además la ventana «⛔ Acceso Denegado — No tienes permisos suficientes para realizar esta acción.». En ningún momento se informa al usuario que la cuenta está bloqueada temporalmente ni por cuánto tiempo.",
+  "comparacion": "La regla de bloqueo coincide: 4 fallos no bloquean (entra en el paso 2 y el contador vuelve a 0, porque luego hicieron falta 5 fallos nuevos), el 5.º fallo consecutivo bloquea y durante el bloqueo la contraseña correcta no permite entrar. No coincide el resultado esperado del paso 4, «mensaje de cuenta bloqueada temporalmente»: se muestra «Acceso denegado. Contacte al administrador.» y «No tienes permisos suficientes…», mensajes que no dicen que es un bloqueo ni que es temporal, y que envían al usuario al administrador.",
+  "pasos": [
+    {
+      "accion": "Iniciar sesión 4 veces con contraseña incorrecta (Incorrecta-1…4)",
+      "estado": "PASS",
+      "observado": "4 veces «Email o contraseña incorrectos.» (HTTP 401)."
+    },
+    {
+      "accion": "Iniciar sesión con la contraseña correcta",
+      "estado": "PASS",
+      "observado": "Entra al Panel Principal como «Prueba Bloqueo TC003 / RECEPCION» (4 fallos no bloquean)."
+    },
+    {
+      "accion": "Cerrar sesión e intentar 5 veces con contraseña incorrecta (Incorrecta-1…5)",
+      "estado": "PASS",
+      "observado": "Sesión cerrada desde el menú de usuario («Cerrar Sesión»). Los 5 intentos muestran «Email o contraseña incorrectos.» (HTTP 401); el 5.º deja la cuenta bloqueada (comprobado en el paso 4), aunque la pantalla no lo indica en ese momento."
+    },
+    {
+      "accion": "Intentar con la contraseña correcta",
+      "estado": "FAIL",
+      "observado": "No entra (HTTP 403, cuerpo «Cuenta bloqueada. Intente en 895 segundos.»), pero la interfaz muestra «Acceso denegado. Contacte al administrador.» y la ventana «Acceso Denegado — No tienes permisos suficientes para realizar esta acción.», no un mensaje de cuenta bloqueada temporalmente."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC003_01.png",
+      "descripcion": "Precondición: admin.demo llena «Nuevo Usuario» para tc003.bloqueo@pruebas.test."
+    },
+    {
+      "archivo": "evidencia_TC003_02.png",
+      "descripcion": "Precondición: el usuario de prueba aparece en la lista con rol Recepción."
+    },
+    {
+      "archivo": "evidencia_TC003_03.png",
+      "descripcion": "Fallo 1 de 4: «Email o contraseña incorrectos.»."
+    },
+    {
+      "archivo": "evidencia_TC003_04.png",
+      "descripcion": "Fallo 2 de 4."
+    },
+    {
+      "archivo": "evidencia_TC003_05.png",
+      "descripcion": "Fallo 3 de 4."
+    },
+    {
+      "archivo": "evidencia_TC003_06.png",
+      "descripcion": "Fallo 4 de 4: sigue el mismo mensaje, sin bloqueo."
+    },
+    {
+      "archivo": "evidencia_TC003_07.png",
+      "descripcion": "Contraseña correcta tras 4 fallos: «Bienvenido/a Prueba Bloqueo TC003», entra."
+    },
+    {
+      "archivo": "evidencia_TC003_08.png",
+      "descripcion": "Dentro del Panel Principal como recepción de prueba."
+    },
+    {
+      "archivo": "evidencia_TC003_09.png",
+      "descripcion": "Tras cerrar sesión, fallo 1 de 5."
+    },
+    {
+      "archivo": "evidencia_TC003_10.png",
+      "descripcion": "Fallo 2 de 5."
+    },
+    {
+      "archivo": "evidencia_TC003_11.png",
+      "descripcion": "Fallo 3 de 5."
+    },
+    {
+      "archivo": "evidencia_TC003_12.png",
+      "descripcion": "Fallo 4 de 5."
+    },
+    {
+      "archivo": "evidencia_TC003_13.png",
+      "descripcion": "Fallo 5 de 5: el mensaje sigue siendo «Email o contraseña incorrectos.», sin aviso de bloqueo."
+    },
+    {
+      "archivo": "evidencia_TC003_14.png",
+      "descripcion": "Contraseña correcta durante el bloqueo: no entra; muestra «Acceso denegado. Contacte al administrador.» y la ventana «Acceso Denegado — No tienes permisos suficientes…»."
+    }
+  ],
+  "desviacion": "Durante el bloqueo, la interfaz muestra «Acceso denegado. Contacte al administrador.» y «No tienes permisos suficientes para realizar esta acción.» en lugar de un mensaje de cuenta bloqueada temporalmente; el 5.º intento tampoco avisa que la cuenta quedó bloqueada.",
+  "observaciones": "Intervalo entre intentos ≈ 5 s; total 9 fallos en ~1 min (por debajo del límite por IP). Bloqueo activado a las 20:01:47 (La Paz); dura 15 minutos y no se desbloqueó a mano. Que el contador vuelve a 0 tras el ingreso correcto no se ve en la interfaz; se deduce de que después fueron necesarios 5 fallos nuevos para bloquear. Ambigüedad del diseño: el paso 3 espera «Al 5.º intento la cuenta queda bloqueada», pero no dice qué debe mostrar la pantalla en ese 5.º intento; se juzgó el mensaje por el paso 4."
+}

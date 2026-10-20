@@ -1,0 +1,20 @@
+{
+  "tc": "TC-022",
+  "titulo": "Los resultados de laboratorio guardados no se ven en ninguna pantalla: el detalle del examen se cae y la historia clínica muestra «Normal» para una hemoglobina crítica",
+  "modulo": "Laboratorio · Consulta de resultados / Historia clínica",
+  "severidad": "Crítica",
+  "prioridad": "Alta",
+  "precondiciones": "Sesión de administrador. Paciente Rosa López Quispe (CI 9100701) con hemogramas cuyos resultados se cargaron con «Importar Excel o CSV», entre ellos hemoglobina 6,9 g/dL (crítico) y 11,9 / 16,1 g/dL (anormales).",
+  "pasos": [
+    "1 Laboratorio → en la fila de un hemograma de Rosa López Quispe pulsar «Ver detalle» (ojo).",
+    "2 Observar la pantalla.",
+    "3 Volver al listado de Laboratorio y mirar la columna «Resultados».",
+    "4 Pacientes → Historia clínica de Rosa López Quispe → pestaña «Laboratorio»."
+  ],
+  "datos": "Exámenes 3957 (Hb 12,0), 3958 (Hb 11,9), 3959 (Hb 16,0), 3960 (Hb 16,1), 3961 (Hb 6,9).",
+  "esperado": "El detalle muestra cada resultado con su evaluación (normal, anormal, crítico) y un aviso de resultado crítico; el listado indica NORMALES/ANORMALES/CRÍTICOS; la historia clínica muestra el valor y su estado real.",
+  "obtenido": "«Ver detalle» de cualquier examen (también de otras pacientes, p. ej. 3926) muestra «Error Inesperado en la Aplicacion — El sistema ha encontrado un problema tecnico. Por favor, intente recargar la pagina o volver al inicio.» (consola: «TypeError: _.map is not a function»). El listado muestra todos los exámenes con «Sin resultados». La historia clínica lista los hemogramas con «Resultado» y «Valores Ref.» vacíos y «Estado: Normal» en todos, incluido el de 6,9 g/dL que el servidor evaluó como CRÍTICO.",
+  "evidencias": ["evidencia_TC022_05.png", "evidencia_TC022_12.png", "evidencia_TC022_13.png"],
+  "frecuencia": "Siempre",
+  "notas": "GET /api/laboratorios/examenes/3961/ devuelve el resultado con \"estado\": \"CRÍTICO\", \"es_critico\": true y \"resumen\": {\"criticos\": 1}, es decir, el dato correcto existe pero la interfaz no lo muestra (el listado no recibe el resumen y la historia clínica usa un campo es_anormal que el examen no trae, por lo que siempre pinta «Normal»)."
+}

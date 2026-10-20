@@ -1,0 +1,29 @@
+{
+  "id": "TC-017",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:15",
+  "resultado": "PASS",
+  "que_ocurrio": "Se registraron cuatro controles (Controles Prenatales → «Nuevo Control», embarazo de Rosa López Quispe, PA 120/80, peso 68, altura uterina 39, Cefálica, movimientos Presentes, edema No, proteinuria Negativa) variando solo la FCF. FCF 109: el formulario mostró «⚠️ 1 Alerta(s) Clínica(s) Detectada(s) — BRADICARDIA FETAL (<110 lpm) - URGENTE» y al guardar «Control prenatal creado correctamente» + «Se detectaron 1 alerta(s) clínica(s)». FCF 110: sin recuadro de alertas; al guardar solo «Control prenatal creado correctamente». FCF 160: sin recuadro de alertas; solo «Control prenatal creado correctamente». FCF 161: «⚠️ 1 Alerta(s) Clínica(s) Detectada(s) — TAQUICARDIA FETAL (>160 lpm)» y al guardar «Se detectaron 1 alerta(s) clínica(s)». En el listado, las filas FCF 109 y 161 muestran la FCF en rojo y el triángulo rojo con «2»; las filas 110 y 160 muestran el ícono verde «0» («Sin alertas»). El detalle del control FCF 109 dice «2 Alerta(s) Médica(s) Detectada(s): Prehipertensión detectada — Valor: 120/80 — MEDIO; Frecuencia cardíaca fetal anormal — Valor: 109 — ALTO»; el de FCF 161, lo mismo con «Valor: 161».",
+  "comparacion": "Coincide con lo esperado respecto de la FCF: solo 109 y 161 generan alerta de FCF; 110 y 160 (límites) no. Aparte, los controles 109 y 161 llevan además una alerta «Prehipertensión detectada» con PA 120/80, que no es objeto de este caso (ver observaciones y bug de TC-015).",
+  "pasos": [
+    {"accion": "Registrar control con FCF 109", "estado": "PASS", "observado": "Alerta «BRADICARDIA FETAL (<110 lpm) - URGENTE»; guardado con «Se detectaron 1 alerta(s) clínica(s)»; detalle «Frecuencia cardíaca fetal anormal — Valor: 109 — ALTO»."},
+    {"accion": "Registrar control con FCF 110", "estado": "PASS", "observado": "Sin alerta de FCF; «Control prenatal creado correctamente»; listado «0» alertas."},
+    {"accion": "Registrar control con FCF 160", "estado": "PASS", "observado": "Sin alerta de FCF; «Control prenatal creado correctamente»; listado «0» alertas."},
+    {"accion": "Registrar control con FCF 161", "estado": "PASS", "observado": "Alerta «TAQUICARDIA FETAL (>160 lpm)»; guardado con «Se detectaron 1 alerta(s) clínica(s)»; detalle «Frecuencia cardíaca fetal anormal — Valor: 161 — ALTO»."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC017_01.png", "descripcion": "FCF 109: formulario con «BRADICARDIA FETAL (<110 lpm) - URGENTE»."},
+    {"archivo": "evidencia_TC017_02.png", "descripcion": "FCF 109 guardado: «Control prenatal creado correctamente» / «Se detectaron 1 alerta(s) clínica(s)»."},
+    {"archivo": "evidencia_TC017_03.png", "descripcion": "FCF 110: formulario sin recuadro de alertas."},
+    {"archivo": "evidencia_TC017_04.png", "descripcion": "FCF 110 guardado: solo «Control prenatal creado correctamente»; fila con 0 alertas."},
+    {"archivo": "evidencia_TC017_05.png", "descripcion": "FCF 160: formulario sin recuadro de alertas."},
+    {"archivo": "evidencia_TC017_06.png", "descripcion": "FCF 160 guardado: solo «Control prenatal creado correctamente»; fila con 0 alertas."},
+    {"archivo": "evidencia_TC017_07.png", "descripcion": "FCF 161: formulario con «TAQUICARDIA FETAL (>160 lpm)»."},
+    {"archivo": "evidencia_TC017_08.png", "descripcion": "FCF 161 guardado con «Se detectaron 1 alerta(s) clínica(s)»."},
+    {"archivo": "evidencia_TC017_09.png", "descripcion": "Listado: FCF 161 y 109 en rojo con alertas; 160 y 110 con 0 alertas."},
+    {"archivo": "evidencia_TC017_10.png", "descripcion": "Detalle FCF 109: «Frecuencia cardíaca fetal anormal — Valor: 109 — ALTO» (y «Prehipertensión detectada — 120/80»)."},
+    {"archivo": "evidencia_TC017_11.png", "descripcion": "Detalle FCF 161: «Frecuencia cardíaca fetal anormal — Valor: 161 — ALTO» (y «Prehipertensión detectada — 120/80»)."}
+  ],
+  "desviacion": "",
+  "observaciones": "Con PA 120/80 (normal) el sistema guarda en los cuatro controles una alerta «Prehipertensión detectada» (API: tipo prehipertension, nivel medio); en 110 y 160 no se muestra (listado «Sin alertas»), pero en 109 y 161 sí aparece en el detalle y eleva el contador a «2». Es el mismo defecto informado en TC-015 (bugs/borrador_TC-015.json); no afecta a la regla de FCF que valida este caso. Altura uterina 39 cm y peso 68 kg elegidos por el ejecutor. Los cuatro controles quedaron con «N° Control 1»."
+}

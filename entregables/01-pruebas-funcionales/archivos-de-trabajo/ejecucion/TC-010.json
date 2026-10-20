@@ -1,0 +1,25 @@
+{
+  "id": "TC-010",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:00",
+  "resultado": "PASS",
+  "que_ocurrio": "Pacientes → «Nueva Paciente» con «Elena Fechafutura Prueba», CI «9101001». Al abrir el selector de «Fecha de Nacimiento» el día de hoy (18/10/2026) está habilitado y marcado, y desde el 19/10/2026 (mañana) en adelante todos los días aparecen deshabilitados (grises); al pulsar el 19 no se elige nada. Al escribir «19/10/2026» en el campo, el selector no lo acepta: al salir del campo el valor queda vacío. Se intentó guardar: «Siguiente» avanzó hasta «Información Médica» y, con el consentimiento marcado, al pulsar «Registrar Paciente» no se registró nada (no hubo mensaje de éxito; la API confirma 0 pacientes con CI 9101001). El error «Seleccione fecha» quedó bajo el campo en el paso «Datos Personales», visible al volver con «Atrás». Se corrigió la fecha a «18/10/2001» (hace 25 años) y al guardar apareció «Paciente registrado exitosamente» y el diálogo «¿Registrar ahora su embarazo?» («Elena Fechafutura Prueba quedó registrada…»). En el listado, la búsqueda «9101001» muestra «Elena Fechafutura Prueba · 25 años · 9101001 · Sin Embarazo».",
+  "comparacion": "Coincide con lo esperado: el selector no permite la fecha de mañana, con ella no se registra la paciente, y con una fecha válida (hace 25 años) se registra correctamente.",
+  "pasos": [
+    {"accion": "Nueva Paciente con fecha de nacimiento = mañana (19/10/2026), por el calendario y escribiéndola", "estado": "PASS", "observado": "El calendario muestra deshabilitados todos los días desde el 19/10/2026; hoy (18) habilitado. Escrita a mano, la fecha 19/10/2026 se descarta y el campo queda vacío."},
+    {"accion": "Intentar guardar (Siguiente → Siguiente → consentimiento → «Registrar Paciente»)", "estado": "PASS", "observado": "No se registra: sin mensaje de éxito, 0 pacientes con CI 9101001. El error «Seleccione fecha» aparece en el paso «Datos Personales» (visible al volver con «Atrás»)."},
+    {"accion": "Corregir la fecha a hace 25 años (18/10/2001) y guardar", "estado": "PASS", "observado": "«Paciente registrado exitosamente»; se ofrece registrar el embarazo; aparece en el listado con 25 años y CI 9101001."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC010_01.png", "descripcion": "Calendario de fecha de nacimiento: 18/10/2026 (hoy) habilitado, desde 19/10/2026 deshabilitado."},
+    {"archivo": "evidencia_TC010_02.png", "descripcion": "Fecha «19/10/2026» escrita a mano en el campo (se descarta al salir del campo)."},
+    {"archivo": "evidencia_TC010_03.png", "descripcion": "Tras «Siguiente» el asistente avanzó al paso «Contacto» con la fecha vacía."},
+    {"archivo": "evidencia_TC010_04.png", "descripcion": "Paso «Información Médica» tras pulsar «Registrar Paciente»: no hubo mensaje de éxito ni registro."},
+    {"archivo": "evidencia_TC010_05.png", "descripcion": "De vuelta en «Datos Personales»: error «Seleccione fecha» bajo Fecha de Nacimiento."},
+    {"archivo": "evidencia_TC010_06.png", "descripcion": "Fecha corregida a 18/10/2001 (hace 25 años) sin errores."},
+    {"archivo": "evidencia_TC010_07.png", "descripcion": "«Paciente registrado exitosamente» y diálogo «¿Registrar ahora su embarazo?» para Elena Fechafutura Prueba."},
+    {"archivo": "evidencia_TC010_08.png", "descripcion": "Búsqueda «9101001»: Elena Fechafutura Prueba, 25 años."}
+  ],
+  "desviacion": "",
+  "observaciones": "Observación de usabilidad (no cambia el resultado): con la fecha obligatoria vacía, «Siguiente» deja avanzar a los pasos 2 y 3, y al pulsar «Registrar Paciente» no se ve ningún mensaje en el paso actual; el error «Seleccione fecha» solo se ve al volver al paso 1. El diseño no fija el nombre de la paciente de este caso; se usó «Elena Fechafutura Prueba». Esta paciente se usa luego en TC-014."
+}

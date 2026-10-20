@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1176" height="450" viewBox="0 0 1176 450" font-family="Arial, Helvetica, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="190" y="40" width="956" height="396" fill="#f7f9fb" stroke="#3d5266" stroke-width="1.6"/>
+<text x="668" y="64" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1d2a36">Fetal Medical Bolivia · Embarazos</text>
+<line x1="98.0" y1="261.0" x2="242.0" y2="181.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="261.0" x2="242.0" y2="357.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="442.7" y1="165.7" x2="558.4" y2="145.9" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="549.4,152.3 558.4,145.9 547.8,142.8" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="465.4" y="133.0" width="67.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="498.9" y="144.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«include»</text>
+<line x1="436.3" y1="198.0" x2="582.2" y2="228.1" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="571.6,230.8 582.2,228.1 573.5,221.4" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="477.8" y="190.2" width="67.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="511.3" y="201.2" text-anchor="middle" font-size="11.5" fill="#1d2a36">«include»</text>
+<line x1="882.0" y1="126.0" x2="798.0" y2="126.0" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="807.9,121.2 798.0,126.0 807.9,130.8" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="810.0" y="103.0" width="60.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="840.0" y="114.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«extend»</text>
+<ellipse cx="354.0" cy="181.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="177.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-30</text>
+<text x="354.0" y="192.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar embarazo</text>
+<ellipse cx="674.0" cy="126.0" rx="124" ry="55" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="96.6" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-31</text>
+<text x="674.0" y="111.6" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Calcular EG y FPP</text>
+<text x="674.0" y="126.6" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">(Naegele)</text>
+<line x1="551.2" y1="133.6" x2="796.8" y2="133.6" stroke="#1d2a36" stroke-width="1.1"/>
+<text x="674.0" y="146.6" text-anchor="middle" font-size="10" font-style="italic" fill="#5a6b7a">extension points</text>
+<text x="674.0" y="160.1" text-anchor="middle" font-size="11" fill="#1d2a36">Ecografía discordante</text>
+<ellipse cx="994.0" cy="126.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="994.0" y="114.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-33</text>
+<text x="994.0" y="129.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Redatar según ecografía</text>
+<text x="994.0" y="144.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">(ACOG)</text>
+<ellipse cx="674.0" cy="247.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="235.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-32</text>
+<text x="674.0" y="250.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Verificar un solo</text>
+<text x="674.0" y="265.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">embarazo activo</text>
+<ellipse cx="354.0" cy="357.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="345.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-34</text>
+<text x="354.0" y="360.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Ver embarazo y su línea</text>
+<text x="354.0" y="375.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">de tiempo</text>
+<circle cx="80" cy="239.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="249.0" x2="80" y2="277.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="259.0" x2="96" y2="259.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="277.0" x2="68" y2="297.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="277.0" x2="92" y2="297.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="313.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Médico</text>
+</svg>

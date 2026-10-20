@@ -1,0 +1,37 @@
+{
+  "id": "TC-022",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:22",
+  "resultado": "FAIL",
+  "que_ocurrio": "Sesión de administrador (admin.demo@fetalmedical.bo). Laboratorio → «Nuevo Examen»: paciente «Rosa López Quispe - PAC-95FF654C», tipo «Hemograma completo (HEM001)»; el formulario cargó los parámetros del catálogo, con Hemoglobina «12.00-16.00 g/dL». Se escribió Hemoglobina 12.0: la etiqueta de la fila mostró «NORMAL». Al pulsar «Guardar Examen» se creó la cabecera del examen (POST /api/laboratorios/examenes/ → 201, examen 3956) pero el resultado no se guardó (POST /api/laboratorios/resultados/ → 400 {\"examen\":[\"Este campo es requerido.\"]}); la interfaz mostró «Error al guardar — Request failed with status code 400» y «⚠️ Datos Inválidos — examen: Este campo es requerido.». El examen quedó en el listado como «SOLICITADO · Sin resultados». Al abrir «Ver detalle» de ese examen (y de cualquier otro, p. ej. el 3926 de otra paciente) la pantalla muestra «Error Inesperado en la Aplicacion — El sistema ha encontrado un problema tecnico…» (consola: «TypeError: _.map is not a function»). En «Editar» la tabla de resultados queda vacía («No hay registros para mostrar») y «Agregar Parámetro» no agrega filas, así que tampoco se pueden cargar resultados por esa vía. En el mismo formulario de alta (sin guardar) la evaluación en pantalla de los cinco valores fue: 12.0 «NORMAL», 11.9 «ANORMAL», 16.0 «NORMAL», 16.1 «ANORMAL», 6.9 «CRÍTICO». Como vía alternativa de interfaz se cargaron los cinco valores con «Importar Excel o CSV» (un archivo por valor: «Se guardaron 1 resultados en 1 exámenes»); el servidor los evaluó (consulta por la API): 12.0 NORMAL, 11.9 ANORMAL («Valor fuera de rango»), 16.0 NORMAL, 16.1 ANORMAL, 6.9 CRÍTICO («Valor crítico bajo: 6.9 < 7.00»). Sin embargo ninguna pantalla muestra esa evaluación guardada: el listado de Laboratorio muestra los cinco exámenes «COMPLETADO … Sin resultados», el detalle se cae, y la pestaña Laboratorio de la historia clínica lista los 6 hemogramas con «Estado: Normal» (incluido el de 6.9 crítico) y las columnas «Resultado» y «Valores Ref.» vacías.",
+  "comparacion": "No coincide. La regla de evaluación (normal en 12,0 y 16,0; anormal en 11,9 y 16,1; crítico en 6,9) es correcta tanto en el formulario como en el servidor, pero no se puede completar el caso como fue diseñado: registrar el hemograma desde la interfaz no guarda el resultado (error 400), el detalle del examen se cae, y la evaluación guardada no se ve en ninguna pantalla (la historia clínica muestra «Normal» incluso para el valor crítico 6,9).",
+  "pasos": [
+    {"accion": "Registrar un hemograma para la paciente con hemoglobina 12,0", "estado": "FAIL", "observado": "En el formulario la fila muestra «NORMAL», pero al guardar: «Error al guardar — Request failed with status code 400» / «examen: Este campo es requerido.»; el examen queda «Sin resultados». (Por importación CSV el servidor lo evalúa NORMAL, solo visible por la API.)"},
+    {"accion": "Registrar con 11,9", "estado": "FAIL", "observado": "Formulario: «ANORMAL»; no se puede guardar desde el formulario. Importado: ANORMAL en la API; la historia clínica lo muestra «Normal»."},
+    {"accion": "Registrar con 16,0", "estado": "FAIL", "observado": "Formulario: «NORMAL»; no se puede guardar desde el formulario. Importado: NORMAL en la API; no visible en el listado ni en el detalle."},
+    {"accion": "Registrar con 16,1", "estado": "FAIL", "observado": "Formulario: «ANORMAL»; no se puede guardar desde el formulario. Importado: ANORMAL en la API; la historia clínica lo muestra «Normal»."},
+    {"accion": "Registrar con 6,9", "estado": "FAIL", "observado": "Formulario: «CRÍTICO»; no se puede guardar desde el formulario. Importado: CRÍTICO («Valor crítico bajo: 6.9 < 7.00») en la API; el listado dice «Sin resultados» y la historia clínica lo muestra «Normal»."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC022_01.png", "descripcion": "Formulario «Nuevo Examen»: Hemoglobina 12 con etiqueta «NORMAL» (rango 12.00-16.00 g/dL)."},
+    {"archivo": "evidencia_TC022_02.png", "descripcion": "Al guardar: «Error al guardar — Request failed with status code 400»."},
+    {"archivo": "evidencia_TC022_03.png", "descripcion": "Diálogo de fondo: «⚠️ Datos Inválidos — examen: Este campo es requerido.»."},
+    {"archivo": "evidencia_TC022_04.png", "descripcion": "Listado de Laboratorio: el hemograma de Rosa López Quispe quedó «SOLICITADO · Sin resultados»."},
+    {"archivo": "evidencia_TC022_05.png", "descripcion": "«Ver detalle» del examen: «Error Inesperado en la Aplicacion»."},
+    {"archivo": "evidencia_TC022_06.png", "descripcion": "Importar CSV (Hb 12,0): revisión «Lista para importar»."},
+    {"archivo": "evidencia_TC022_07.png", "descripcion": "Importar CSV (Hb 12,0): «Guardada»."},
+    {"archivo": "evidencia_TC022_08.png", "descripcion": "Importar CSV (Hb 11,9): «Se guardaron 1 resultados en 1 exámenes»."},
+    {"archivo": "evidencia_TC022_09.png", "descripcion": "Importar CSV (Hb 16,0): guardada."},
+    {"archivo": "evidencia_TC022_10.png", "descripcion": "Importar CSV (Hb 16,1): guardada."},
+    {"archivo": "evidencia_TC022_11.png", "descripcion": "Importar CSV (Hb 6,9): guardada."},
+    {"archivo": "evidencia_TC022_12.png", "descripcion": "Historia clínica → Laboratorio: 6 hemogramas, todos «Estado: Normal», sin resultado ni valores de referencia (incluye el de 6,9 crítico)."},
+    {"archivo": "evidencia_TC022_13.png", "descripcion": "Listado de Laboratorio tras importar: los exámenes de Rosa figuran «COMPLETADO · Sin resultados»."},
+    {"archivo": "evidencia_TC022_14.png", "descripcion": "Formulario (sin guardar): Hemoglobina 12.0 → «NORMAL»."},
+    {"archivo": "evidencia_TC022_15.png", "descripcion": "Formulario (sin guardar): Hemoglobina 11.9 → «ANORMAL»."},
+    {"archivo": "evidencia_TC022_16.png", "descripcion": "Formulario (sin guardar): Hemoglobina 16.0 → «NORMAL»."},
+    {"archivo": "evidencia_TC022_17.png", "descripcion": "Formulario (sin guardar): Hemoglobina 16.1 → «ANORMAL»."},
+    {"archivo": "evidencia_TC022_18.png", "descripcion": "Formulario (sin guardar): Hemoglobina 6.9 → «CRÍTICO»."}
+  ],
+  "desviacion": "No se puede registrar el resultado del hemograma desde el formulario (HTTP 400 «examen: Este campo es requerido.»); el detalle de cualquier examen se cae con «Error Inesperado en la Aplicacion»; la evaluación guardada (correcta en el servidor) no se muestra en ninguna pantalla y la historia clínica marca «Normal» incluso la hemoglobina crítica de 6,9 g/dL.",
+  "observaciones": "Se usó el administrador, como indica el diseño (el médico también ve el módulo Laboratorio). Los valores se escribieron con punto decimal (12.0) en el formulario y con coma (12,0) en el CSV. Para importar cada valor por separado se usaron fechas distintas (18, 17, 16, 15 y 14/10/2026) porque el importador marca «Ya cargada» una segunda fila con la misma CI, examen, fecha y parámetro. La comprobación de la evaluación guardada se hizo con GET /api/laboratorios/examenes/{id}/ (exámenes 3957–3961) porque ninguna pantalla la muestra. Quedan como datos de prueba: el examen 3956 (sin resultados, del intento fallido) y los exámenes 3957–3961 importados. Los archivos CSV usados están en el espacio de trabajo del ejecutor (tc022_hb_*.csv). La hora indicada es la del primer guardado (el caso terminó a las 20:36)."
+}

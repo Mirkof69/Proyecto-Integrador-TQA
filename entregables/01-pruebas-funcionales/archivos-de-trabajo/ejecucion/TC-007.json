@@ -1,0 +1,24 @@
+{
+  "id": "TC-007",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:56",
+  "resultado": "PASS",
+  "que_ocurrio": "Desde el menú Pacientes → «Nueva Paciente» se abrió el asistente «Registro de Nuevo Paciente» (Datos Personales / Contacto / Información Médica). Se cargaron Nombres «Rosa», Apellido Paterno «López», Apellido Materno «Quispe», CI «9100701», Fecha de Nacimiento «15/03/1995» (Género fijo «femenino») sin ningún error de campo. En el tercer paso se marcó «Consentimiento de Tratamiento de Datos … conforme a la Ley 164 de Bolivia» y se pulsó «Registrar Paciente». Apareció el mensaje «Paciente registrado exitosamente» y el diálogo «¿Registrar ahora su embarazo?» con el texto «Rosa López Quispe quedó registrada. Puede iniciar su embarazo con ella ya elegida.» y los botones «Más tarde» / «Registrar embarazo». Se eligió «Más tarde». Al buscar «9100701» en el listado aparece una sola fila: «PAC-95FF654C 18/10/2026 · Rosa López Quispe · 31 años · 9100701 · Sin Embarazo».",
+  "comparacion": "Coincide con lo esperado: la paciente quedó registrada, se mostró el mensaje de éxito, se ofreció iniciar su embarazo y aparece en el listado con su nombre y CI.",
+  "pasos": [
+    {"accion": "Pacientes (menú lateral) → «Nueva Paciente»", "estado": "PASS", "observado": "Se abre el asistente «Registro de Nuevo Paciente» en el paso «Datos Personales»."},
+    {"accion": "Completar los datos obligatorios: Rosa / López / Quispe, CI 9100701, nacimiento 15/03/1995", "estado": "PASS", "observado": "Todos los campos aceptan los valores; no aparece ningún mensaje de error. El género queda fijado en «femenino»."},
+    {"accion": "Avanzar al paso «Información Médica», marcar el consentimiento Ley 164 y pulsar «Registrar Paciente»", "estado": "PASS", "observado": "Mensaje «Paciente registrado exitosamente»."},
+    {"accion": "Observar la acción posterior", "estado": "PASS", "observado": "Diálogo «¿Registrar ahora su embarazo?» — «Rosa López Quispe quedó registrada. Puede iniciar su embarazo con ella ya elegida.» con botones «Más tarde» y «Registrar embarazo». Se pulsó «Más tarde» (el embarazo se registra en TC-012)."},
+    {"accion": "Buscar «9100701» en el listado de Pacientes", "estado": "PASS", "observado": "1 registro: «Rosa López Quispe», 31 años, CI 9100701, «Sin Embarazo», código PAC-95FF654C."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC007_01.png", "descripcion": "Asistente «Registro de Nuevo Paciente» abierto desde Pacientes → Nueva Paciente."},
+    {"archivo": "evidencia_TC007_02.png", "descripcion": "Datos personales cargados (Rosa López Quispe, CI 9100701, 15/03/1995) sin errores."},
+    {"archivo": "evidencia_TC007_03.png", "descripcion": "Paso «Información Médica» con el consentimiento Ley 164 marcado antes de guardar."},
+    {"archivo": "evidencia_TC007_04.png", "descripcion": "Mensaje «Paciente registrado exitosamente» y diálogo «¿Registrar ahora su embarazo?»."},
+    {"archivo": "evidencia_TC007_05.png", "descripcion": "Búsqueda «9100701» en el listado: aparece Rosa López Quispe con su CI."}
+  ],
+  "desviacion": "",
+  "observaciones": "El título del asistente dice «Registro de Nuevo Paciente» (masculino) aunque el botón dice «Nueva Paciente»; no afecta el resultado. Los campos Grupo Sanguíneo, Estado Civil, peso, altura, contacto, etc. son opcionales y se dejaron vacíos."
+}

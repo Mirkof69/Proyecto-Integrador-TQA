@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="986" height="1427" viewBox="0 0 986 1427" font-family="Arial, Helvetica, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="330" y="40" width="316" height="1373" fill="#f7f9fb" stroke="#3d5266" stroke-width="1.6"/>
+<text x="488" y="64" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1d2a36">Fetal Medical Bolivia</text>
+<line x1="98.0" y1="194.0" x2="382.0" y2="126.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="194.0" x2="382.0" y2="202.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="194.0" x2="382.0" y2="278.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="384.0" x2="382.0" y2="354.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="384.0" x2="382.0" y2="430.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="574.0" x2="382.0" y2="506.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="574.0" x2="382.0" y2="582.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="574.0" x2="382.0" y2="658.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="748.0" x2="382.0" y2="658.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="748.0" x2="382.0" y2="734.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="992.0" x2="382.0" y2="810.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="992.0" x2="382.0" y2="886.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="992.0" x2="382.0" y2="962.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="992.0" x2="382.0" y2="1038.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="992.0" x2="382.0" y2="1114.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="992.0" x2="382.0" y2="1190.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="1296.0" x2="382.0" y2="1266.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="1296.0" x2="382.0" y2="1342.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="868.0" y1="916.0" x2="606.0" y2="886.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="868.0" y1="916.0" x2="606.0" y2="962.0" stroke="#1d2a36" stroke-width="1.5"/>
+<ellipse cx="494.0" cy="126.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="122.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-01</text>
+<text x="494.0" y="137.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Iniciar sesión</text>
+<ellipse cx="494.0" cy="202.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="198.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-02</text>
+<text x="494.0" y="213.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Cerrar sesión</text>
+<ellipse cx="494.0" cy="278.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="274.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-11</text>
+<text x="494.0" y="289.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Buscar paciente</text>
+<ellipse cx="494.0" cy="354.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="350.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-10</text>
+<text x="494.0" y="365.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar paciente</text>
+<ellipse cx="494.0" cy="430.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="426.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-50</text>
+<text x="494.0" y="441.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Agendar cita</text>
+<ellipse cx="494.0" cy="506.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="502.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-40</text>
+<text x="494.0" y="517.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar triaje</text>
+<ellipse cx="494.0" cy="582.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="570.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-41</text>
+<text x="494.0" y="585.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar control</text>
+<text x="494.0" y="600.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">prenatal</text>
+<ellipse cx="494.0" cy="658.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="646.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-60</text>
+<text x="494.0" y="661.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Usar una calculadora</text>
+<text x="494.0" y="676.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">clínica</text>
+<ellipse cx="494.0" cy="734.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="722.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-70</text>
+<text x="494.0" y="737.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar resultado de</text>
+<text x="494.0" y="752.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">laboratorio</text>
+<ellipse cx="494.0" cy="810.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="806.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-30</text>
+<text x="494.0" y="821.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar embarazo</text>
+<ellipse cx="494.0" cy="886.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="874.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-90</text>
+<text x="494.0" y="889.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Analizar ecografía</text>
+<text x="494.0" y="904.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">obstétrica</text>
+<ellipse cx="494.0" cy="962.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="950.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-95</text>
+<text x="494.0" y="965.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Analizar ecografía</text>
+<text x="494.0" y="980.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">ginecológica</text>
+<ellipse cx="494.0" cy="1038.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="1026.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-93</text>
+<text x="494.0" y="1041.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Clasificar</text>
+<text x="494.0" y="1056.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">cardiotocografía</text>
+<ellipse cx="494.0" cy="1114.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="1110.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-80</text>
+<text x="494.0" y="1125.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar parto</text>
+<ellipse cx="494.0" cy="1190.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="1178.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-B0</text>
+<text x="494.0" y="1193.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Consultar centro de</text>
+<text x="494.0" y="1208.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">reportes</text>
+<ellipse cx="494.0" cy="1266.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="1262.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-20</text>
+<text x="494.0" y="1277.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Gestionar usuarios</text>
+<ellipse cx="494.0" cy="1342.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="494.0" y="1338.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-B3</text>
+<text x="494.0" y="1353.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Consultar auditoría</text>
+<circle cx="80" cy="172.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="182.0" x2="80" y2="210.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="192.0" x2="96" y2="192.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="210.0" x2="68" y2="230.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="210.0" x2="92" y2="230.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="246.0" text-anchor="middle" font-style="italic" font-weight="700" font-size="13" fill="#1d2a36">Usuario del</text>
+<text x="80" y="260.0" text-anchor="middle" font-style="italic" font-weight="700" font-size="13" fill="#1d2a36">sistema</text>
+<circle cx="80" cy="362.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="372.0" x2="80" y2="400.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="382.0" x2="96" y2="382.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="400.0" x2="68" y2="420.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="400.0" x2="92" y2="420.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="436.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Recepción</text>
+<circle cx="80" cy="552.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="562.0" x2="80" y2="590.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="572.0" x2="96" y2="572.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="590.0" x2="68" y2="610.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="590.0" x2="92" y2="610.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="626.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Enfermería</text>
+<circle cx="80" cy="726.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="736.0" x2="80" y2="764.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="746.0" x2="96" y2="746.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="764.0" x2="68" y2="784.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="764.0" x2="92" y2="784.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="800.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Laboratorista</text>
+<circle cx="80" cy="970.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="980.0" x2="80" y2="1008.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="990.0" x2="96" y2="990.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="1008.0" x2="68" y2="1028.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="1008.0" x2="92" y2="1028.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="1044.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Médico</text>
+<circle cx="80" cy="1274.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="1284.0" x2="80" y2="1312.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="1294.0" x2="96" y2="1294.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="1312.0" x2="68" y2="1332.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="1312.0" x2="92" y2="1332.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="1348.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Administrador</text>
+<circle cx="886" cy="894.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="886" y1="904.0" x2="886" y2="932.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="870" y1="914.0" x2="902" y2="914.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="886" y1="932.0" x2="874" y2="952.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="886" y1="932.0" x2="898" y2="952.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="886" y="968.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«system»</text>
+<text x="886" y="982.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Servicio de IA</text>
+</svg>

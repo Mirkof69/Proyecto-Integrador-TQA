@@ -1,0 +1,41 @@
+{
+  "id": "TC-005",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:04",
+  "resultado": "PASS",
+  "que_ocurrio": "Sesión de recep.flores@fetalmedical.bo. Menú lateral: «Panel Principal», «Pacientes», «Agenda de Citas», «Consultorios», «Ayuda»; no aparece «Laboratorio». Al escribir http://localhost:3000/dashboard/laboratorio en la barra de direcciones, la aplicación redirige a /403: «Acceso Restringido (403) — Lo sentimos, Juan Carlos Flores Quispe. No tienes los permisos necesarios para acceder a esta sección.» y no se lista ningún examen (0 filas; no se consultó /api/laboratorios/). La consulta GET http://localhost:8000/api/laboratorios/examenes/ hecha con fetch desde la sesión de recepción respondió HTTP 403 {\"detail\":\"Solo personal clínico puede realizar esta acción.\"}.",
+  "comparacion": "Coincide: el módulo no aparece en el menú, la ruta directa muestra la pantalla de acceso no autorizado sin datos y la API responde 403.",
+  "pasos": [
+    {
+      "accion": "Revisar el menú lateral",
+      "estado": "PASS",
+      "observado": "No aparece «Laboratorio»."
+    },
+    {
+      "accion": "Escribir en el navegador la ruta /dashboard/laboratorio",
+      "estado": "PASS",
+      "observado": "Redirige a /403 «Acceso Restringido (403)»; no se listan exámenes."
+    },
+    {
+      "accion": "Consultar GET /api/laboratorios/examenes/ con la sesión de recepción",
+      "estado": "PASS",
+      "observado": "HTTP 403 «Solo personal clínico puede realizar esta acción.»"
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC005_01.png",
+      "descripcion": "Menú lateral de recepción sin «Laboratorio»."
+    },
+    {
+      "archivo": "evidencia_TC005_02.png",
+      "descripcion": "Ruta directa /dashboard/laboratorio → pantalla «Acceso Restringido (403)», sin exámenes."
+    },
+    {
+      "archivo": "evidencia_TC005_03.png",
+      "descripcion": "Resultado de la consulta a la API impreso en la página: GET /api/laboratorios/examenes/ → HTTP 403."
+    }
+  ],
+  "desviacion": "",
+  "observaciones": "La pantalla 403 dice «Esta página requiere privilegios de ADMINISTRADOR o MÉDICO TITULAR», texto inexacto (el módulo también lo usan otros roles clínicos, p. ej. laboratorio); no afecta el resultado. Antes del paso 1 se cerraron las 4 ventanas «Acceso Denegado» que abre el panel de recepción (defecto de TC-001)."
+}

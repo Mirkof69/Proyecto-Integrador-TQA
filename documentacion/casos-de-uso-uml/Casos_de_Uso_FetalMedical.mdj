@@ -1,0 +1,7121 @@
+{
+ "_type": "Project",
+ "_id": "FMBUML000001",
+ "name": "Fetal Medical Bolivia",
+ "ownedElements": [
+  {
+   "_type": "UMLModel",
+   "_id": "FMBUML000002",
+   "_parent": {
+    "$ref": "FMBUML000001"
+   },
+   "name": "Modelo de casos de uso",
+   "ownedElements": [
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000100",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Diagrama general de casos de uso",
+     "defaultDiagram": true,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000102",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000101"
+       },
+       "left": 330,
+       "top": 40,
+       "width": 316,
+       "height": 2436
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000103",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000011"
+       },
+       "left": 370,
+       "top": 58,
+       "width": 248,
+       "height": 137,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000104",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000012"
+       },
+       "left": 382,
+       "top": 234,
+       "width": 224,
+       "height": 70,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000105",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000013"
+       },
+       "left": 382,
+       "top": 344,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000106",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000014"
+       },
+       "left": 370,
+       "top": 476,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000107",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000015"
+       },
+       "left": 382,
+       "top": 646,
+       "width": 224,
+       "height": 70,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000108",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000016"
+       },
+       "left": 382,
+       "top": 756,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000109",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000017"
+       },
+       "left": 382,
+       "top": 888,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000110",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000018"
+       },
+       "left": 370,
+       "top": 1020,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000111",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000019"
+       },
+       "left": 382,
+       "top": 1188,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000112",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000020"
+       },
+       "left": 382,
+       "top": 1352,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000113",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000021"
+       },
+       "left": 370,
+       "top": 1484,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000114",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000022"
+       },
+       "left": 382,
+       "top": 1652,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000115",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000023"
+       },
+       "left": 382,
+       "top": 1816,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000116",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000024"
+       },
+       "left": 382,
+       "top": 1948,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000117",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000025"
+       },
+       "left": 382,
+       "top": 2080,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000118",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000026"
+       },
+       "left": 382,
+       "top": 2212,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000119",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000027"
+       },
+       "left": 382,
+       "top": 2344,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000120",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000003"
+       },
+       "left": 10,
+       "top": 222,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000121",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000004"
+       },
+       "left": 10,
+       "top": 571,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000122",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000005"
+       },
+       "left": 10,
+       "top": 900,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000123",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000006"
+       },
+       "left": 10,
+       "top": 1127,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000124",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000007"
+       },
+       "left": 10,
+       "top": 1733,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000125",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000008"
+       },
+       "left": 10,
+       "top": 2284,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000126",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000010"
+       },
+       "left": 906,
+       "top": 1591,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000130",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000127"
+       },
+       "tail": {
+        "$ref": "FMBUML000120"
+       },
+       "head": {
+        "$ref": "FMBUML000103"
+       },
+       "lineStyle": 1,
+       "points": "30:262;370:92"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000134",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000131"
+       },
+       "tail": {
+        "$ref": "FMBUML000120"
+       },
+       "head": {
+        "$ref": "FMBUML000104"
+       },
+       "lineStyle": 1,
+       "points": "30:262;382:270"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000138",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000135"
+       },
+       "tail": {
+        "$ref": "FMBUML000120"
+       },
+       "head": {
+        "$ref": "FMBUML000105"
+       },
+       "lineStyle": 1,
+       "points": "30:262;382:390"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000142",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000139"
+       },
+       "tail": {
+        "$ref": "FMBUML000121"
+       },
+       "head": {
+        "$ref": "FMBUML000106"
+       },
+       "lineStyle": 1,
+       "points": "30:611;370:522"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000146",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000143"
+       },
+       "tail": {
+        "$ref": "FMBUML000121"
+       },
+       "head": {
+        "$ref": "FMBUML000107"
+       },
+       "lineStyle": 1,
+       "points": "30:611;382:680"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000150",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000147"
+       },
+       "tail": {
+        "$ref": "FMBUML000122"
+       },
+       "head": {
+        "$ref": "FMBUML000108"
+       },
+       "lineStyle": 1,
+       "points": "30:940;382:802"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000154",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000151"
+       },
+       "tail": {
+        "$ref": "FMBUML000122"
+       },
+       "head": {
+        "$ref": "FMBUML000109"
+       },
+       "lineStyle": 1,
+       "points": "30:940;382:934"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000158",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000155"
+       },
+       "tail": {
+        "$ref": "FMBUML000122"
+       },
+       "head": {
+        "$ref": "FMBUML000110"
+       },
+       "lineStyle": 1,
+       "points": "30:940;370:1066"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000162",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000159"
+       },
+       "tail": {
+        "$ref": "FMBUML000123"
+       },
+       "head": {
+        "$ref": "FMBUML000110"
+       },
+       "lineStyle": 1,
+       "points": "30:1167;370:1066"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000166",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000163"
+       },
+       "tail": {
+        "$ref": "FMBUML000123"
+       },
+       "head": {
+        "$ref": "FMBUML000111"
+       },
+       "lineStyle": 1,
+       "points": "30:1167;382:1250"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000170",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000167"
+       },
+       "tail": {
+        "$ref": "FMBUML000124"
+       },
+       "head": {
+        "$ref": "FMBUML000112"
+       },
+       "lineStyle": 1,
+       "points": "30:1773;382:1398"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000174",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000171"
+       },
+       "tail": {
+        "$ref": "FMBUML000124"
+       },
+       "head": {
+        "$ref": "FMBUML000113"
+       },
+       "lineStyle": 1,
+       "points": "30:1773;370:1530"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000178",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000175"
+       },
+       "tail": {
+        "$ref": "FMBUML000124"
+       },
+       "head": {
+        "$ref": "FMBUML000114"
+       },
+       "lineStyle": 1,
+       "points": "30:1773;382:1714"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000182",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000179"
+       },
+       "tail": {
+        "$ref": "FMBUML000124"
+       },
+       "head": {
+        "$ref": "FMBUML000115"
+       },
+       "lineStyle": 1,
+       "points": "30:1773;382:1862"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000186",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000183"
+       },
+       "tail": {
+        "$ref": "FMBUML000124"
+       },
+       "head": {
+        "$ref": "FMBUML000116"
+       },
+       "lineStyle": 1,
+       "points": "30:1773;382:1994"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000190",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000187"
+       },
+       "tail": {
+        "$ref": "FMBUML000124"
+       },
+       "head": {
+        "$ref": "FMBUML000117"
+       },
+       "lineStyle": 1,
+       "points": "30:1773;382:2126"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000194",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000191"
+       },
+       "tail": {
+        "$ref": "FMBUML000125"
+       },
+       "head": {
+        "$ref": "FMBUML000118"
+       },
+       "lineStyle": 1,
+       "points": "30:2324;382:2258"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000198",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000195"
+       },
+       "tail": {
+        "$ref": "FMBUML000125"
+       },
+       "head": {
+        "$ref": "FMBUML000119"
+       },
+       "lineStyle": 1,
+       "points": "30:2324;382:2390"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000202",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000199"
+       },
+       "tail": {
+        "$ref": "FMBUML000126"
+       },
+       "head": {
+        "$ref": "FMBUML000113"
+       },
+       "lineStyle": 1,
+       "points": "926:1631;618:1530"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000206",
+       "_parent": {
+        "$ref": "FMBUML000100"
+       },
+       "model": {
+        "$ref": "FMBUML000203"
+       },
+       "tail": {
+        "$ref": "FMBUML000126"
+       },
+       "head": {
+        "$ref": "FMBUML000114"
+       },
+       "lineStyle": 1,
+       "points": "926:1631;606:1714"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000207",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Jerarquía de actores",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000208",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000003"
+       },
+       "left": 400,
+       "top": 50,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000209",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000004"
+       },
+       "left": 200,
+       "top": 220,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000210",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000006"
+       },
+       "left": 600,
+       "top": 220,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000211",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000009"
+       },
+       "left": 840,
+       "top": 220,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000212",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000005"
+       },
+       "left": 200,
+       "top": 390,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000213",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000007"
+       },
+       "left": 400,
+       "top": 560,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000214",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000008"
+       },
+       "left": 400,
+       "top": 730,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000215",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000093"
+       },
+       "tail": {
+        "$ref": "FMBUML000209"
+       },
+       "head": {
+        "$ref": "FMBUML000208"
+       },
+       "lineStyle": 1,
+       "points": "220:260;420:90"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000216",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000094"
+       },
+       "tail": {
+        "$ref": "FMBUML000210"
+       },
+       "head": {
+        "$ref": "FMBUML000208"
+       },
+       "lineStyle": 1,
+       "points": "620:260;420:90"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000217",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000095"
+       },
+       "tail": {
+        "$ref": "FMBUML000212"
+       },
+       "head": {
+        "$ref": "FMBUML000209"
+       },
+       "lineStyle": 1,
+       "points": "220:430;220:260"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000218",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000096"
+       },
+       "tail": {
+        "$ref": "FMBUML000213"
+       },
+       "head": {
+        "$ref": "FMBUML000212"
+       },
+       "lineStyle": 1,
+       "points": "420:600;220:430"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000219",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000097"
+       },
+       "tail": {
+        "$ref": "FMBUML000213"
+       },
+       "head": {
+        "$ref": "FMBUML000210"
+       },
+       "lineStyle": 1,
+       "points": "420:600;620:260"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000220",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000098"
+       },
+       "tail": {
+        "$ref": "FMBUML000214"
+       },
+       "head": {
+        "$ref": "FMBUML000213"
+       },
+       "lineStyle": 1,
+       "points": "420:770;420:600"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000221",
+       "_parent": {
+        "$ref": "FMBUML000207"
+       },
+       "model": {
+        "$ref": "FMBUML000099"
+       },
+       "tail": {
+        "$ref": "FMBUML000211"
+       },
+       "head": {
+        "$ref": "FMBUML000208"
+       },
+       "lineStyle": 1,
+       "points": "860:260;420:90"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000222",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Autenticación y segundo factor",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000224",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000223"
+       },
+       "left": 190,
+       "top": 40,
+       "width": 636,
+       "height": 760
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000225",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000012"
+       },
+       "left": 242,
+       "top": 91,
+       "width": 224,
+       "height": 70,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000226",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000011"
+       },
+       "left": 230,
+       "top": 314,
+       "width": 248,
+       "height": 137,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000227",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000028"
+       },
+       "left": 562,
+       "top": 157,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000228",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000029"
+       },
+       "left": 562,
+       "top": 289,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000229",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000030"
+       },
+       "left": 562,
+       "top": 421,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000230",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000031"
+       },
+       "left": 562,
+       "top": 553,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000231",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000032"
+       },
+       "left": 242,
+       "top": 668,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000232",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000003"
+       },
+       "left": 10,
+       "top": 214,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000233",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000008"
+       },
+       "left": 10,
+       "top": 674,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000234",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000131"
+       },
+       "tail": {
+        "$ref": "FMBUML000232"
+       },
+       "head": {
+        "$ref": "FMBUML000225"
+       },
+       "lineStyle": 1,
+       "points": "30:254;242:126"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000235",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000127"
+       },
+       "tail": {
+        "$ref": "FMBUML000232"
+       },
+       "head": {
+        "$ref": "FMBUML000226"
+       },
+       "lineStyle": 1,
+       "points": "30:254;230:349"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000239",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000236"
+       },
+       "tail": {
+        "$ref": "FMBUML000233"
+       },
+       "head": {
+        "$ref": "FMBUML000231"
+       },
+       "lineStyle": 1,
+       "points": "30:714;242:714"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000241",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000240"
+       },
+       "tail": {
+        "$ref": "FMBUML000233"
+       },
+       "head": {
+        "$ref": "FMBUML000232"
+       },
+       "lineStyle": 1,
+       "points": "30:714;30:254"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000243",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000242"
+       },
+       "tail": {
+        "$ref": "FMBUML000226"
+       },
+       "head": {
+        "$ref": "FMBUML000227"
+       },
+       "lineStyle": 1,
+       "points": "354:383;674:203"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000245",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000244"
+       },
+       "tail": {
+        "$ref": "FMBUML000228"
+       },
+       "head": {
+        "$ref": "FMBUML000226"
+       },
+       "lineStyle": 1,
+       "points": "674:335;354:383"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000247",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000246"
+       },
+       "tail": {
+        "$ref": "FMBUML000229"
+       },
+       "head": {
+        "$ref": "FMBUML000226"
+       },
+       "lineStyle": 1,
+       "points": "674:467;354:383"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000249",
+       "_parent": {
+        "$ref": "FMBUML000222"
+       },
+       "model": {
+        "$ref": "FMBUML000248"
+       },
+       "tail": {
+        "$ref": "FMBUML000230"
+       },
+       "head": {
+        "$ref": "FMBUML000226"
+       },
+       "lineStyle": 1,
+       "points": "674:599;354:383"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000250",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Control de acceso por rol y cargo",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000252",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000251"
+       },
+       "left": 190,
+       "top": 40,
+       "width": 956,
+       "height": 602
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000253",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000026"
+       },
+       "left": 242,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000254",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000033"
+       },
+       "left": 562,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000255",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000034"
+       },
+       "left": 242,
+       "top": 212,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000256",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000035"
+       },
+       "left": 562,
+       "top": 212,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000257",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000027"
+       },
+       "left": 242,
+       "top": 344,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000258",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000036"
+       },
+       "left": 242,
+       "top": 476,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000259",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000037"
+       },
+       "left": 550,
+       "top": 442,
+       "width": 248,
+       "height": 160,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000260",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000038"
+       },
+       "left": 882,
+       "top": 476,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000261",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000008"
+       },
+       "left": 10,
+       "top": 218,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000262",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000009"
+       },
+       "left": 10,
+       "top": 482,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000263",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000191"
+       },
+       "tail": {
+        "$ref": "FMBUML000261"
+       },
+       "head": {
+        "$ref": "FMBUML000253"
+       },
+       "lineStyle": 1,
+       "points": "30:258;242:126"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000267",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000264"
+       },
+       "tail": {
+        "$ref": "FMBUML000261"
+       },
+       "head": {
+        "$ref": "FMBUML000255"
+       },
+       "lineStyle": 1,
+       "points": "30:258;242:258"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000268",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000195"
+       },
+       "tail": {
+        "$ref": "FMBUML000261"
+       },
+       "head": {
+        "$ref": "FMBUML000257"
+       },
+       "lineStyle": 1,
+       "points": "30:258;242:390"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000272",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000269"
+       },
+       "tail": {
+        "$ref": "FMBUML000262"
+       },
+       "head": {
+        "$ref": "FMBUML000258"
+       },
+       "lineStyle": 1,
+       "points": "30:522;242:522"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000274",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000273"
+       },
+       "tail": {
+        "$ref": "FMBUML000253"
+       },
+       "head": {
+        "$ref": "FMBUML000254"
+       },
+       "lineStyle": 1,
+       "points": "354:126;674:126"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000276",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000275"
+       },
+       "tail": {
+        "$ref": "FMBUML000255"
+       },
+       "head": {
+        "$ref": "FMBUML000256"
+       },
+       "lineStyle": 1,
+       "points": "354:258;674:258"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000278",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000277"
+       },
+       "tail": {
+        "$ref": "FMBUML000258"
+       },
+       "head": {
+        "$ref": "FMBUML000259"
+       },
+       "lineStyle": 1,
+       "points": "354:522;674:522"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000280",
+       "_parent": {
+        "$ref": "FMBUML000250"
+       },
+       "model": {
+        "$ref": "FMBUML000279"
+       },
+       "tail": {
+        "$ref": "FMBUML000260"
+       },
+       "head": {
+        "$ref": "FMBUML000259"
+       },
+       "lineStyle": 1,
+       "points": "994:522;674:522"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000281",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Gestión de pacientes",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000283",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000282"
+       },
+       "left": 190,
+       "top": 40,
+       "width": 956,
+       "height": 614
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000284",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000014"
+       },
+       "left": 230,
+       "top": 120,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000285",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000039"
+       },
+       "left": 562,
+       "top": 64,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000286",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000040"
+       },
+       "left": 562,
+       "top": 228,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000287",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000020"
+       },
+       "left": 882,
+       "top": 139,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000288",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000013"
+       },
+       "left": 242,
+       "top": 346,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000289",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000041"
+       },
+       "left": 562,
+       "top": 360,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000290",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000042"
+       },
+       "left": 242,
+       "top": 478,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000291",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000043"
+       },
+       "left": 562,
+       "top": 522,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000292",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000004"
+       },
+       "left": 10,
+       "top": 332,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000293",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000005"
+       },
+       "left": 10,
+       "top": 521,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000294",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000007"
+       },
+       "left": 10,
+       "top": 695,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000295",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000139"
+       },
+       "tail": {
+        "$ref": "FMBUML000292"
+       },
+       "head": {
+        "$ref": "FMBUML000284"
+       },
+       "lineStyle": 1,
+       "points": "30:372;230:166"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000299",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000296"
+       },
+       "tail": {
+        "$ref": "FMBUML000292"
+       },
+       "head": {
+        "$ref": "FMBUML000288"
+       },
+       "lineStyle": 1,
+       "points": "30:372;242:392"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000303",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000300"
+       },
+       "tail": {
+        "$ref": "FMBUML000292"
+       },
+       "head": {
+        "$ref": "FMBUML000290"
+       },
+       "lineStyle": 1,
+       "points": "30:372;242:539"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000304",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000095"
+       },
+       "tail": {
+        "$ref": "FMBUML000293"
+       },
+       "head": {
+        "$ref": "FMBUML000292"
+       },
+       "lineStyle": 1,
+       "points": "30:561;30:372"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000305",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000096"
+       },
+       "tail": {
+        "$ref": "FMBUML000294"
+       },
+       "head": {
+        "$ref": "FMBUML000293"
+       },
+       "lineStyle": 1,
+       "points": "30:735;30:561"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000307",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000306"
+       },
+       "tail": {
+        "$ref": "FMBUML000284"
+       },
+       "head": {
+        "$ref": "FMBUML000285"
+       },
+       "lineStyle": 1,
+       "points": "354:185;674:126"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000309",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000308"
+       },
+       "tail": {
+        "$ref": "FMBUML000284"
+       },
+       "head": {
+        "$ref": "FMBUML000286"
+       },
+       "lineStyle": 1,
+       "points": "354:185;674:274"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000311",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000310"
+       },
+       "tail": {
+        "$ref": "FMBUML000287"
+       },
+       "head": {
+        "$ref": "FMBUML000284"
+       },
+       "lineStyle": 1,
+       "points": "994:185;354:185"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000313",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000312"
+       },
+       "tail": {
+        "$ref": "FMBUML000288"
+       },
+       "head": {
+        "$ref": "FMBUML000289"
+       },
+       "lineStyle": 1,
+       "points": "354:392;674:421"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000315",
+       "_parent": {
+        "$ref": "FMBUML000281"
+       },
+       "model": {
+        "$ref": "FMBUML000314"
+       },
+       "tail": {
+        "$ref": "FMBUML000290"
+       },
+       "head": {
+        "$ref": "FMBUML000291"
+       },
+       "lineStyle": 1,
+       "points": "354:539;674:568"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000316",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Registro del embarazo",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000318",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000317"
+       },
+       "left": 190,
+       "top": 40,
+       "width": 956,
+       "height": 432
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000319",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000020"
+       },
+       "left": 242,
+       "top": 135,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000320",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000044"
+       },
+       "left": 550,
+       "top": 62,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000321",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000045"
+       },
+       "left": 882,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000322",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000046"
+       },
+       "left": 562,
+       "top": 230,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000323",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000047"
+       },
+       "left": 242,
+       "top": 340,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000324",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000007"
+       },
+       "left": 10,
+       "top": 244,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000325",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000167"
+       },
+       "tail": {
+        "$ref": "FMBUML000324"
+       },
+       "head": {
+        "$ref": "FMBUML000319"
+       },
+       "lineStyle": 1,
+       "points": "30:284;242:181"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000329",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000326"
+       },
+       "tail": {
+        "$ref": "FMBUML000324"
+       },
+       "head": {
+        "$ref": "FMBUML000323"
+       },
+       "lineStyle": 1,
+       "points": "30:284;242:386"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000331",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000330"
+       },
+       "tail": {
+        "$ref": "FMBUML000319"
+       },
+       "head": {
+        "$ref": "FMBUML000320"
+       },
+       "lineStyle": 1,
+       "points": "354:181;674:126"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000333",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000332"
+       },
+       "tail": {
+        "$ref": "FMBUML000319"
+       },
+       "head": {
+        "$ref": "FMBUML000322"
+       },
+       "lineStyle": 1,
+       "points": "354:181;674:276"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000335",
+       "_parent": {
+        "$ref": "FMBUML000316"
+       },
+       "model": {
+        "$ref": "FMBUML000334"
+       },
+       "tail": {
+        "$ref": "FMBUML000321"
+       },
+       "head": {
+        "$ref": "FMBUML000320"
+       },
+       "lineStyle": 1,
+       "points": "994:126;674:126"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000336",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Triaje y control prenatal",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000338",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000337"
+       },
+       "left": 190,
+       "top": 40,
+       "width": 956,
+       "height": 574
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000339",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000016"
+       },
+       "left": 242,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000340",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000048"
+       },
+       "left": 562,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000341",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000017"
+       },
+       "left": 242,
+       "top": 272,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000342",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000049"
+       },
+       "left": 562,
+       "top": 212,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000343",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000050"
+       },
+       "left": 550,
+       "top": 344,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000344",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000051"
+       },
+       "left": 882,
+       "top": 362,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000345",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000052"
+       },
+       "left": 242,
+       "top": 482,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000346",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000005"
+       },
+       "left": 10,
+       "top": 284,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000347",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000007"
+       },
+       "left": 10,
+       "top": 458,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000348",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000147"
+       },
+       "tail": {
+        "$ref": "FMBUML000346"
+       },
+       "head": {
+        "$ref": "FMBUML000339"
+       },
+       "lineStyle": 1,
+       "points": "30:324;242:126"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000349",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000151"
+       },
+       "tail": {
+        "$ref": "FMBUML000346"
+       },
+       "head": {
+        "$ref": "FMBUML000341"
+       },
+       "lineStyle": 1,
+       "points": "30:324;242:318"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000353",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000350"
+       },
+       "tail": {
+        "$ref": "FMBUML000346"
+       },
+       "head": {
+        "$ref": "FMBUML000345"
+       },
+       "lineStyle": 1,
+       "points": "30:324;242:528"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000354",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000096"
+       },
+       "tail": {
+        "$ref": "FMBUML000347"
+       },
+       "head": {
+        "$ref": "FMBUML000346"
+       },
+       "lineStyle": 1,
+       "points": "30:498;30:324"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000356",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000355"
+       },
+       "tail": {
+        "$ref": "FMBUML000339"
+       },
+       "head": {
+        "$ref": "FMBUML000340"
+       },
+       "lineStyle": 1,
+       "points": "354:126;674:126"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000358",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000357"
+       },
+       "tail": {
+        "$ref": "FMBUML000341"
+       },
+       "head": {
+        "$ref": "FMBUML000342"
+       },
+       "lineStyle": 1,
+       "points": "354:318;674:258"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000360",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000359"
+       },
+       "tail": {
+        "$ref": "FMBUML000341"
+       },
+       "head": {
+        "$ref": "FMBUML000343"
+       },
+       "lineStyle": 1,
+       "points": "354:318;674:408"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000362",
+       "_parent": {
+        "$ref": "FMBUML000336"
+       },
+       "model": {
+        "$ref": "FMBUML000361"
+       },
+       "tail": {
+        "$ref": "FMBUML000344"
+       },
+       "head": {
+        "$ref": "FMBUML000343"
+       },
+       "lineStyle": 1,
+       "points": "994:408;674:408"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000363",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Calculadoras clínicas",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000365",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000364"
+       },
+       "left": 190,
+       "top": 40,
+       "width": 636,
+       "height": 731
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000366",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000018"
+       },
+       "left": 230,
+       "top": 305,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000367",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000053"
+       },
+       "left": 562,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000368",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000054"
+       },
+       "left": 562,
+       "top": 212,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000369",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000055"
+       },
+       "left": 562,
+       "top": 375,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000370",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000056"
+       },
+       "left": 562,
+       "top": 507,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000371",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000057"
+       },
+       "left": 562,
+       "top": 639,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000372",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000058"
+       },
+       "left": 242,
+       "top": 603,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000373",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000005"
+       },
+       "left": 10,
+       "top": 330,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000374",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000006"
+       },
+       "left": 10,
+       "top": 330,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000375",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000155"
+       },
+       "tail": {
+        "$ref": "FMBUML000373"
+       },
+       "head": {
+        "$ref": "FMBUML000366"
+       },
+       "lineStyle": 1,
+       "points": "30:370;230:351"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000376",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000159"
+       },
+       "tail": {
+        "$ref": "FMBUML000374"
+       },
+       "head": {
+        "$ref": "FMBUML000366"
+       },
+       "lineStyle": 1,
+       "points": "30:370;230:351"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000378",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000377"
+       },
+       "tail": {
+        "$ref": "FMBUML000367"
+       },
+       "head": {
+        "$ref": "FMBUML000366"
+       },
+       "lineStyle": 1,
+       "points": "674:126;354:370"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000380",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000379"
+       },
+       "tail": {
+        "$ref": "FMBUML000368"
+       },
+       "head": {
+        "$ref": "FMBUML000366"
+       },
+       "lineStyle": 1,
+       "points": "674:274;354:370"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000382",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000381"
+       },
+       "tail": {
+        "$ref": "FMBUML000369"
+       },
+       "head": {
+        "$ref": "FMBUML000366"
+       },
+       "lineStyle": 1,
+       "points": "674:421;354:370"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000384",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000383"
+       },
+       "tail": {
+        "$ref": "FMBUML000370"
+       },
+       "head": {
+        "$ref": "FMBUML000366"
+       },
+       "lineStyle": 1,
+       "points": "674:553;354:370"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000386",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000385"
+       },
+       "tail": {
+        "$ref": "FMBUML000371"
+       },
+       "head": {
+        "$ref": "FMBUML000366"
+       },
+       "lineStyle": 1,
+       "points": "674:685;354:370"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000388",
+       "_parent": {
+        "$ref": "FMBUML000363"
+       },
+       "model": {
+        "$ref": "FMBUML000387"
+       },
+       "tail": {
+        "$ref": "FMBUML000372"
+       },
+       "head": {
+        "$ref": "FMBUML000366"
+       },
+       "lineStyle": 1,
+       "points": "354:649;354:370"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000389",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Laboratorio",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000391",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000390"
+       },
+       "left": 190,
+       "top": 40,
+       "width": 956,
+       "height": 562
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000392",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000019"
+       },
+       "left": 242,
+       "top": 64,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000393",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000059"
+       },
+       "left": 550,
+       "top": 145,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000394",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000060"
+       },
+       "left": 882,
+       "top": 163,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000395",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000061"
+       },
+       "left": 230,
+       "top": 228,
+       "width": 248,
+       "height": 160,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000396",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000062"
+       },
+       "left": 562,
+       "top": 355,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000397",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000063"
+       },
+       "left": 242,
+       "top": 470,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000398",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000006"
+       },
+       "left": 10,
+       "top": 177,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000399",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000007"
+       },
+       "left": 10,
+       "top": 351,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000400",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000008"
+       },
+       "left": 10,
+       "top": 476,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000401",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000163"
+       },
+       "tail": {
+        "$ref": "FMBUML000398"
+       },
+       "head": {
+        "$ref": "FMBUML000392"
+       },
+       "lineStyle": 1,
+       "points": "30:217;242:126"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000405",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000402"
+       },
+       "tail": {
+        "$ref": "FMBUML000398"
+       },
+       "head": {
+        "$ref": "FMBUML000395"
+       },
+       "lineStyle": 1,
+       "points": "30:217;230:289"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000409",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000406"
+       },
+       "tail": {
+        "$ref": "FMBUML000400"
+       },
+       "head": {
+        "$ref": "FMBUML000397"
+       },
+       "lineStyle": 1,
+       "points": "30:516;242:516"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000410",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000097"
+       },
+       "tail": {
+        "$ref": "FMBUML000399"
+       },
+       "head": {
+        "$ref": "FMBUML000398"
+       },
+       "lineStyle": 1,
+       "points": "30:391;30:217"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000412",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000411"
+       },
+       "tail": {
+        "$ref": "FMBUML000392"
+       },
+       "head": {
+        "$ref": "FMBUML000393"
+       },
+       "lineStyle": 1,
+       "points": "354:126;674:209"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000414",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000413"
+       },
+       "tail": {
+        "$ref": "FMBUML000395"
+       },
+       "head": {
+        "$ref": "FMBUML000393"
+       },
+       "lineStyle": 1,
+       "points": "354:308;674:209"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000416",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000415"
+       },
+       "tail": {
+        "$ref": "FMBUML000394"
+       },
+       "head": {
+        "$ref": "FMBUML000393"
+       },
+       "lineStyle": 1,
+       "points": "994:209;674:209"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000418",
+       "_parent": {
+        "$ref": "FMBUML000389"
+       },
+       "model": {
+        "$ref": "FMBUML000417"
+       },
+       "tail": {
+        "$ref": "FMBUML000396"
+       },
+       "head": {
+        "$ref": "FMBUML000395"
+       },
+       "lineStyle": 1,
+       "points": "674:401;354:308"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000419",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Parto y recién nacido",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000421",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000420"
+       },
+       "left": 190,
+       "top": 40,
+       "width": 956,
+       "height": 730
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000422",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000024"
+       },
+       "left": 242,
+       "top": 136,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000423",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000064"
+       },
+       "left": 550,
+       "top": 62,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000424",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000065"
+       },
+       "left": 882,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000425",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000066"
+       },
+       "left": 562,
+       "top": 230,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000426",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000067"
+       },
+       "left": 230,
+       "top": 341,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000427",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000068"
+       },
+       "left": 562,
+       "top": 362,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000428",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000069"
+       },
+       "left": 562,
+       "top": 526,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000429",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000070"
+       },
+       "left": 242,
+       "top": 638,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000430",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000007"
+       },
+       "left": 10,
+       "top": 384,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000431",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000010"
+       },
+       "left": 1296,
+       "top": 532,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000432",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000183"
+       },
+       "tail": {
+        "$ref": "FMBUML000430"
+       },
+       "head": {
+        "$ref": "FMBUML000422"
+       },
+       "lineStyle": 1,
+       "points": "30:424;242:182"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000436",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000433"
+       },
+       "tail": {
+        "$ref": "FMBUML000430"
+       },
+       "head": {
+        "$ref": "FMBUML000426"
+       },
+       "lineStyle": 1,
+       "points": "30:424;230:387"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000440",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000437"
+       },
+       "tail": {
+        "$ref": "FMBUML000430"
+       },
+       "head": {
+        "$ref": "FMBUML000429"
+       },
+       "lineStyle": 1,
+       "points": "30:424;242:684"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000444",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000441"
+       },
+       "tail": {
+        "$ref": "FMBUML000431"
+       },
+       "head": {
+        "$ref": "FMBUML000428"
+       },
+       "lineStyle": 1,
+       "points": "1316:572;786:572"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000446",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000445"
+       },
+       "tail": {
+        "$ref": "FMBUML000422"
+       },
+       "head": {
+        "$ref": "FMBUML000423"
+       },
+       "lineStyle": 1,
+       "points": "354:182;674:126"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000448",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000447"
+       },
+       "tail": {
+        "$ref": "FMBUML000423"
+       },
+       "head": {
+        "$ref": "FMBUML000424"
+       },
+       "lineStyle": 1,
+       "points": "674:126;994:126"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000450",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000449"
+       },
+       "tail": {
+        "$ref": "FMBUML000425"
+       },
+       "head": {
+        "$ref": "FMBUML000423"
+       },
+       "lineStyle": 1,
+       "points": "674:276;674:126"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000452",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000451"
+       },
+       "tail": {
+        "$ref": "FMBUML000426"
+       },
+       "head": {
+        "$ref": "FMBUML000427"
+       },
+       "lineStyle": 1,
+       "points": "354:405;674:424"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000454",
+       "_parent": {
+        "$ref": "FMBUML000419"
+       },
+       "model": {
+        "$ref": "FMBUML000453"
+       },
+       "tail": {
+        "$ref": "FMBUML000428"
+       },
+       "head": {
+        "$ref": "FMBUML000426"
+       },
+       "lineStyle": 1,
+       "points": "674:572;354:405"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000455",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Inteligencia artificial",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000457",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000456"
+       },
+       "left": 300,
+       "top": 40,
+       "width": 636,
+       "height": 866
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000458",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000021"
+       },
+       "left": 340,
+       "top": 214,
+       "width": 248,
+       "height": 129,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000459",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000071"
+       },
+       "left": 672,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000460",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000072"
+       },
+       "left": 672,
+       "top": 212,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000461",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000073"
+       },
+       "left": 672,
+       "top": 375,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000462",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000022"
+       },
+       "left": 352,
+       "top": 480,
+       "width": 224,
+       "height": 123,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000463",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000074"
+       },
+       "left": 672,
+       "top": 507,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000464",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000023"
+       },
+       "left": 352,
+       "top": 642,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000465",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000075"
+       },
+       "left": 352,
+       "top": 774,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000466",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000007"
+       },
+       "left": 10,
+       "top": 542,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000467",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000010"
+       },
+       "left": 1086,
+       "top": 303,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000468",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000171"
+       },
+       "tail": {
+        "$ref": "FMBUML000466"
+       },
+       "head": {
+        "$ref": "FMBUML000458"
+       },
+       "lineStyle": 1,
+       "points": "30:582;340:260"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000469",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000175"
+       },
+       "tail": {
+        "$ref": "FMBUML000466"
+       },
+       "head": {
+        "$ref": "FMBUML000462"
+       },
+       "lineStyle": 1,
+       "points": "30:582;352:541"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000470",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000179"
+       },
+       "tail": {
+        "$ref": "FMBUML000466"
+       },
+       "head": {
+        "$ref": "FMBUML000464"
+       },
+       "lineStyle": 1,
+       "points": "30:582;352:688"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000474",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000471"
+       },
+       "tail": {
+        "$ref": "FMBUML000466"
+       },
+       "head": {
+        "$ref": "FMBUML000465"
+       },
+       "lineStyle": 1,
+       "points": "30:582;352:820"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000478",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000475"
+       },
+       "tail": {
+        "$ref": "FMBUML000467"
+       },
+       "head": {
+        "$ref": "FMBUML000459"
+       },
+       "lineStyle": 1,
+       "points": "1106:343;896:126"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000482",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000479"
+       },
+       "tail": {
+        "$ref": "FMBUML000467"
+       },
+       "head": {
+        "$ref": "FMBUML000460"
+       },
+       "lineStyle": 1,
+       "points": "1106:343;896:274"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000486",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000483"
+       },
+       "tail": {
+        "$ref": "FMBUML000467"
+       },
+       "head": {
+        "$ref": "FMBUML000461"
+       },
+       "lineStyle": 1,
+       "points": "1106:343;896:421"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000490",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000487"
+       },
+       "tail": {
+        "$ref": "FMBUML000467"
+       },
+       "head": {
+        "$ref": "FMBUML000463"
+       },
+       "lineStyle": 1,
+       "points": "1106:343;896:553"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000492",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000491"
+       },
+       "tail": {
+        "$ref": "FMBUML000458"
+       },
+       "head": {
+        "$ref": "FMBUML000459"
+       },
+       "lineStyle": 1,
+       "points": "464:278;784:126"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000494",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000493"
+       },
+       "tail": {
+        "$ref": "FMBUML000458"
+       },
+       "head": {
+        "$ref": "FMBUML000460"
+       },
+       "lineStyle": 1,
+       "points": "464:278;784:274"
+      },
+      {
+       "_type": "UMLExtendView",
+       "_id": "FMBUML000496",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000495"
+       },
+       "tail": {
+        "$ref": "FMBUML000461"
+       },
+       "head": {
+        "$ref": "FMBUML000458"
+       },
+       "lineStyle": 1,
+       "points": "784:421;464:278"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000498",
+       "_parent": {
+        "$ref": "FMBUML000455"
+       },
+       "model": {
+        "$ref": "FMBUML000497"
+       },
+       "tail": {
+        "$ref": "FMBUML000462"
+       },
+       "head": {
+        "$ref": "FMBUML000463"
+       },
+       "lineStyle": 1,
+       "points": "464:541;784:553"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCaseDiagram",
+     "_id": "FMBUML000499",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Reportes y auditoría",
+     "defaultDiagram": false,
+     "ownedViews": [
+      {
+       "_type": "UMLUseCaseSubjectView",
+       "_id": "FMBUML000501",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000500"
+       },
+       "left": 190,
+       "top": 40,
+       "width": 636,
+       "height": 586
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000502",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000025"
+       },
+       "left": 242,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000503",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000076"
+       },
+       "left": 562,
+       "top": 80,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000504",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000077"
+       },
+       "left": 242,
+       "top": 218,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000505",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000078"
+       },
+       "left": 562,
+       "top": 218,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000506",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000079"
+       },
+       "left": 242,
+       "top": 356,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLUseCaseView",
+       "_id": "FMBUML000507",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000027"
+       },
+       "left": 242,
+       "top": 494,
+       "width": 224,
+       "height": 92,
+       "wordWrap": true,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000508",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000007"
+       },
+       "left": 10,
+       "top": 224,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLActorView",
+       "_id": "FMBUML000509",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000008"
+       },
+       "left": 10,
+       "top": 500,
+       "width": 40,
+       "height": 80,
+       "suppressAttributes": true,
+       "suppressOperations": true
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000510",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000187"
+       },
+       "tail": {
+        "$ref": "FMBUML000508"
+       },
+       "head": {
+        "$ref": "FMBUML000502"
+       },
+       "lineStyle": 1,
+       "points": "30:264;242:126"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000514",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000511"
+       },
+       "tail": {
+        "$ref": "FMBUML000508"
+       },
+       "head": {
+        "$ref": "FMBUML000504"
+       },
+       "lineStyle": 1,
+       "points": "30:264;242:264"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000518",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000515"
+       },
+       "tail": {
+        "$ref": "FMBUML000508"
+       },
+       "head": {
+        "$ref": "FMBUML000506"
+       },
+       "lineStyle": 1,
+       "points": "30:264;242:402"
+      },
+      {
+       "_type": "UMLAssociationView",
+       "_id": "FMBUML000519",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000195"
+       },
+       "tail": {
+        "$ref": "FMBUML000509"
+       },
+       "head": {
+        "$ref": "FMBUML000507"
+       },
+       "lineStyle": 1,
+       "points": "30:540;242:540"
+      },
+      {
+       "_type": "UMLGeneralizationView",
+       "_id": "FMBUML000520",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000098"
+       },
+       "tail": {
+        "$ref": "FMBUML000509"
+       },
+       "head": {
+        "$ref": "FMBUML000508"
+       },
+       "lineStyle": 1,
+       "points": "30:540;30:264"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000522",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000521"
+       },
+       "tail": {
+        "$ref": "FMBUML000502"
+       },
+       "head": {
+        "$ref": "FMBUML000503"
+       },
+       "lineStyle": 1,
+       "points": "354:126;674:126"
+      },
+      {
+       "_type": "UMLIncludeView",
+       "_id": "FMBUML000524",
+       "_parent": {
+        "$ref": "FMBUML000499"
+       },
+       "model": {
+        "$ref": "FMBUML000523"
+       },
+       "tail": {
+        "$ref": "FMBUML000504"
+       },
+       "head": {
+        "$ref": "FMBUML000505"
+       },
+       "lineStyle": 1,
+       "points": "354:264;674:264"
+      }
+     ]
+    },
+    {
+     "_type": "UMLActor",
+     "_id": "FMBUML000003",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Usuario del sistema",
+     "ownedElements": [
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000127",
+       "_parent": {
+        "$ref": "FMBUML000003"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000128",
+        "_parent": {
+         "$ref": "FMBUML000127"
+        },
+        "reference": {
+         "$ref": "FMBUML000003"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000129",
+        "_parent": {
+         "$ref": "FMBUML000127"
+        },
+        "reference": {
+         "$ref": "FMBUML000011"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000131",
+       "_parent": {
+        "$ref": "FMBUML000003"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000132",
+        "_parent": {
+         "$ref": "FMBUML000131"
+        },
+        "reference": {
+         "$ref": "FMBUML000003"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000133",
+        "_parent": {
+         "$ref": "FMBUML000131"
+        },
+        "reference": {
+         "$ref": "FMBUML000012"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000135",
+       "_parent": {
+        "$ref": "FMBUML000003"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000136",
+        "_parent": {
+         "$ref": "FMBUML000135"
+        },
+        "reference": {
+         "$ref": "FMBUML000003"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000137",
+        "_parent": {
+         "$ref": "FMBUML000135"
+        },
+        "reference": {
+         "$ref": "FMBUML000013"
+        }
+       }
+      }
+     ],
+     "documentation": "Actor primario (abstracto)",
+     "isAbstract": true
+    },
+    {
+     "_type": "UMLActor",
+     "_id": "FMBUML000004",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Recepción",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000093",
+       "_parent": {
+        "$ref": "FMBUML000004"
+       },
+       "source": {
+        "$ref": "FMBUML000004"
+       },
+       "target": {
+        "$ref": "FMBUML000003"
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000139",
+       "_parent": {
+        "$ref": "FMBUML000004"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000140",
+        "_parent": {
+         "$ref": "FMBUML000139"
+        },
+        "reference": {
+         "$ref": "FMBUML000004"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000141",
+        "_parent": {
+         "$ref": "FMBUML000139"
+        },
+        "reference": {
+         "$ref": "FMBUML000014"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000143",
+       "_parent": {
+        "$ref": "FMBUML000004"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000144",
+        "_parent": {
+         "$ref": "FMBUML000143"
+        },
+        "reference": {
+         "$ref": "FMBUML000004"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000145",
+        "_parent": {
+         "$ref": "FMBUML000143"
+        },
+        "reference": {
+         "$ref": "FMBUML000015"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000296",
+       "_parent": {
+        "$ref": "FMBUML000004"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000297",
+        "_parent": {
+         "$ref": "FMBUML000296"
+        },
+        "reference": {
+         "$ref": "FMBUML000004"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000298",
+        "_parent": {
+         "$ref": "FMBUML000296"
+        },
+        "reference": {
+         "$ref": "FMBUML000013"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000300",
+       "_parent": {
+        "$ref": "FMBUML000004"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000301",
+        "_parent": {
+         "$ref": "FMBUML000300"
+        },
+        "reference": {
+         "$ref": "FMBUML000004"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000302",
+        "_parent": {
+         "$ref": "FMBUML000300"
+        },
+        "reference": {
+         "$ref": "FMBUML000042"
+        }
+       }
+      }
+     ],
+     "documentation": "Actor primario"
+    },
+    {
+     "_type": "UMLActor",
+     "_id": "FMBUML000005",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Enfermería",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000095",
+       "_parent": {
+        "$ref": "FMBUML000005"
+       },
+       "source": {
+        "$ref": "FMBUML000005"
+       },
+       "target": {
+        "$ref": "FMBUML000004"
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000147",
+       "_parent": {
+        "$ref": "FMBUML000005"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000148",
+        "_parent": {
+         "$ref": "FMBUML000147"
+        },
+        "reference": {
+         "$ref": "FMBUML000005"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000149",
+        "_parent": {
+         "$ref": "FMBUML000147"
+        },
+        "reference": {
+         "$ref": "FMBUML000016"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000151",
+       "_parent": {
+        "$ref": "FMBUML000005"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000152",
+        "_parent": {
+         "$ref": "FMBUML000151"
+        },
+        "reference": {
+         "$ref": "FMBUML000005"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000153",
+        "_parent": {
+         "$ref": "FMBUML000151"
+        },
+        "reference": {
+         "$ref": "FMBUML000017"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000155",
+       "_parent": {
+        "$ref": "FMBUML000005"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000156",
+        "_parent": {
+         "$ref": "FMBUML000155"
+        },
+        "reference": {
+         "$ref": "FMBUML000005"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000157",
+        "_parent": {
+         "$ref": "FMBUML000155"
+        },
+        "reference": {
+         "$ref": "FMBUML000018"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000350",
+       "_parent": {
+        "$ref": "FMBUML000005"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000351",
+        "_parent": {
+         "$ref": "FMBUML000350"
+        },
+        "reference": {
+         "$ref": "FMBUML000005"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000352",
+        "_parent": {
+         "$ref": "FMBUML000350"
+        },
+        "reference": {
+         "$ref": "FMBUML000052"
+        }
+       }
+      }
+     ],
+     "documentation": "Actor primario"
+    },
+    {
+     "_type": "UMLActor",
+     "_id": "FMBUML000006",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Laboratorista",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000094",
+       "_parent": {
+        "$ref": "FMBUML000006"
+       },
+       "source": {
+        "$ref": "FMBUML000006"
+       },
+       "target": {
+        "$ref": "FMBUML000003"
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000159",
+       "_parent": {
+        "$ref": "FMBUML000006"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000160",
+        "_parent": {
+         "$ref": "FMBUML000159"
+        },
+        "reference": {
+         "$ref": "FMBUML000006"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000161",
+        "_parent": {
+         "$ref": "FMBUML000159"
+        },
+        "reference": {
+         "$ref": "FMBUML000018"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000163",
+       "_parent": {
+        "$ref": "FMBUML000006"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000164",
+        "_parent": {
+         "$ref": "FMBUML000163"
+        },
+        "reference": {
+         "$ref": "FMBUML000006"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000165",
+        "_parent": {
+         "$ref": "FMBUML000163"
+        },
+        "reference": {
+         "$ref": "FMBUML000019"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000402",
+       "_parent": {
+        "$ref": "FMBUML000006"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000403",
+        "_parent": {
+         "$ref": "FMBUML000402"
+        },
+        "reference": {
+         "$ref": "FMBUML000006"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000404",
+        "_parent": {
+         "$ref": "FMBUML000402"
+        },
+        "reference": {
+         "$ref": "FMBUML000061"
+        }
+       }
+      }
+     ],
+     "documentation": "Actor primario"
+    },
+    {
+     "_type": "UMLActor",
+     "_id": "FMBUML000007",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Médico",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000096",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "source": {
+        "$ref": "FMBUML000007"
+       },
+       "target": {
+        "$ref": "FMBUML000005"
+       }
+      },
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000097",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "source": {
+        "$ref": "FMBUML000007"
+       },
+       "target": {
+        "$ref": "FMBUML000006"
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000167",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000168",
+        "_parent": {
+         "$ref": "FMBUML000167"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000169",
+        "_parent": {
+         "$ref": "FMBUML000167"
+        },
+        "reference": {
+         "$ref": "FMBUML000020"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000171",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000172",
+        "_parent": {
+         "$ref": "FMBUML000171"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000173",
+        "_parent": {
+         "$ref": "FMBUML000171"
+        },
+        "reference": {
+         "$ref": "FMBUML000021"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000175",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000176",
+        "_parent": {
+         "$ref": "FMBUML000175"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000177",
+        "_parent": {
+         "$ref": "FMBUML000175"
+        },
+        "reference": {
+         "$ref": "FMBUML000022"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000179",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000180",
+        "_parent": {
+         "$ref": "FMBUML000179"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000181",
+        "_parent": {
+         "$ref": "FMBUML000179"
+        },
+        "reference": {
+         "$ref": "FMBUML000023"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000183",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000184",
+        "_parent": {
+         "$ref": "FMBUML000183"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000185",
+        "_parent": {
+         "$ref": "FMBUML000183"
+        },
+        "reference": {
+         "$ref": "FMBUML000024"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000187",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000188",
+        "_parent": {
+         "$ref": "FMBUML000187"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000189",
+        "_parent": {
+         "$ref": "FMBUML000187"
+        },
+        "reference": {
+         "$ref": "FMBUML000025"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000326",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000327",
+        "_parent": {
+         "$ref": "FMBUML000326"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000328",
+        "_parent": {
+         "$ref": "FMBUML000326"
+        },
+        "reference": {
+         "$ref": "FMBUML000047"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000433",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000434",
+        "_parent": {
+         "$ref": "FMBUML000433"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000435",
+        "_parent": {
+         "$ref": "FMBUML000433"
+        },
+        "reference": {
+         "$ref": "FMBUML000067"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000437",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000438",
+        "_parent": {
+         "$ref": "FMBUML000437"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000439",
+        "_parent": {
+         "$ref": "FMBUML000437"
+        },
+        "reference": {
+         "$ref": "FMBUML000070"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000471",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000472",
+        "_parent": {
+         "$ref": "FMBUML000471"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000473",
+        "_parent": {
+         "$ref": "FMBUML000471"
+        },
+        "reference": {
+         "$ref": "FMBUML000075"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000511",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000512",
+        "_parent": {
+         "$ref": "FMBUML000511"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000513",
+        "_parent": {
+         "$ref": "FMBUML000511"
+        },
+        "reference": {
+         "$ref": "FMBUML000077"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000515",
+       "_parent": {
+        "$ref": "FMBUML000007"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000516",
+        "_parent": {
+         "$ref": "FMBUML000515"
+        },
+        "reference": {
+         "$ref": "FMBUML000007"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000517",
+        "_parent": {
+         "$ref": "FMBUML000515"
+        },
+        "reference": {
+         "$ref": "FMBUML000079"
+        }
+       }
+      }
+     ],
+     "documentation": "Actor primario"
+    },
+    {
+     "_type": "UMLActor",
+     "_id": "FMBUML000008",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Administrador",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000098",
+       "_parent": {
+        "$ref": "FMBUML000008"
+       },
+       "source": {
+        "$ref": "FMBUML000008"
+       },
+       "target": {
+        "$ref": "FMBUML000007"
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000191",
+       "_parent": {
+        "$ref": "FMBUML000008"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000192",
+        "_parent": {
+         "$ref": "FMBUML000191"
+        },
+        "reference": {
+         "$ref": "FMBUML000008"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000193",
+        "_parent": {
+         "$ref": "FMBUML000191"
+        },
+        "reference": {
+         "$ref": "FMBUML000026"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000195",
+       "_parent": {
+        "$ref": "FMBUML000008"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000196",
+        "_parent": {
+         "$ref": "FMBUML000195"
+        },
+        "reference": {
+         "$ref": "FMBUML000008"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000197",
+        "_parent": {
+         "$ref": "FMBUML000195"
+        },
+        "reference": {
+         "$ref": "FMBUML000027"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000236",
+       "_parent": {
+        "$ref": "FMBUML000008"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000237",
+        "_parent": {
+         "$ref": "FMBUML000236"
+        },
+        "reference": {
+         "$ref": "FMBUML000008"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000238",
+        "_parent": {
+         "$ref": "FMBUML000236"
+        },
+        "reference": {
+         "$ref": "FMBUML000032"
+        }
+       }
+      },
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000240",
+       "_parent": {
+        "$ref": "FMBUML000008"
+       },
+       "source": {
+        "$ref": "FMBUML000008"
+       },
+       "target": {
+        "$ref": "FMBUML000003"
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000264",
+       "_parent": {
+        "$ref": "FMBUML000008"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000265",
+        "_parent": {
+         "$ref": "FMBUML000264"
+        },
+        "reference": {
+         "$ref": "FMBUML000008"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000266",
+        "_parent": {
+         "$ref": "FMBUML000264"
+        },
+        "reference": {
+         "$ref": "FMBUML000034"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000406",
+       "_parent": {
+        "$ref": "FMBUML000008"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000407",
+        "_parent": {
+         "$ref": "FMBUML000406"
+        },
+        "reference": {
+         "$ref": "FMBUML000008"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000408",
+        "_parent": {
+         "$ref": "FMBUML000406"
+        },
+        "reference": {
+         "$ref": "FMBUML000063"
+        }
+       }
+      }
+     ],
+     "documentation": "Actor primario"
+    },
+    {
+     "_type": "UMLActor",
+     "_id": "FMBUML000009",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Personal de salud",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000099",
+       "_parent": {
+        "$ref": "FMBUML000009"
+       },
+       "source": {
+        "$ref": "FMBUML000009"
+       },
+       "target": {
+        "$ref": "FMBUML000003"
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000269",
+       "_parent": {
+        "$ref": "FMBUML000009"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000270",
+        "_parent": {
+         "$ref": "FMBUML000269"
+        },
+        "reference": {
+         "$ref": "FMBUML000009"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000271",
+        "_parent": {
+         "$ref": "FMBUML000269"
+        },
+        "reference": {
+         "$ref": "FMBUML000036"
+        }
+       }
+      }
+     ],
+     "documentation": "Actor primario (abstracto)",
+     "isAbstract": true
+    },
+    {
+     "_type": "UMLActor",
+     "_id": "FMBUML000010",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Servicio de IA",
+     "ownedElements": [
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000199",
+       "_parent": {
+        "$ref": "FMBUML000010"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000200",
+        "_parent": {
+         "$ref": "FMBUML000199"
+        },
+        "reference": {
+         "$ref": "FMBUML000010"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000201",
+        "_parent": {
+         "$ref": "FMBUML000199"
+        },
+        "reference": {
+         "$ref": "FMBUML000021"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000203",
+       "_parent": {
+        "$ref": "FMBUML000010"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000204",
+        "_parent": {
+         "$ref": "FMBUML000203"
+        },
+        "reference": {
+         "$ref": "FMBUML000010"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000205",
+        "_parent": {
+         "$ref": "FMBUML000203"
+        },
+        "reference": {
+         "$ref": "FMBUML000022"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000441",
+       "_parent": {
+        "$ref": "FMBUML000010"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000442",
+        "_parent": {
+         "$ref": "FMBUML000441"
+        },
+        "reference": {
+         "$ref": "FMBUML000010"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000443",
+        "_parent": {
+         "$ref": "FMBUML000441"
+        },
+        "reference": {
+         "$ref": "FMBUML000069"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000475",
+       "_parent": {
+        "$ref": "FMBUML000010"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000476",
+        "_parent": {
+         "$ref": "FMBUML000475"
+        },
+        "reference": {
+         "$ref": "FMBUML000010"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000477",
+        "_parent": {
+         "$ref": "FMBUML000475"
+        },
+        "reference": {
+         "$ref": "FMBUML000071"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000479",
+       "_parent": {
+        "$ref": "FMBUML000010"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000480",
+        "_parent": {
+         "$ref": "FMBUML000479"
+        },
+        "reference": {
+         "$ref": "FMBUML000010"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000481",
+        "_parent": {
+         "$ref": "FMBUML000479"
+        },
+        "reference": {
+         "$ref": "FMBUML000072"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000483",
+       "_parent": {
+        "$ref": "FMBUML000010"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000484",
+        "_parent": {
+         "$ref": "FMBUML000483"
+        },
+        "reference": {
+         "$ref": "FMBUML000010"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000485",
+        "_parent": {
+         "$ref": "FMBUML000483"
+        },
+        "reference": {
+         "$ref": "FMBUML000073"
+        }
+       }
+      },
+      {
+       "_type": "UMLAssociation",
+       "_id": "FMBUML000487",
+       "_parent": {
+        "$ref": "FMBUML000010"
+       },
+       "end1": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000488",
+        "_parent": {
+         "$ref": "FMBUML000487"
+        },
+        "reference": {
+         "$ref": "FMBUML000010"
+        }
+       },
+       "end2": {
+        "_type": "UMLAssociationEnd",
+        "_id": "FMBUML000489",
+        "_parent": {
+         "$ref": "FMBUML000487"
+        },
+        "reference": {
+         "$ref": "FMBUML000074"
+        }
+       }
+      }
+     ],
+     "documentation": "Actor secundario",
+     "stereotype": "system"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000011",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-01 Iniciar sesión",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000242",
+       "_parent": {
+        "$ref": "FMBUML000011"
+       },
+       "source": {
+        "$ref": "FMBUML000011"
+       },
+       "target": {
+        "$ref": "FMBUML000028"
+       }
+      }
+     ],
+     "documentation": "La persona entra al sistema con su correo y contraseña y, si su rol lo exige, con el código de su aplicación autenticadora.\n\nActores: Usuario del sistema\n\nPrecondiciones:\n- La cuenta existe y está activa.\n- La cuenta no está bloqueada.\n\nFlujo principal:\n1. El usuario abre la pantalla de inicio de sesión.\n2. Ingresa correo y contraseña.\n3. El sistema valida las credenciales (incluye CU-03).\n4. El sistema abre el Panel Principal con el menú propio del rol del usuario.\n\nFlujos alternativos:\n- 3a. Credenciales inválidas: el sistema muestra «Email o contraseña incorrectos.» (el mismo mensaje si el correo no existe) y suma un intento fallido.\n- 3b. Quinto intento fallido consecutivo: se extiende con CU-06 (bloqueo de 15 minutos).\n- 3c. El usuario tiene MFA activo: se extiende con CU-04 antes de entrar.\n- 3d. El rol exige MFA y aún no lo configuró: se extiende con CU-05 (primer ingreso).\n\nPostcondiciones:\n- Sesión abierta con cookies seguras y registrada en la auditoría (inicio, IP y navegador).\n\nRequisitos: RF-21, RF-22, RNF-17\nCasos de prueba: TC-001, TC-002, TC-003, TC-004\nDefectos abiertos: BUG-001, BUG-002",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000080",
+       "_parent": {
+        "$ref": "FMBUML000011"
+       },
+       "name": "MFA activo"
+      },
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000081",
+       "_parent": {
+        "$ref": "FMBUML000011"
+       },
+       "name": "Primer ingreso"
+      },
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000082",
+       "_parent": {
+        "$ref": "FMBUML000011"
+       },
+       "name": "Quinto fallo"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000012",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-02 Cerrar sesión",
+     "ownedElements": [],
+     "documentation": "La persona termina su sesión.\n\nActores: Usuario del sistema\n\nPrecondiciones:\n- Sesión abierta.\n\nFlujo principal:\n1. El usuario elige «Cerrar sesión».\n2. El sistema invalida el token y borra las cookies.\n3. El sistema muestra la pantalla de inicio de sesión.\n\nFlujos alternativos:\n- 2a. El servidor no responde: la sesión se cierra igual en el navegador.\n\nPostcondiciones:\n- Sesión cerrada y registrada en la auditoría.\n\nRequisitos: RF-22\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000028",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-03 Validar credenciales",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000029",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-04 Verificar código MFA",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000244",
+       "_parent": {
+        "$ref": "FMBUML000029"
+       },
+       "source": {
+        "$ref": "FMBUML000029"
+       },
+       "target": {
+        "$ref": "FMBUML000011"
+       },
+       "condition": "el usuario tiene el MFA activado",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000080"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000030",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-05 Configurar segundo factor (MFA)",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000246",
+       "_parent": {
+        "$ref": "FMBUML000030"
+       },
+       "source": {
+        "$ref": "FMBUML000030"
+       },
+       "target": {
+        "$ref": "FMBUML000011"
+       },
+       "condition": "su rol exige MFA y aún no lo configuró",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000081"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000031",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-06 Bloquear cuenta 15 minutos",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000248",
+       "_parent": {
+        "$ref": "FMBUML000031"
+       },
+       "source": {
+        "$ref": "FMBUML000031"
+       },
+       "target": {
+        "$ref": "FMBUML000011"
+       },
+       "condition": "5.º intento fallido consecutivo",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000082"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000032",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-07 Restablecer MFA de un usuario",
+     "ownedElements": [],
+     "documentation": "El administrador borra el segundo factor de quien perdió o cambió el celular.\n\nActores: Administrador\n\nPrecondiciones:\n- Sesión de administrador.\n- El usuario tiene MFA activo.\n\nFlujo principal:\n1. El administrador abre Usuarios y elige «Restablecer MFA» en la fila del usuario.\n2. El sistema pide confirmación.\n3. El administrador confirma.\n4. El sistema borra el secreto y desactiva el MFA del usuario.\n\nFlujos alternativos:\n- 1a. Quien lo intenta no es administrador: el sistema responde 403.\n\nPostcondiciones:\n- El usuario configurará el MFA en su próximo ingreso (CU-05).\n- Queda en la auditoría como MFA_RESTABLECIDO.\n\nRequisitos: RNF-17\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000014",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-10 Registrar paciente",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000306",
+       "_parent": {
+        "$ref": "FMBUML000014"
+       },
+       "source": {
+        "$ref": "FMBUML000014"
+       },
+       "target": {
+        "$ref": "FMBUML000039"
+       }
+      },
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000308",
+       "_parent": {
+        "$ref": "FMBUML000014"
+       },
+       "source": {
+        "$ref": "FMBUML000014"
+       },
+       "target": {
+        "$ref": "FMBUML000040"
+       }
+      }
+     ],
+     "documentation": "Se registra a la gestante con sus datos y su consentimiento de tratamiento de datos.\n\nActores: Recepción (y por herencia Enfermería, Médico)\n\nPrecondiciones:\n- Sesión con permiso de pacientes.\n\nFlujo principal:\n1. El usuario abre Pacientes → «Nueva Paciente».\n2. Completa los datos personales y de contacto.\n3. Marca el consentimiento de tratamiento de datos (incluye CU-12).\n4. Guarda; el sistema verifica que la cédula no esté registrada (incluye CU-13).\n5. El sistema confirma el registro y ofrece registrar su embarazo (extensión CU-30).\n\nFlujos alternativos:\n- 3a. Sin consentimiento: el sistema no registra y muestra «Se requiere el consentimiento del paciente para registrar sus datos (Ley 164)».\n- 4a. Cédula ya registrada: «Ya existe un paciente registrado con esta cédula de identidad».\n- 2a. Fecha de nacimiento futura: el selector no la permite.\n\nPostcondiciones:\n- La paciente existe con sus datos personales cifrados y su consentimiento registrado.\n\nRequisitos: RF-01\nCasos de prueba: TC-007, TC-008, TC-009, TC-010\nDefectos abiertos: —",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000083",
+       "_parent": {
+        "$ref": "FMBUML000014"
+       },
+       "name": "Registro exitoso"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000013",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-11 Buscar paciente",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000312",
+       "_parent": {
+        "$ref": "FMBUML000013"
+       },
+       "source": {
+        "$ref": "FMBUML000013"
+       },
+       "target": {
+        "$ref": "FMBUML000041"
+       }
+      }
+     ],
+     "documentation": "Encontrar a una paciente por nombre, apellido o cédula aunque los datos estén cifrados.\n\nActores: Recepción (y por herencia Enfermería, Médico); Laboratorista\n\nPrecondiciones:\n- Sesión con permiso de ver pacientes.\n\nFlujo principal:\n1. El usuario escribe el texto de búsqueda.\n2. El sistema normaliza tildes y grafías (incluye CU-14) y busca por el hash de los datos.\n3. El sistema muestra las coincidencias paginadas.\n\nFlujos alternativos:\n- 3a. Sin coincidencias: listado vacío con su mensaje, sin error.\n\nPostcondiciones:\n- —\n\nRequisitos: RF-02\nCasos de prueba: TC-011\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000039",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-12 Registrar consentimiento (Ley 164)",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000040",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-13 Validar cédula única",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000041",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-14 Ignorar tildes y grafías (Quispe/Kispe)",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000042",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-15 Importar pacientes desde Excel",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000314",
+       "_parent": {
+        "$ref": "FMBUML000042"
+       },
+       "source": {
+        "$ref": "FMBUML000042"
+       },
+       "target": {
+        "$ref": "FMBUML000043"
+       }
+      }
+     ],
+     "documentation": "Carga masiva desde una plantilla, con vista previa fila por fila.\n\nActores: Recepción\n\nPrecondiciones:\n- Sesión con permiso de crear pacientes.\n\nFlujo principal:\n1. El usuario descarga la plantilla y la llena.\n2. Sube el archivo.\n3. El sistema valida cada fila y detecta cédulas duplicadas (incluye CU-16).\n4. El usuario revisa la vista previa y confirma.\n5. El sistema registra solo las filas válidas.\n\nFlujos alternativos:\n- 3a. Filas inválidas o duplicadas: se marcan con su motivo y no se importan.\n\nPostcondiciones:\n- Las pacientes válidas quedan registradas.\n\nRequisitos: RF-03\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000043",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-16 Detectar cédulas duplicadas",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000026",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-20 Gestionar usuarios",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000273",
+       "_parent": {
+        "$ref": "FMBUML000026"
+       },
+       "source": {
+        "$ref": "FMBUML000026"
+       },
+       "target": {
+        "$ref": "FMBUML000033"
+       }
+      }
+     ],
+     "documentation": "El administrador crea, edita, activa o desactiva cuentas del personal.\n\nActores: Administrador\n\nPrecondiciones:\n- Sesión de administrador.\n\nFlujo principal:\n1. El administrador abre Gestión de Usuarios.\n2. Elige «Nuevo Usuario» o edita uno existente.\n3. Completa los datos y asigna rol o cargo (incluye CU-21).\n4. Guarda.\n\nFlujos alternativos:\n- 4a. Correo repetido o contraseña débil: el sistema indica el campo a corregir.\n- 1a. Un usuario con historial no se borra: se desactiva (la auditoría es inmutable).\n\nPostcondiciones:\n- El usuario puede iniciar sesión con los permisos de su rol o cargo.\n\nRequisitos: RF-21\nCasos de prueba: TC-003, TC-004 (precondición)\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000033",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-21 Asignar rol o cargo",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000034",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-22 Crear o editar cargo",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000275",
+       "_parent": {
+        "$ref": "FMBUML000034"
+       },
+       "source": {
+        "$ref": "FMBUML000034"
+       },
+       "target": {
+        "$ref": "FMBUML000035"
+       }
+      }
+     ],
+     "documentation": "El administrador define un cargo del hospital (obstetriz, nutricionista…) sobre un rol base, eligiendo qué módulos de ese rol usa.\n\nActores: Administrador\n\nPrecondiciones:\n- Sesión de administrador.\n\nFlujo principal:\n1. El administrador abre «Cargos y permisos» y elige «Nuevo cargo».\n2. Escribe el nombre y elige el rol base.\n3. Elige los módulos del rol base que usará el cargo (incluye CU-23).\n4. Guarda.\n\nFlujos alternativos:\n- 3a. Intenta incluir un módulo que el rol base no tiene: el sistema no lo ofrece y la API lo rechaza.\n- 4a. Intenta borrar un cargo con usuarios: el sistema lo impide.\n\nPostcondiciones:\n- El cargo existe; quien lo tenga ve solo esos módulos. El alta queda auditada.\n\nRequisitos: RF-30\nCasos de prueba: TC-006\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000035",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-23 Elegir módulos del rol base",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000036",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-24 Usar un módulo del sistema",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000277",
+       "_parent": {
+        "$ref": "FMBUML000036"
+       },
+       "source": {
+        "$ref": "FMBUML000036"
+       },
+       "target": {
+        "$ref": "FMBUML000037"
+       }
+      }
+     ],
+     "documentation": "Cada vez que el personal abre una pantalla o llama a la API, el sistema verifica su permiso.\n\nActores: Personal de salud\n\nPrecondiciones:\n- Sesión abierta.\n\nFlujo principal:\n1. El usuario elige un módulo del menú.\n2. El sistema verifica el permiso del rol y del cargo (incluye CU-25).\n3. El sistema muestra el módulo.\n\nFlujos alternativos:\n- 2a. Sin permiso (módulo ajeno al rol o quitado por el cargo): se extiende con CU-26; la pantalla muestra «Acceso Restringido» y la API responde 403.\n\nPostcondiciones:\n- El usuario solo ve y modifica lo que su rol y su cargo permiten.\n\nRequisitos: RF-21, RF-30\nCasos de prueba: TC-005, TC-006\nDefectos abiertos: BUG-001"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000037",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-25 Verificar permiso del rol y del cargo",
+     "ownedElements": [],
+     "documentation": "",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000084",
+       "_parent": {
+        "$ref": "FMBUML000037"
+       },
+       "name": "Sin permiso"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000038",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-26 Denegar acceso (403)",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000279",
+       "_parent": {
+        "$ref": "FMBUML000038"
+       },
+       "source": {
+        "$ref": "FMBUML000038"
+       },
+       "target": {
+        "$ref": "FMBUML000037"
+       },
+       "condition": "el módulo no está en su rol o su cargo",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000084"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000020",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-30 Registrar embarazo",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000310",
+       "_parent": {
+        "$ref": "FMBUML000020"
+       },
+       "source": {
+        "$ref": "FMBUML000020"
+       },
+       "target": {
+        "$ref": "FMBUML000014"
+       },
+       "condition": "se acepta registrar el embarazo ahora",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000083"
+        }
+       ]
+      },
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000330",
+       "_parent": {
+        "$ref": "FMBUML000020"
+       },
+       "source": {
+        "$ref": "FMBUML000020"
+       },
+       "target": {
+        "$ref": "FMBUML000044"
+       }
+      },
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000332",
+       "_parent": {
+        "$ref": "FMBUML000020"
+       },
+       "source": {
+        "$ref": "FMBUML000020"
+       },
+       "target": {
+        "$ref": "FMBUML000046"
+       }
+      }
+     ],
+     "documentation": "Se abre el embarazo de la paciente con su FUM; el sistema calcula la edad gestacional y la FPP.\n\nActores: Médico\n\nPrecondiciones:\n- La paciente está registrada.\n- No tiene otro embarazo activo.\n\nFlujo principal:\n1. El médico elige «Registrar embarazo» (desde la paciente o desde Embarazos).\n2. Ingresa la fecha de la última menstruación y los antecedentes obstétricos.\n3. El sistema calcula EG y FPP por Naegele (incluye CU-31) y verifica que no haya otro embarazo activo (incluye CU-32).\n4. El sistema guarda el embarazo como activo.\n\nFlujos alternativos:\n- 3a. Ya hay un embarazo activo: «Esta paciente ya tiene un embarazo activo».\n- 2a. FUM futura: «La Fecha de Última Menstruación no puede estar en el futuro.»\n- 3b. Hay ecografía del primer trimestre con discrepancia: se extiende con CU-33 (redatar, ACOG).\n\nPostcondiciones:\n- Embarazo activo con EG y FPP; FUM hace 280 días → EG 40+0 y FPP = hoy.\n\nRequisitos: RF-05\nCasos de prueba: TC-012, TC-013, TC-014\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000044",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-31 Calcular EG y FPP (Naegele)",
+     "ownedElements": [],
+     "documentation": "",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000085",
+       "_parent": {
+        "$ref": "FMBUML000044"
+       },
+       "name": "Ecografía discordante"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000046",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-32 Verificar un solo embarazo activo",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000045",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-33 Redatar según ecografía (ACOG)",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000334",
+       "_parent": {
+        "$ref": "FMBUML000045"
+       },
+       "source": {
+        "$ref": "FMBUML000045"
+       },
+       "target": {
+        "$ref": "FMBUML000044"
+       },
+       "condition": "EG por ecografía y por FUM difieren más que el umbral ACOG",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000085"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000047",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-34 Ver embarazo y su línea de tiempo",
+     "ownedElements": [],
+     "documentation": "Consultar el embarazo con sus controles, ecografías, laboratorio y parto en orden temporal.\n\nActores: Médico\n\nPrecondiciones:\n- El embarazo existe.\n\nFlujo principal:\n1. El médico abre el embarazo.\n2. El sistema muestra el resumen y la línea de tiempo.\n\nFlujos alternativos:\n- —\n\nPostcondiciones:\n- —\n\nRequisitos: RF-05\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000016",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-40 Registrar triaje",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000355",
+       "_parent": {
+        "$ref": "FMBUML000016"
+       },
+       "source": {
+        "$ref": "FMBUML000016"
+       },
+       "target": {
+        "$ref": "FMBUML000048"
+       }
+      }
+     ],
+     "documentation": "Enfermería toma signos vitales al llegar la paciente y asigna prioridad.\n\nActores: Enfermería (y por herencia Médico)\n\nPrecondiciones:\n- La paciente está registrada.\n\nFlujo principal:\n1. La enfermera abre Triaje → «Nuevo».\n2. Registra los signos vitales y el motivo.\n3. Asigna prioridad urgente, alta, normal o baja (incluye CU-42).\n4. Guarda como pendiente.\n\nFlujos alternativos:\n- 2a. Signos vitales fuera de rango fisiológico: el sistema los rechaza con su mensaje.\n\nPostcondiciones:\n- Triaje pendiente de atención.\n\nRequisitos: RF-16\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000017",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-41 Registrar control prenatal",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000357",
+       "_parent": {
+        "$ref": "FMBUML000017"
+       },
+       "source": {
+        "$ref": "FMBUML000017"
+       },
+       "target": {
+        "$ref": "FMBUML000049"
+       }
+      },
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000359",
+       "_parent": {
+        "$ref": "FMBUML000017"
+       },
+       "source": {
+        "$ref": "FMBUML000017"
+       },
+       "target": {
+        "$ref": "FMBUML000050"
+       }
+      }
+     ],
+     "documentation": "Se registra la consulta prenatal y el sistema marca las alertas clínicas.\n\nActores: Enfermería (y por herencia Médico)\n\nPrecondiciones:\n- La paciente tiene un embarazo activo.\n\nFlujo principal:\n1. El usuario abre Controles → «Nuevo control» y elige paciente y embarazo.\n2. Registra signos vitales, altura uterina, FCF y hallazgos (incluye CU-43).\n3. El sistema evalúa las alertas clínicas (incluye CU-44): PA ≥ 140/90, FCF fuera de 110–160 lpm, proteinuria positiva, edema severo, movimientos fetales ausentes.\n4. El sistema guarda el control y muestra sus alertas.\n\nFlujos alternativos:\n- 3a. Hay alertas: se notifica al médico responsable (CU-45 «extend» CU-44).\n- 2a. Dato fuera de rango: el sistema debe indicar qué campo corregir.\n\nPostcondiciones:\n- Control guardado con sus alertas visibles en el listado y el detalle.\n\nRequisitos: RF-06, RF-20\nCasos de prueba: TC-015, TC-016, TC-017, TC-018\nDefectos abiertos: BUG-003, BUG-004"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000048",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-42 Asignar prioridad",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000049",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-43 Registrar signos vitales",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000050",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-44 Evaluar alertas clínicas",
+     "ownedElements": [],
+     "documentation": "",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000086",
+       "_parent": {
+        "$ref": "FMBUML000050"
+       },
+       "name": "Alerta detectada"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000051",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-45 Notificar al médico responsable",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000361",
+       "_parent": {
+        "$ref": "FMBUML000051"
+       },
+       "source": {
+        "$ref": "FMBUML000051"
+       },
+       "target": {
+        "$ref": "FMBUML000050"
+       },
+       "condition": "al menos una alerta clínica",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000086"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000052",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-46 Ver historial de controles",
+     "ownedElements": [],
+     "documentation": "Consultar los controles del embarazo con su evolución.\n\nActores: Enfermería (y por herencia Médico)\n\nPrecondiciones:\n- El embarazo tiene controles.\n\nFlujo principal:\n1. El usuario abre los controles de la paciente.\n2. El sistema los lista con sus alertas.\n\nFlujos alternativos:\n- —\n\nPostcondiciones:\n- —\n\nRequisitos: RF-06\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000015",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-50 Agendar cita",
+     "ownedElements": [],
+     "documentation": "Programar una consulta para una paciente con un médico y consultorio.\n\nActores: Recepción (y por herencia Enfermería, Médico)\n\nPrecondiciones:\n- La paciente está registrada.\n\nFlujo principal:\n1. El usuario abre Agenda de Citas → «Nueva cita».\n2. Elige paciente, médico, fecha y hora.\n3. Guarda.\n4. El sistema programa el recordatorio para el médico responsable.\n\nFlujos alternativos:\n- 3a. Horario ocupado o fuera de atención: el sistema lo indica.\n\nPostcondiciones:\n- Cita agendada; el recordatorio llega por notificación en vivo (hora de Bolivia).\n\nRequisitos: RF-20\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000018",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-60 Usar una calculadora clínica",
+     "ownedElements": [],
+     "documentation": "Caso general del que se especializan las calculadoras (IMC, PTOG, Bishop, preeclampsia, EG…): el usuario ingresa los datos y obtiene el resultado con su interpretación según la norma.\n\nActores: Médico, Enfermería, Laboratorista\n\nPrecondiciones:\n- Sesión con permiso de calculadoras.\n\nFlujo principal:\n1. El usuario abre Calculadoras y elige una.\n2. Ingresa los datos.\n3. El sistema calcula y muestra el resultado con su clasificación (OMS, IADPSG, Bishop…).\n4. El usuario puede guardarlo (CU-66 «extend» CU-60).\n\nFlujos alternativos:\n- 2a. Dato faltante o fuera de rango: el sistema indica el campo.\n\nPostcondiciones:\n- Resultado mostrado (y guardado si se eligió).\n\nRequisitos: RF-17\nCasos de prueba: TC-019, TC-020, TC-021\nDefectos abiertos: BUG-005, BUG-006",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000087",
+       "_parent": {
+        "$ref": "FMBUML000018"
+       },
+       "name": "Guardar"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000053",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-61 Calcular IMC (OMS)",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000377",
+       "_parent": {
+        "$ref": "FMBUML000053"
+       },
+       "source": {
+        "$ref": "FMBUML000053"
+       },
+       "target": {
+        "$ref": "FMBUML000018"
+       }
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000054",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-62 Diagnosticar diabetes gestacional (PTOG)",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000379",
+       "_parent": {
+        "$ref": "FMBUML000054"
+       },
+       "source": {
+        "$ref": "FMBUML000054"
+       },
+       "target": {
+        "$ref": "FMBUML000018"
+       }
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000055",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-63 Calcular puntaje de Bishop",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000381",
+       "_parent": {
+        "$ref": "FMBUML000055"
+       },
+       "source": {
+        "$ref": "FMBUML000055"
+       },
+       "target": {
+        "$ref": "FMBUML000018"
+       }
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000056",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-64 Estimar riesgo de preeclampsia",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000383",
+       "_parent": {
+        "$ref": "FMBUML000056"
+       },
+       "source": {
+        "$ref": "FMBUML000056"
+       },
+       "target": {
+        "$ref": "FMBUML000018"
+       }
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000057",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-65 Calcular edad gestacional",
+     "ownedElements": [
+      {
+       "_type": "UMLGeneralization",
+       "_id": "FMBUML000385",
+       "_parent": {
+        "$ref": "FMBUML000057"
+       },
+       "source": {
+        "$ref": "FMBUML000057"
+       },
+       "target": {
+        "$ref": "FMBUML000018"
+       }
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000058",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-66 Guardar en el historial",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000387",
+       "_parent": {
+        "$ref": "FMBUML000058"
+       },
+       "source": {
+        "$ref": "FMBUML000058"
+       },
+       "target": {
+        "$ref": "FMBUML000018"
+       },
+       "condition": "el usuario elige guardar el resultado",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000087"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000019",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-70 Registrar resultado de laboratorio",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000411",
+       "_parent": {
+        "$ref": "FMBUML000019"
+       },
+       "source": {
+        "$ref": "FMBUML000019"
+       },
+       "target": {
+        "$ref": "FMBUML000059"
+       }
+      }
+     ],
+     "documentation": "Se registra el examen de una paciente con sus resultados, que el sistema evalúa.\n\nActores: Laboratorista (y por herencia Médico)\n\nPrecondiciones:\n- La paciente está registrada.\n- El examen existe en el catálogo con su rango de referencia.\n\nFlujo principal:\n1. El usuario abre Laboratorio → «Nuevo Examen».\n2. Elige paciente y tipo de examen e ingresa los valores.\n3. El sistema evalúa cada valor contra su rango (incluye CU-72): normal, anormal o crítico.\n4. El usuario guarda; el examen y sus resultados quedan visibles en el detalle y en la historia clínica.\n\nFlujos alternativos:\n- 3a. Valor crítico: se alerta al médico responsable (CU-73 «extend» CU-72).\n\nPostcondiciones:\n- Examen con resultados evaluados, visibles en todas las pantallas.\n\nRequisitos: RF-12\nCasos de prueba: TC-022\nDefectos abiertos: BUG-007, BUG-008"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000061",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-71 Importar resultados (Excel o CSV)",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000413",
+       "_parent": {
+        "$ref": "FMBUML000061"
+       },
+       "source": {
+        "$ref": "FMBUML000061"
+       },
+       "target": {
+        "$ref": "FMBUML000059"
+       }
+      }
+     ],
+     "documentation": "Carga de resultados desde Excel o CSV, reconociendo encabezados por sinónimos.\n\nActores: Laboratorista (y por herencia Médico)\n\nPrecondiciones:\n- Archivo con una fila por resultado.\n\nFlujo principal:\n1. El usuario sube el archivo.\n2. El sistema reconoce los encabezados (o el usuario los mapea).\n3. El sistema muestra la vista previa con la evaluación de cada valor (incluye CU-72).\n4. El usuario confirma; el sistema guarda sin duplicados.\n\nFlujos alternativos:\n- 4a. El lote se puede deshacer entero, con motivo (CU-74 «extend» CU-71).\n- 3a. Filas ya cargadas: se marcan «Ya cargada» y no se repiten.\n\nPostcondiciones:\n- Resultados guardados y evaluados; el lote queda auditado.\n\nRequisitos: RF-13\nCasos de prueba: TC-022 (vía alterna)\nDefectos abiertos: BUG-008",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000088",
+       "_parent": {
+        "$ref": "FMBUML000061"
+       },
+       "name": "Lote erróneo"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000059",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-72 Evaluar contra el rango de referencia",
+     "ownedElements": [],
+     "documentation": "",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000089",
+       "_parent": {
+        "$ref": "FMBUML000059"
+       },
+       "name": "Valor crítico"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000060",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-73 Alertar resultado crítico",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000415",
+       "_parent": {
+        "$ref": "FMBUML000060"
+       },
+       "source": {
+        "$ref": "FMBUML000060"
+       },
+       "target": {
+        "$ref": "FMBUML000059"
+       },
+       "condition": "el valor cruza el umbral crítico",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000089"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000062",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-74 Deshacer un lote importado",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000417",
+       "_parent": {
+        "$ref": "FMBUML000062"
+       },
+       "source": {
+        "$ref": "FMBUML000062"
+       },
+       "target": {
+        "$ref": "FMBUML000061"
+       },
+       "condition": "el usuario decide deshacer el lote",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000088"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000063",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-75 Administrar catálogo y rangos",
+     "ownedElements": [],
+     "documentation": "Mantener los tipos de examen y sus rangos de referencia y umbrales críticos.\n\nActores: Administrador\n\nPrecondiciones:\n- Sesión de administrador.\n\nFlujo principal:\n1. Abre el catálogo.\n2. Crea o edita un examen y sus rangos.\n3. Guarda.\n\nFlujos alternativos:\n- 3a. Rango inconsistente (mínimo > máximo): el sistema lo rechaza.\n\nPostcondiciones:\n- Las evaluaciones nuevas usan los rangos actualizados.\n\nRequisitos: RF-12\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000024",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-80 Registrar parto",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000445",
+       "_parent": {
+        "$ref": "FMBUML000024"
+       },
+       "source": {
+        "$ref": "FMBUML000024"
+       },
+       "target": {
+        "$ref": "FMBUML000064"
+       }
+      }
+     ],
+     "documentation": "Se registra el parto con uno o varios recién nacidos validados.\n\nActores: Médico\n\nPrecondiciones:\n- La paciente tiene un embarazo activo sin parto registrado.\n\nFlujo principal:\n1. El médico abre Partos → «Nuevo parto» y elige el embarazo.\n2. Registra los datos del parto (vía, duración, complicaciones).\n3. Registra cada recién nacido (incluye CU-81), con peso, talla y Apgar validados (CU-82).\n4. Guarda; el parto queda en sus cinco pestañas.\n\nFlujos alternativos:\n- 3a. Peso fuera de 300–6.000 g o Apgar fuera de 0–10: el sistema indica el rango válido.\n- 3b. Se estima la EG del recién nacido por Capurro o Ballard (CU-83 «extend» CU-81).\n\nPostcondiciones:\n- Parto y recién nacidos registrados; el embarazo se cierra.\n\nRequisitos: RF-11, RF-25\nCasos de prueba: TC-023, TC-024\nDefectos abiertos: BUG-009, BUG-010"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000064",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-81 Registrar recién nacido",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000447",
+       "_parent": {
+        "$ref": "FMBUML000064"
+       },
+       "source": {
+        "$ref": "FMBUML000064"
+       },
+       "target": {
+        "$ref": "FMBUML000065"
+       }
+      }
+     ],
+     "documentation": "",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000090",
+       "_parent": {
+        "$ref": "FMBUML000064"
+       },
+       "name": "EG por examen físico"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000065",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-82 Validar peso, talla y Apgar",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000066",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-83 Estimar EG por Capurro o Ballard",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000449",
+       "_parent": {
+        "$ref": "FMBUML000066"
+       },
+       "source": {
+        "$ref": "FMBUML000066"
+       },
+       "target": {
+        "$ref": "FMBUML000064"
+       },
+       "condition": "se necesita la EG del recién nacido",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000090"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000067",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-84 Registrar tacto en el partograma",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000451",
+       "_parent": {
+        "$ref": "FMBUML000067"
+       },
+       "source": {
+        "$ref": "FMBUML000067"
+       },
+       "target": {
+        "$ref": "FMBUML000068"
+       }
+      }
+     ],
+     "documentation": "Registrar la evolución del trabajo de parto y ver la curva frente a las líneas de la OMS.\n\nActores: Médico\n\nPrecondiciones:\n- Parto en trabajo de parto.\n\nFlujo principal:\n1. El médico elige «Registrar tacto».\n2. Ingresa dilatación, estación, contracciones, FCF y signos vitales.\n3. El sistema dibuja la curva con las líneas de alerta y acción (incluye CU-85) y avisa si se cruzan.\n\nFlujos alternativos:\n- 2a. Con ecografía transperineal, el Servicio de IA mide el ángulo de progresión y el médico lo confirma antes de guardarlo (CU-86 «extend» CU-84).\n\nPostcondiciones:\n- Tacto registrado; curva actualizada.\n\nRequisitos: RF-24, RF-28\nCasos de prueba: —\nDefectos abiertos: —",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000091",
+       "_parent": {
+        "$ref": "FMBUML000067"
+       },
+       "name": "Ecografía transperineal"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000068",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-85 Ver curva de dilatación y líneas OMS",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000069",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-86 Medir ángulo de progresión",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000453",
+       "_parent": {
+        "$ref": "FMBUML000069"
+       },
+       "source": {
+        "$ref": "FMBUML000069"
+       },
+       "target": {
+        "$ref": "FMBUML000067"
+       },
+       "condition": "se dispone de la imagen transperineal",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000091"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000070",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-87 Redactar y firmar epicrisis",
+     "ownedElements": [],
+     "documentation": "Epicrisis del parto según la norma técnica y la HCP CLAP, firmada con matrícula.\n\nActores: Médico\n\nPrecondiciones:\n- Parto registrado.\n\nFlujo principal:\n1. El médico redacta la epicrisis (diagnósticos CIE-10, egreso, indicaciones).\n2. Firma con su matrícula.\n3. El sistema la bloquea y permite exportarla en PDF.\n\nFlujos alternativos:\n- 3a. Solo el administrador puede reabrirla, con motivo.\n\nPostcondiciones:\n- Epicrisis firmada e inalterable.\n\nRequisitos: RF-26, RF-27\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000021",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-90 Analizar ecografía obstétrica",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000491",
+       "_parent": {
+        "$ref": "FMBUML000021"
+       },
+       "source": {
+        "$ref": "FMBUML000021"
+       },
+       "target": {
+        "$ref": "FMBUML000071"
+       }
+      },
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000493",
+       "_parent": {
+        "$ref": "FMBUML000021"
+       },
+       "source": {
+        "$ref": "FMBUML000021"
+       },
+       "target": {
+        "$ref": "FMBUML000072"
+       }
+      }
+     ],
+     "documentation": "Análisis de la imagen con las redes entrenadas con ecografías reales.\n\nActores: Médico; Servicio de IA (secundario)\n\nPrecondiciones:\n- Servicio de IA en marcha.\n- Imagen PNG, JPG o DICOM.\n\nFlujo principal:\n1. El médico abre Análisis CNN (IA) → Ecografía y sube la imagen (y el tamaño de píxel si lo conoce).\n2. El Servicio de IA reconoce el plano anatómico (incluye CU-91).\n3. Segmenta las estructuras de ese plano y mide (HC, DBP, EG; ICT; CA; LF) (incluye CU-92).\n4. El sistema muestra el informe con cada medida y su margen de error medido.\n\nFlujos alternativos:\n- 3a. Corte de cabeza: se agrega el cribado de anomalías cerebrales (CU-94 «extend» CU-90).\n- 1a. Archivo que no es imagen: se rechaza con el formato válido, sin error del servidor.\n- 1b. Tamaño de píxel imposible (0 o negativo): debe rechazarse con su mensaje.\n\nPostcondiciones:\n- Informe de apoyo a la decisión (no diagnóstico).\n\nRequisitos: RF-09, RF-32\nCasos de prueba: TC-025, TC-026, TC-027\nDefectos abiertos: BUG-011",
+     "extensionPoints": [
+      {
+       "_type": "UMLExtensionPoint",
+       "_id": "FMBUML000092",
+       "_parent": {
+        "$ref": "FMBUML000021"
+       },
+       "name": "Plano de cabeza"
+      }
+     ]
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000071",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-91 Reconocer plano anatómico",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000072",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-92 Segmentar y medir (HC, ICT, CA, LF)",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000023",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-93 Clasificar cardiotocografía",
+     "ownedElements": [],
+     "documentation": "Clasificar el monitoreo fetal con el modelo supervisado (gradient boosting).\n\nActores: Médico\n\nPrecondiciones:\n- Parámetros del registro de CTG.\n\nFlujo principal:\n1. El médico abre la pestaña Cardiotocografía.\n2. Ingresa los parámetros del monitoreo.\n3. El sistema clasifica normal, sospechosa o patológica y muestra la fiabilidad medida (96,0 %).\n\nFlujos alternativos:\n- 2a. Parámetro faltante: el sistema indica cuál.\n\nPostcondiciones:\n- Clasificación de apoyo con sus límites.\n\nRequisitos: RF-29\nCasos de prueba: TC-028\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000073",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-94 Cribar anomalías cerebrales",
+     "ownedElements": [
+      {
+       "_type": "UMLExtend",
+       "_id": "FMBUML000495",
+       "_parent": {
+        "$ref": "FMBUML000073"
+       },
+       "source": {
+        "$ref": "FMBUML000073"
+       },
+       "target": {
+        "$ref": "FMBUML000021"
+       },
+       "condition": "el plano reconocido es la cabeza fetal",
+       "extensionLocations": [
+        {
+         "$ref": "FMBUML000092"
+        }
+       ]
+      }
+     ],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000022",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-95 Analizar ecografía ginecológica",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000497",
+       "_parent": {
+        "$ref": "FMBUML000022"
+       },
+       "source": {
+        "$ref": "FMBUML000022"
+       },
+       "target": {
+        "$ref": "FMBUML000074"
+       }
+      }
+     ],
+     "documentation": "Masa ovárica, mioma u ovario poliquístico con las redes ginecológicas.\n\nActores: Médico; Servicio de IA (secundario)\n\nPrecondiciones:\n- Servicio de IA en marcha.\n\nFlujo principal:\n1. El médico abre la pestaña Ecografía ginecológica y elige el estudio.\n2. Sube la imagen.\n3. El Servicio de IA segmenta y clasifica la lesión (incluye CU-96).\n4. El sistema muestra el contorno, el tipo probable, la alarma si corresponde y su fiabilidad medida.\n\nFlujos alternativos:\n- 4a. Sin alarma de malignidad: el sistema aclara que eso no descarta el cáncer.\n\nPostcondiciones:\n- Resultado de apoyo con sus límites visibles.\n\nRequisitos: RF-31\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000074",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-96 Segmentar y clasificar la lesión",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000075",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-97 Consultar la Guía de IA",
+     "ownedElements": [],
+     "documentation": "Leer qué hace cada modelo, cuánto se le puede creer y dónde usarlo.\n\nActores: Médico\n\nPrecondiciones:\n- Sesión de médico o administrador.\n\nFlujo principal:\n1. El médico abre «Guía de IA».\n2. El sistema muestra cada modelo con su cifra medida (leída del backend).\n3. El médico elige «Usar ahora» y el sistema lo lleva a la pantalla del modelo.\n\nFlujos alternativos:\n- 2a. Modelos descartados: se muestran como «evaluado y descartado» con su motivo.\n\nPostcondiciones:\n- —\n\nRequisitos: RF-33\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000025",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-B0 Consultar centro de reportes",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000521",
+       "_parent": {
+        "$ref": "FMBUML000025"
+       },
+       "source": {
+        "$ref": "FMBUML000025"
+       },
+       "target": {
+        "$ref": "FMBUML000076"
+       }
+      }
+     ],
+     "documentation": "Panel, estadísticas, natalidad, IA, KPIs e indicadores con un período común.\n\nActores: Médico (y por herencia Administrador)\n\nPrecondiciones:\n- Sesión con permiso de reportes.\n\nFlujo principal:\n1. El usuario abre Centro de reportes.\n2. Elige el período (incluye CU-B4).\n3. El sistema muestra cada pestaña con sus cifras del período.\n\nFlujos alternativos:\n- 2a. Período sin datos: cifras en cero, sin error.\n\nPostcondiciones:\n- —\n\nRequisitos: RF-18\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000077",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-B1 Exportar listado a Excel",
+     "ownedElements": [
+      {
+       "_type": "UMLInclude",
+       "_id": "FMBUML000523",
+       "_parent": {
+        "$ref": "FMBUML000077"
+       },
+       "source": {
+        "$ref": "FMBUML000077"
+       },
+       "target": {
+        "$ref": "FMBUML000078"
+       }
+      }
+     ],
+     "documentation": "Exportar cualquier listado con los mismos filtros de la pantalla.\n\nActores: Médico (y por herencia Administrador)\n\nPrecondiciones:\n- Listado abierto con sus filtros.\n\nFlujo principal:\n1. El usuario elige «Exportar Excel».\n2. El sistema genera el archivo con los filtros aplicados.\n3. El sistema registra la exportación en la auditoría (incluye CU-B5).\n\nFlujos alternativos:\n- —\n\nPostcondiciones:\n- Archivo descargado y exportación auditada.\n\nRequisitos: RF-19, RF-22\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000079",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-B2 Generar reporte en PDF",
+     "ownedElements": [],
+     "documentation": "Generar el PDF de un reporte o de la pestaña abierta.\n\nActores: Médico (y por herencia Administrador)\n\nPrecondiciones:\n- Reporte con datos.\n\nFlujo principal:\n1. El usuario elige «Generar PDF».\n2. El sistema genera y descarga el PDF.\n\nFlujos alternativos:\n- —\n\nPostcondiciones:\n- PDF descargado.\n\nRequisitos: RF-18\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000027",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-B3 Consultar auditoría",
+     "ownedElements": [],
+     "documentation": "El administrador revisa quién hizo qué, cuándo y desde dónde.\n\nActores: Administrador\n\nPrecondiciones:\n- Sesión de administrador.\n\nFlujo principal:\n1. El administrador abre Auditoría.\n2. Filtra por usuario, acción, módulo o fechas.\n3. El sistema muestra los registros, que no se pueden modificar.\n\nFlujos alternativos:\n- 1a. Un usuario sin el rol: 403.\n\nPostcondiciones:\n- —\n\nRequisitos: RF-22\nCasos de prueba: —\nDefectos abiertos: —"
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000076",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-B4 Filtrar por período",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCase",
+     "_id": "FMBUML000078",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "CU-B5 Registrar en la auditoría",
+     "ownedElements": [],
+     "documentation": ""
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000101",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000223",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · Autenticación"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000251",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · Accesos"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000282",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · Pacientes"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000317",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · Embarazos"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000337",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · Control prenatal"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000364",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · Calculadoras"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000390",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · Laboratorio"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000420",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · Partos"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000456",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · IA"
+    },
+    {
+     "_type": "UMLUseCaseSubject",
+     "_id": "FMBUML000500",
+     "_parent": {
+      "$ref": "FMBUML000002"
+     },
+     "name": "Fetal Medical Bolivia · Reportes"
+    }
+   ]
+  }
+ ]
+}

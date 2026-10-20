@@ -1,0 +1,41 @@
+{
+  "id": "TC-026",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:59",
+  "resultado": "PASS",
+  "que_ocurrio": "Arrastrar notas.txt a la zona de la ecografía no tiene efecto: la zona sigue en «Arrastre una ecografía o haga clic» y «Analizar» sigue deshabilitado, sin mensaje. Al hacer clic, el selector de archivos se abre filtrado a «.png,.jpg,.jpeg,.bmp,.tif,.dcm,.dicom»; eligiendo igualmente notas.txt (como al cambiar el filtro a «Todos los archivos»), la zona lo acepta (muestra «notas.txt») y habilita «Analizar». Al pulsarlo, el servidor responde HTTP 400 y la pantalla muestra «No se pudo analizar — Extensión no permitida. Use: ['.jpg', '.jpeg', '.png', '.bmp', '.tif', '.dicom', '.dcm']» y además una ventana «⚠️ Datos Inválidos — error: Extensión no permitida. Use: [...]» con botón «Aceptar».",
+  "comparacion": "Coincide: el archivo no se analiza, no aparece «Error del servidor» y el mensaje dice qué formatos subir.",
+  "pasos": [
+    {
+      "accion": "Análisis CNN (IA) → Ecografía; arrastrar notas.txt sobre la zona",
+      "estado": "PASS",
+      "observado": "Se ignora: la zona no cambia y «Analizar» sigue deshabilitado (no se muestra mensaje)."
+    },
+    {
+      "accion": "Clic en la zona y elegir notas.txt en el selector",
+      "estado": "PASS",
+      "observado": "El selector tiene el filtro accept=«.png,.jpg,.jpeg,.bmp,.tif,.dcm,.dicom». Forzando el archivo, la zona muestra «notas.txt» y «Analizar» se habilita (no hay validación en el navegador)."
+    },
+    {
+      "accion": "Pulsar «Analizar» y observar la respuesta",
+      "estado": "PASS",
+      "observado": "POST /api/ecografias/plano-anatomico/ y /anomalias-cerebrales/ → 400 {\"error\":\"Extensión no permitida. Use: [...]\"}. Mensaje en pantalla: «No se pudo analizar» — «Extensión no permitida. Use: ['.jpg', '.jpeg', '.png', '.bmp', '.tif', '.dicom', '.dcm']» y ventana «Datos Inválidos». Nunca «Error del servidor»."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC026_01.png",
+      "descripcion": "Tras arrastrar notas.txt: la zona no lo acepta y «Analizar» sigue deshabilitado."
+    },
+    {
+      "archivo": "evidencia_TC026_02.png",
+      "descripcion": "notas.txt elegido desde el selector: la zona lo muestra y habilita «Analizar»."
+    },
+    {
+      "archivo": "evidencia_TC026_03.png",
+      "descripcion": "Mensaje «No se pudo analizar — Extensión no permitida. Use: [...]» y ventana «Datos Inválidos»."
+    }
+  ],
+  "desviacion": "",
+  "observaciones": "notas.txt: archivo de texto plano de 2 líneas creado para la prueba. El arrastre se hizo enviando a la zona los eventos dragenter/dragover/drop con el archivo (text/plain). Mejoras posibles (no cambian el resultado): al arrastrar no se avisa por qué no se aceptó; con el selector forzado la validación es solo del servidor; el mensaje muestra la lista con sintaxis de programación (['.jpg', ...]) y sale dos veces (alerta en la tarjeta y ventana emergente con el prefijo «error:»). Sin tamaño de píxel no se llama a la circunferencia cefálica, por eso solo hubo dos peticiones."
+}

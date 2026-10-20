@@ -1,0 +1,28 @@
+{
+  "id": "TC-023",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:38",
+  "resultado": "FAIL",
+  "que_ocurrio": "Partos → «Registrar Nuevo Parto»: embarazo «G1 PAC-95FF654C - Rosa López Quispe · FUM 11/01/2026», tipo de evento «PARTO», fecha del parto 18/10/2026 20:38, 40+0 semanas, tipo «Vaginal Espontáneo»; en «Datos del Recién Nacido»: sexo Femenino, talla 49, Apgar 8/9. Peso 299: mientras el cursor está en el campo aparece en rojo «Ingrese peso» (no dice el rango); al salir del campo el valor cambia solo a «300» y el mensaje desaparece, sin ningún aviso. Peso 300: aceptado en el campo, sin mensaje. Peso 6001: no aparece ningún mensaje; al salir del campo el valor cambia solo a «6000». Peso 6000: aceptado en el campo. El parto se guardó con peso 6000 g (Apgar 10/10): POST /api/partos/ → 201, parto #548, y el listado lo muestra con «6000g». Para comprobar que el sistema acepta 300 g se editó ese parto («Editar») con peso 300: el servidor lo rechazó (PUT /api/partos/548/ → 400 {\"recien_nacidos\":{\"bebé 1\":{\"peso_nacimiento\":[\"Peso de 300g es extremadamente bajo. Mínimo viable 400g. Verificar viabilidad.\"]}}}) y la interfaz mostró solo «⚠️ Datos Inválidos — recien_nacidos: [object Object]».",
+  "comparacion": "No coincide. Se esperaba aceptar 300 y 6.000 g y rechazar 299 y 6.001 g con un mensaje que explique el rango. Obtenido: 299 y 6.001 no muestran un mensaje de rango (299 solo «Ingrese peso»; 6.001 nada) y el formulario los reemplaza en silencio por 300 y 6.000, de modo que si el usuario guarda se registra un peso distinto del que escribió; 6.000 g se acepta; 300 g lo acepta el formulario pero el servidor lo rechaza («Mínimo viable 400g») con un mensaje ilegible «[object Object]».",
+  "pasos": [
+    {"accion": "Registrar el recién nacido con peso 299 g", "estado": "FAIL", "observado": "Mientras se escribe: «Ingrese peso» (sin rango). Al salir del campo el valor pasa solo a 300 y el mensaje desaparece; no hay rechazo con mensaje del rango válido."},
+    {"accion": "Corregir el peso a 300 g", "estado": "FAIL", "observado": "El campo lo acepta, pero al guardar (edición del parto #548) el servidor lo rechaza: «Peso de 300g es extremadamente bajo. Mínimo viable 400g. Verificar viabilidad.»; en pantalla solo «recien_nacidos: [object Object]»."},
+    {"accion": "Probar el otro extremo: 6.001 g", "estado": "FAIL", "observado": "Ningún mensaje; al salir del campo el valor pasa solo a 6000."},
+    {"accion": "Corregir el peso a 6.000 g", "estado": "PASS", "observado": "Aceptado: el parto #548 se guardó con peso 6000 g (aparece «6000g» en el listado de Partos)."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC023_01.png", "descripcion": "Peso 299 escrito: mensaje «Ingrese peso» (sin indicar el rango 300–6000)."},
+    {"archivo": "evidencia_TC023_02.png", "descripcion": "Al salir del campo el peso cambió solo a 300, sin mensaje."},
+    {"archivo": "evidencia_TC023_03.png", "descripcion": "Peso 300 aceptado en el campo, sin error."},
+    {"archivo": "evidencia_TC023_04.png", "descripcion": "Peso 6001 escrito: ningún mensaje."},
+    {"archivo": "evidencia_TC023_05.png", "descripcion": "Al salir del campo el peso cambió solo a 6000, sin mensaje."},
+    {"archivo": "evidencia_TC023_06.png", "descripcion": "Peso 6000 aceptado en el campo."},
+    {"archivo": "evidencia_TC023_07.png", "descripcion": "Primer intento de guardado (peso 6000, Apgar 10/0, ver TC-024): «⚠️ Datos Inválidos — recien_nacidos: [object Object]»."},
+    {"archivo": "evidencia_TC023_08.png", "descripcion": "Parto #548 guardado: listado de Partos con Rosa López, peso RN «6000g»."},
+    {"archivo": "evidencia_TC023_09.png", "descripcion": "Edición del parto #548 con peso 300 g."},
+    {"archivo": "evidencia_TC023_10.png", "descripcion": "Rechazo al guardar 300 g: «⚠️ Datos Inválidos — recien_nacidos: [object Object]» (el servidor exige mínimo 400 g)."}
+  ],
+  "desviacion": "Los pesos fuera de rango (299 y 6.001 g) no se rechazan con un mensaje del rango: se corrigen solos al límite (300 y 6.000) sin avisar. El límite inferior válido 300 g es rechazado por el servidor (mínimo 400 g), y el mensaje que ve el usuario es «recien_nacidos: [object Object]».",
+  "observaciones": "TC-023 y TC-024 se ejecutaron sobre el mismo formulario de registro del parto (el caso TC-024 pide «parto en registro como en TC-023»). El paciente tenía un único embarazo activo, por lo que la comprobación de 300 g por el servidor se hizo editando el parto ya registrado (#548) en lugar de crear otro; el registro final quedó con peso 6000 g. Talla 49 cm, sexo Femenino y la fecha/hora del parto (botón «Ahora») los eligió el ejecutor. El texto exacto del rechazo del servidor se leyó en la respuesta HTTP del navegador porque la interfaz solo muestra «[object Object]»."
+}

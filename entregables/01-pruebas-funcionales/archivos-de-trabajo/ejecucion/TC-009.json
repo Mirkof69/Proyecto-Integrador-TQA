@@ -1,0 +1,20 @@
+{
+  "id": "TC-009",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:58",
+  "resultado": "PASS",
+  "que_ocurrio": "Pacientes → «Nueva Paciente»: se cargaron «Carla» / «Duplicada» / «Prueba», CI «9100701» (ya registrada en TC-007) y nacimiento «20/07/1992»; mientras se llenaban los campos no apareció ningún error. En el paso «Información Médica» se marcó el consentimiento y se pulsó «Registrar Paciente». El sistema no guardó: apareció el mensaje «Ya existe un paciente registrado con esta cédula de identidad» y el diálogo «⚠️ Datos Inválidos» con el texto «ci: Ya existe un paciente registrado con esta cédula de identidad» y el botón «Aceptar». Tras aceptar y cerrar el asistente, la búsqueda «9100701» devuelve un único registro: «Rosa López Quispe» (PAC-95FF654C); la búsqueda «Duplicada» devuelve «No hay pacientes registrados».",
+  "comparacion": "Coincide con lo esperado: la CI duplicada se rechaza con un mensaje de CI ya registrada y solo existe la paciente de TC-007.",
+  "pasos": [
+    {"accion": "Pacientes → «Nueva Paciente» con la CI ya registrada 9100701 (Carla Duplicada Prueba)", "estado": "PASS", "observado": "Campos aceptados mientras se llenan; ningún mensaje de error en el paso «Datos Personales»."},
+    {"accion": "Marcar consentimiento y pulsar «Registrar Paciente»", "estado": "PASS", "observado": "No guarda. Mensaje «Ya existe un paciente registrado con esta cédula de identidad» y diálogo «⚠️ Datos Inválidos — ci: Ya existe un paciente registrado con esta cédula de identidad»."},
+    {"accion": "Buscar «9100701» en el listado", "estado": "PASS", "observado": "1 registro: Rosa López Quispe (TC-007). No existe «Carla Duplicada Prueba»."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC009_01.png", "descripcion": "Datos de Carla Duplicada Prueba con CI 9100701 cargados sin error en el primer paso."},
+    {"archivo": "evidencia_TC009_02.png", "descripcion": "Rechazo al guardar: «Ya existe un paciente registrado con esta cédula de identidad» (mensaje y diálogo «Datos Inválidos»)."},
+    {"archivo": "evidencia_TC009_03.png", "descripcion": "Búsqueda «9100701»: un único registro, Rosa López Quispe."}
+  ],
+  "desviacion": "",
+  "observaciones": "La unicidad se valida recién al guardar (respuesta del servidor), no al escribir la CI. El diálogo muestra el nombre técnico del campo («ci:») delante del mensaje. El diseño no fija la fecha de nacimiento; se usó 20/07/1992."
+}

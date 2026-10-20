@@ -1,0 +1,25 @@
+{
+  "id": "TC-024",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:39",
+  "resultado": "PASS",
+  "que_ocurrio": "En el mismo registro de parto de TC-023 (Rosa López Quispe, «Datos del Recién Nacido»): Apgar 1 min = 11: mientras el cursor está en el campo se ve «11» sin mensaje; al salir del campo el valor cambia solo a «10» (el campo no admite 11; límites aria 0–10). Apgar 1 min = 10: aceptado. Apgar 5 min = 0: aceptado en el campo. Al guardar con Apgar 10 / 0 el servidor rechazó la combinación (POST /api/partos/ → 400 «Apgar a los 5 min (0) es mucho menor que al 1 min (10). Verificar valores.») y la interfaz mostró «⚠️ Datos Inválidos — recien_nacidos: [object Object]». Con Apgar 10 / 10 el parto se guardó (POST → 201, parto #548), lo que confirma que 10 se acepta. Para comprobar que 0 a los 5 minutos se acepta se editó el parto con Apgar 1 / 0: se guardó (PUT /api/partos/548/ → 200) y el recién nacido quedó con apgar_1_minuto 1 y apgar_5_minutos 0.",
+  "comparacion": "Coincide con lo esperado: 11 no se acepta (el campo no lo admite y lo deja en 10), 10 se acepta y 0 a los 5 minutos se acepta. Matiz: la combinación literal del diseño (10 al minuto y 0 a los 5 minutos en el mismo recién nacido) la rechaza el servidor por una regla de coherencia clínica, no por rango (ver observaciones).",
+  "pasos": [
+    {"accion": "Ingresar Apgar 1 min = 11", "estado": "PASS", "observado": "El campo no lo acepta: al salir, el valor queda en 10. No aparece mensaje de rango."},
+    {"accion": "Corregir a 10", "estado": "PASS", "observado": "Aceptado en el campo y guardado (parto #548 con Apgar 10/10)."},
+    {"accion": "Ingresar Apgar 5 min = 0", "estado": "PASS", "observado": "Aceptado en el campo. Con Apgar 1 min = 10 el servidor rechaza la combinación («Apgar a los 5 min (0) es mucho menor que al 1 min (10)»), mostrada como «recien_nacidos: [object Object]»; con Apgar 1 min = 1 se guardó con Apgar 5 min = 0."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC024_01.png", "descripcion": "Apgar 1 min = 11 escrito en el campo."},
+    {"archivo": "evidencia_TC024_02.png", "descripcion": "Al salir del campo el Apgar 1 min cambió solo a 10, sin mensaje."},
+    {"archivo": "evidencia_TC024_03.png", "descripcion": "Apgar 1 min = 10 aceptado."},
+    {"archivo": "evidencia_TC024_04.png", "descripcion": "Apgar 5 min = 0 aceptado en el campo."},
+    {"archivo": "evidencia_TC024_05.png", "descripcion": "Guardar con Apgar 10/0: «⚠️ Datos Inválidos — recien_nacidos: [object Object]»."},
+    {"archivo": "evidencia_TC024_06.png", "descripcion": "Apgar 5 min cambiado a 10 para guardar el parto con Apgar 10/10."},
+    {"archivo": "evidencia_TC024_07.png", "descripcion": "Edición del parto #548: Apgar 1 min = 1, Apgar 5 min = 0."},
+    {"archivo": "evidencia_TC024_08.png", "descripcion": "Edición guardada (vuelve al listado de Partos sin error)."}
+  ],
+  "desviacion": "",
+  "observaciones": "Diseño ambiguo: usa 10 al minuto y 0 a los 5 minutos en el mismo recién nacido, combinación que el servidor rechaza por coherencia clínica; por eso cada límite se comprobó en un guardado distinto (10/10 al crear, 1/0 al editar). El valor 11 no se rechaza con mensaje: el campo lo sustituye en silencio por 10 (mismo comportamiento que el peso en TC-023, bugs/borrador_TC-023.json); el diseño admite «el campo no lo acepta». El mensaje «recien_nacidos: [object Object]» no explica qué corregir (bugs/borrador_TC-023_b.json). El registro final del parto #548 quedó con peso 6000 g y Apgar 1/0. Ejecutado en el mismo formulario que TC-023."
+}

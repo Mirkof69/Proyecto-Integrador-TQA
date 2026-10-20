@@ -1,0 +1,62 @@
+{
+  "id": "TC-004",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:03",
+  "resultado": "PASS",
+  "que_ocurrio": "admin.demo creó por la interfaz el médico tc004b.medico@pruebas.test (rol Médico, activo), que nunca había iniciado sesión. Al iniciar sesión con él: HTTP 403 con mfa_setup_required y la pantalla «Configuración MFA Requerida» con el texto «Su rol requiere autenticación de dos factores (MFA). Configúrela antes de continuar: POST /api/usuarios/mfa-setup-inicial/» y los botones «Configurar Google Authenticator» y «Volver»; no apareció «Acceso Denegado». Al pulsar «Configurar Google Authenticator» se abrió /setup-mfa con el código QR y el código manual de 32 caracteres. Tras «Ya escaneé el QR →» se escribió el código TOTP de 6 dígitos calculado en el momento con ese secreto (RFC 6238, SHA1, 30 s); al completar el 6.º dígito el formulario se envió solo: HTTP 200 en /api/usuarios/mfa-confirmar-inicial/, aviso «MFA activado correctamente. Su cuenta ahora está protegida.» y la pantalla «¡MFA Activado! … Será redirigido al sistema en unos segundos…». Luego redirigió solo a /dashboard: «Hola, Medico Prueba B TC004», cabecera «Medico Prueba B TC004 / MEDICO», sin ventanas de error.",
+  "comparacion": "Coincide: el médico nuevo configura Google Authenticator en su primer ingreso, el MFA queda activado y termina dentro del Panel Principal sin intervención del administrador.",
+  "pasos": [
+    {
+      "accion": "Iniciar sesión con el médico nuevo",
+      "estado": "PASS",
+      "observado": "Pantalla «Configuración MFA Requerida»: «Su rol requiere autenticación de dos factores (MFA)…» con botón «Configurar Google Authenticator»; sin «Acceso Denegado»."
+    },
+    {
+      "accion": "Pulsar «Configurar Google Authenticator»",
+      "estado": "PASS",
+      "observado": "/setup-mfa muestra el QR y «¿No puede escanear? Use el código manual:» con el secreto."
+    },
+    {
+      "accion": "Pulsar «Ya escaneé el QR» e ingresar el código de 6 dígitos",
+      "estado": "PASS",
+      "observado": "«MFA activado correctamente. Su cuenta ahora está protegida.» y «¡MFA Activado!»."
+    },
+    {
+      "accion": "Esperar la redirección",
+      "estado": "PASS",
+      "observado": "Redirige solo a /dashboard: «Hola, Medico Prueba B TC004», rol MEDICO."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC004_01.png",
+      "descripcion": "Precondición: admin.demo llena «Nuevo Usuario» para el médico de prueba."
+    },
+    {
+      "archivo": "evidencia_TC004_02.png",
+      "descripcion": "Precondición: tc004b.medico@pruebas.test en la lista con rol Médico."
+    },
+    {
+      "archivo": "evidencia_TC004_03.png",
+      "descripcion": "Primer ingreso: «Configuración MFA Requerida» con «Configurar Google Authenticator», sin «Acceso Denegado»."
+    },
+    {
+      "archivo": "evidencia_TC004_04.png",
+      "descripcion": "Código QR y código manual (secreto) en /setup-mfa."
+    },
+    {
+      "archivo": "evidencia_TC004_05.png",
+      "descripcion": "Paso «Verificar»: escribiendo el código TOTP (5 de 6 dígitos)."
+    },
+    {
+      "archivo": "evidencia_TC004_06.png",
+      "descripcion": "«MFA activado correctamente…» y «¡MFA Activado!»."
+    },
+    {
+      "archivo": "evidencia_TC004_07.png",
+      "descripcion": "Dentro del Panel Principal como médico tras la redirección automática."
+    }
+  ],
+  "desviacion": "",
+  "observaciones": "Se usó el correo tc004b.medico@pruebas.test en lugar de tc004.medico@pruebas.test: la primera corrida (20:02) con tc004.medico llegó a activar el MFA (HTTP 200, «¡MFA Activado!»), pero el guion de automatización se detuvo antes de observar la redirección porque esperaba un botón «Activar MFA» que no hace falta (el campo se envía solo al 6.º dígito). Como esa cuenta ya no cumplía la precondición «nunca ha iniciado sesión», se creó otro médico y se repitió el caso completo. Detalle menor de usabilidad (no cambia el resultado esperado): el aviso del paso 1 muestra al usuario texto técnico de la API, «Configúrela antes de continuar: POST /api/usuarios/mfa-setup-inicial/»."
+}

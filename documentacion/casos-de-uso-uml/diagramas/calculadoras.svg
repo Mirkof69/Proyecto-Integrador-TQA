@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="856" height="603" viewBox="0 0 856 603" font-family="Arial, Helvetica, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="190" y="40" width="636" height="549" fill="#f7f9fb" stroke="#3d5266" stroke-width="1.6"/>
+<text x="508" y="64" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1d2a36">Fetal Medical Bolivia · Calculadoras</text>
+<line x1="98.0" y1="310.0" x2="230.0" y2="318.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="484.0" x2="230.0" y2="318.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="634.9" y1="149.4" x2="438.9" y2="267.1" stroke="#1d2a36" stroke-width="1.5"/>
+<polygon points="434.8,261.7 427.7,273.8 441.7,273.2" fill="#fff" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="595.5" y1="245.5" x2="469.2" y2="283.5" stroke="#1d2a36" stroke-width="1.5"/>
+<polygon points="466.6,277.2 456.7,287.2 470.4,290.1" fill="#fff" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="562.0" y1="318.0" x2="491.0" y2="318.0" stroke="#1d2a36" stroke-width="1.5"/>
+<polygon points="490.3,311.3 478.0,318.0 490.3,324.7" fill="#fff" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="595.5" y1="390.5" x2="469.2" y2="352.5" stroke="#1d2a36" stroke-width="1.5"/>
+<polygon points="470.4,345.9 456.7,348.8 466.6,358.8" fill="#fff" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="624.6" y1="480.4" x2="438.9" y2="368.9" stroke="#1d2a36" stroke-width="1.5"/>
+<polygon points="441.7,362.8 427.7,362.2 434.8,374.3" fill="#fff" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="354.0" y1="485.0" x2="354.0" y2="373.0" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="358.8,382.9 354.0,373.0 349.2,382.9" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="334.0" y="416.0" width="60.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="364.0" y="427.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«extend»</text>
+<ellipse cx="354.0" cy="318.0" rx="124" ry="55" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="288.6" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-60</text>
+<text x="354.0" y="303.6" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Usar una calculadora</text>
+<text x="354.0" y="318.6" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">clínica</text>
+<line x1="231.2" y1="325.6" x2="476.8" y2="325.6" stroke="#1d2a36" stroke-width="1.1"/>
+<text x="354.0" y="338.6" text-anchor="middle" font-size="10" font-style="italic" fill="#5a6b7a">extension points</text>
+<text x="354.0" y="352.1" text-anchor="middle" font-size="11" fill="#1d2a36">Guardar</text>
+<ellipse cx="674.0" cy="126.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="122.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-61</text>
+<text x="674.0" y="137.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Calcular IMC (OMS)</text>
+<ellipse cx="674.0" cy="222.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="210.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-62</text>
+<text x="674.0" y="225.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Diagnosticar diabetes</text>
+<text x="674.0" y="240.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">gestacional (PTOG)</text>
+<ellipse cx="674.0" cy="318.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="306.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-63</text>
+<text x="674.0" y="321.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Calcular puntaje de</text>
+<text x="674.0" y="336.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Bishop</text>
+<ellipse cx="674.0" cy="414.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="402.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-64</text>
+<text x="674.0" y="417.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Estimar riesgo de</text>
+<text x="674.0" y="432.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">preeclampsia</text>
+<ellipse cx="674.0" cy="510.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="498.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-65</text>
+<text x="674.0" y="513.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Calcular edad</text>
+<text x="674.0" y="528.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">gestacional</text>
+<ellipse cx="354.0" cy="510.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="506.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-66</text>
+<text x="354.0" y="521.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Guardar en el historial</text>
+<circle cx="80" cy="288.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="298.0" x2="80" y2="326.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="308.0" x2="96" y2="308.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="326.0" x2="68" y2="346.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="326.0" x2="92" y2="346.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="362.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Enfermería</text>
+<circle cx="80" cy="462.0" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="472.0" x2="80" y2="500.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="482.0" x2="96" y2="482.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="500.0" x2="68" y2="520.0" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="500.0" x2="92" y2="520.0" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="536.0" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Laboratorista</text>
+</svg>

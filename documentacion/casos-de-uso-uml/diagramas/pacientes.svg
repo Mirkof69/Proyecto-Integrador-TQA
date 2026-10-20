@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1176" height="794" viewBox="0 0 1176 794" font-family="Arial, Helvetica, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="190" y="40" width="956" height="740" fill="#f7f9fb" stroke="#3d5266" stroke-width="1.6"/>
+<text x="668" y="64" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1d2a36">Fetal Medical Bolivia · Pacientes</text>
+<line x1="98.0" y1="334.3" x2="230.0" y2="185.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="334.3" x2="242.0" y2="362.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="98.0" y1="334.3" x2="242.0" y2="480.0" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="80.0" y1="474.3" x2="80.0" y2="425.3" stroke="#1d2a36" stroke-width="1.5"/>
+<polygon points="86.7,424.6 80.0,412.3 73.3,424.6" fill="#fff" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="80.0" y1="648.3" x2="80.0" y2="599.3" stroke="#1d2a36" stroke-width="1.5"/>
+<polygon points="86.7,598.6 80.0,586.3 73.3,598.6" fill="#fff" stroke="#1d2a36" stroke-width="1.5"/>
+<line x1="465.5" y1="164.4" x2="579.1" y2="143.5" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="570.2,150.0 579.1,143.5 568.4,140.6" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="487.0" y="131.1" width="67.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="520.5" y="142.1" text-anchor="middle" font-size="11.5" fill="#1d2a36">«include»</text>
+<line x1="465.5" y1="205.6" x2="587.6" y2="228.1" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="577.0,231.0 587.6,228.1 578.8,221.6" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="494.9" y="194.0" width="67.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="528.4" y="205.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«include»</text>
+<line x1="882.0" y1="185.0" x2="478.0" y2="185.0" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="487.9,180.2 478.0,185.0 487.9,189.8" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="690.4" y="162.0" width="60.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="720.4" y="173.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«extend»</text>
+<line x1="466.0" y1="362.0" x2="562.0" y2="362.0" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="552.1,366.8 562.0,362.0 552.1,357.2" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="480.5" y="339.0" width="67.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="514.0" y="350.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«include»</text>
+<line x1="466.0" y1="480.0" x2="562.0" y2="480.0" stroke="#1d2a36" stroke-width="1.4" stroke-dasharray="7 5"/>
+<polyline points="552.1,484.8 562.0,480.0 552.1,475.2" fill="none" stroke="#1d2a36" stroke-width="1.5"/>
+<rect x="480.5" y="457.0" width="67.0" height="14" fill="#f7f9fb" opacity="0.94"/>
+<text x="514.0" y="468.0" text-anchor="middle" font-size="11.5" fill="#1d2a36">«include»</text>
+<ellipse cx="354.0" cy="185.0" rx="124" ry="47" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="163.2" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-10</text>
+<text x="354.0" y="178.2" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar paciente</text>
+<line x1="230.0" y1="185.2" x2="478.0" y2="185.2" stroke="#1d2a36" stroke-width="1.1"/>
+<text x="354.0" y="198.2" text-anchor="middle" font-size="10" font-style="italic" fill="#5a6b7a">extension points</text>
+<text x="354.0" y="211.7" text-anchor="middle" font-size="11" fill="#1d2a36">Registro exitoso</text>
+<ellipse cx="674.0" cy="126.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="114.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-12</text>
+<text x="674.0" y="129.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar consentimiento</text>
+<text x="674.0" y="144.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">(Ley 164)</text>
+<ellipse cx="674.0" cy="244.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="240.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-13</text>
+<text x="674.0" y="255.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Validar cédula única</text>
+<ellipse cx="994.0" cy="185.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="994.0" y="181.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-30</text>
+<text x="994.0" y="196.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Registrar embarazo</text>
+<ellipse cx="354.0" cy="362.0" rx="112" ry="25" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="358.4" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-11</text>
+<text x="354.0" y="373.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Buscar paciente</text>
+<ellipse cx="674.0" cy="362.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="350.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-14</text>
+<text x="674.0" y="365.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Ignorar tildes y grafías</text>
+<text x="674.0" y="380.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">(Quispe/Kispe)</text>
+<ellipse cx="354.0" cy="480.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="354.0" y="468.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-15</text>
+<text x="354.0" y="483.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Importar pacientes desde</text>
+<text x="354.0" y="498.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Excel</text>
+<ellipse cx="674.0" cy="480.0" rx="112" ry="33" fill="#ffffff" stroke="#1d2a36" stroke-width="1.6"/>
+<text x="674.0" y="468.8" text-anchor="middle" font-size="10" fill="#5a6b7a" font-weight="700">CU-16</text>
+<text x="674.0" y="483.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">Detectar cédulas</text>
+<text x="674.0" y="498.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d2a36">duplicadas</text>
+<circle cx="80" cy="312.3333333333333" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="322.3333333333333" x2="80" y2="350.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="332.3333333333333" x2="96" y2="332.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="350.3333333333333" x2="68" y2="370.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="350.3333333333333" x2="92" y2="370.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="386.3333333333333" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Recepción</text>
+<circle cx="80" cy="486.33333333333326" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="496.33333333333326" x2="80" y2="524.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="506.33333333333326" x2="96" y2="506.33333333333326" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="524.3333333333333" x2="68" y2="544.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="524.3333333333333" x2="92" y2="544.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="560.3333333333333" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Enfermería</text>
+<circle cx="80" cy="660.3333333333333" r="10" fill="#fff" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="670.3333333333333" x2="80" y2="698.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="64" y1="680.3333333333333" x2="96" y2="680.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="698.3333333333333" x2="68" y2="718.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<line x1="80" y1="698.3333333333333" x2="92" y2="718.3333333333333" stroke="#1d2a36" stroke-width="1.8"/>
+<text x="80" y="734.3333333333333" text-anchor="middle" font-weight="700" font-size="13" fill="#1d2a36">Médico</text>
+</svg>

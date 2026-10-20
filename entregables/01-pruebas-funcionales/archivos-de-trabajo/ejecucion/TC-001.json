@@ -1,0 +1,54 @@
+{
+  "id": "TC-001",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:56",
+  "resultado": "FAIL",
+  "que_ocurrio": "Con recep.flores@fetalmedical.bo y su contraseña vigente el login respondió HTTP 200, apareció el aviso «Bienvenido/a Juan Carlos Flores Quispe» y se abrió /dashboard con «Hola, Juan Carlos Flores Quispe» y, en la cabecera, «Juan Carlos Flores Quispe / RECEPCION». El menú lateral muestra solo «Panel Principal», «Pacientes», «Agenda de Citas», «Consultorios» y «Ayuda» (sin «Laboratorio»). Pero al cargar el Panel Principal aparecen 4 ventanas superpuestas «⛔ Acceso Denegado — No tienes permisos suficientes para realizar esta acción.» que hay que cerrar una por una con «Aceptar». Las provoca el propio panel: pide 4 recursos que el rol recepción no puede consultar y el servidor responde 403 (GET /api/auditoria/?page=1&page_size=20, /api/reportes/alertas-medicas/activas/, /api/embarazos/?estado=activo&riesgo_embarazo=alto, /api/reportes/statistics/dashboard/). Se repitió en los 7 ingresos con rol recepción de esta sesión (TC-001 y sus 2 repeticiones, TC-002 paso 3, TC-005 y la recepción de prueba de TC-003).",
+  "comparacion": "Coincide en lo esencial de autenticación: entra al Panel Principal con su nombre y rol, y el menú es el de recepción (Pacientes y Agenda de Citas sí, Laboratorio no). No coincide con «Entra al Panel Principal» como entrada normal: a un usuario con credenciales válidas su propia pantalla de inicio le dice 4 veces que no tiene permisos. Es una diferencia verificable con el resultado esperado del paso 3 y con el criterio de F01 «entra al panel de su rol».",
+  "pasos": [
+    {
+      "accion": "Abrir http://localhost:3000/login",
+      "estado": "PASS",
+      "observado": "Se muestra el formulario «Iniciar Sesión» con Email, Contraseña y botón «Iniciar Sesión»."
+    },
+    {
+      "accion": "Escribir el correo recep.flores@fetalmedical.bo y la contraseña vigente",
+      "estado": "PASS",
+      "observado": "Los campos aceptan el texto (contraseña enmascarada)."
+    },
+    {
+      "accion": "Pulsar «Iniciar Sesión»",
+      "estado": "FAIL",
+      "observado": "HTTP 200, aviso «Bienvenido/a Juan Carlos Flores Quispe», entra a /dashboard con «Hola, Juan Carlos Flores Quispe» y rol «RECEPCION», pero se abren 4 ventanas «⛔ Acceso Denegado — No tienes permisos suficientes para realizar esta acción.» sobre el panel."
+    },
+    {
+      "accion": "Revisar el menú lateral",
+      "estado": "PASS",
+      "observado": "Menú: «Panel Principal», «Pacientes», «Agenda de Citas», «Consultorios», «Ayuda». Aparecen Pacientes y Agenda de Citas; no aparece Laboratorio."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC001_01.png",
+      "descripcion": "Formulario de inicio de sesión en /login."
+    },
+    {
+      "archivo": "evidencia_TC001_02.png",
+      "descripcion": "Correo y contraseña escritos en el formulario."
+    },
+    {
+      "archivo": "evidencia_TC001_03.png",
+      "descripcion": "Panel Principal recién abierto con nombre y rol RECEPCION, tapado por la ventana «Acceso Denegado»."
+    },
+    {
+      "archivo": "evidencia_TC001_04.png",
+      "descripcion": "Menú lateral de recepción (Pacientes, Agenda de Citas, sin Laboratorio) con la ventana «Acceso Denegado» aún abierta."
+    },
+    {
+      "archivo": "evidencia_TC001_05.png",
+      "descripcion": "El mismo panel después de cerrar con «Aceptar» las 4 ventanas «Acceso Denegado» (repetición del ingreso a las 19:57)."
+    }
+  ],
+  "desviacion": "Al entrar, el Panel Principal de recepción muestra 4 ventanas «Acceso Denegado — No tienes permisos suficientes para realizar esta acción.» porque pide datos que el rol no puede consultar (4 respuestas 403).",
+  "observaciones": "El rol se muestra como «RECEPCION» (sin tilde); se tomó como coincidente con «RECEPCIÓN». El panel muestra a recepción las tarjetas «Embarazos Activos» y «Riesgo Alto» con cifras y el acceso rápido «IA Assistant», aunque la API le niega /api/embarazos y /api/reportes: no se evaluó, queda anotado. Los 403 se vieron en la red del navegador (sin tocar el código). Es discutible si el equipo prefiere clasificarlo como PASS con observación, ya que la autenticación y el menú sí cumplen."
+}

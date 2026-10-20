@@ -1,0 +1,45 @@
+{
+  "id": "TC-025",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:58",
+  "resultado": "PASS",
+  "que_ocurrio": "En Análisis CNN (IA) → pestaña «Ecografía», tarjeta «Redes entrenadas con ecografías reales», se subió 147_HC.png (HC18, partición de prueba) con tamaño de píxel 0.074836 mm y se pulsó «Analizar». En unos 3 s: «Plano anatómico — La imagen muestra cerebro fetal 89 %»; «Cribado de anomalías cerebrales — Sin alarma P(anomalía) 6,2 %»; «Circunferencia cefálica — Circunferencia 88.2 mm ± 7 — Edad gestacional 13.9 semanas», con la nota «Error medio 7 mm (R² 0.978) en 146 imágenes de 117 madres que no vio.» y el aviso «Apoyo al cribado. No es un diagnóstico: toda alarma la confirma un especialista.»",
+  "comparacion": "Coincide: plano de cabeza (cerebro fetal), CC en mm con su margen (± 7 mm), sin errores y con aviso de apoyo, no diagnóstico. La CC de referencia de HC18 para esta imagen es 88,81 mm (catalogo_imagenes.xlsx, hoja HC18): la diferencia es 0,6 mm, dentro del margen mostrado.",
+  "pasos": [
+    {
+      "accion": "Menú «Análisis CNN (IA)» → pestaña «Ecografía»",
+      "estado": "PASS",
+      "observado": "Zona «Arrastre una ecografía o haga clic» — «PNG, JPG o DICOM · máx. 10 MB» y el campo «Tamaño de píxel (mm) — para dar las medidas en milímetros»."
+    },
+    {
+      "accion": "Clic en la zona, elegir 147_HC.png en el selector e ingresar 0.074836 en el tamaño de píxel",
+      "estado": "PASS",
+      "observado": "La zona muestra «147_HC.png»; el campo queda en 0.074836; «Analizar» se habilita."
+    },
+    {
+      "accion": "Pulsar «Analizar»",
+      "estado": "PASS",
+      "observado": "«cerebro fetal 89 %», «Sin alarma», «Circunferencia 88.2 mm ± 7», «Edad gestacional 13.9 semanas»; las tres llamadas (plano-anatomico, circunferencia-cefalica, anomalias-cerebrales) respondieron HTTP 200."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC025_01.png",
+      "descripcion": "Pestaña Ecografía con la zona para subir la imagen."
+    },
+    {
+      "archivo": "evidencia_TC025_02.png",
+      "descripcion": "Imagen 147_HC.png cargada y tamaño de píxel 0.074836 ingresado."
+    },
+    {
+      "archivo": "evidencia_TC025_03.png",
+      "descripcion": "Resultado: plano «cerebro fetal 89 %» y cribado cerebral «Sin alarma» con el aviso de que no es un diagnóstico."
+    },
+    {
+      "archivo": "evidencia_TC025_04.png",
+      "descripcion": "Resultado: circunferencia cefálica «88.2 mm ± 7» y edad gestacional «13.9 semanas»."
+    }
+  ],
+  "desviacion": "",
+  "observaciones": "Imagen real de prueba: Backend/Microservicio_IA/entrenamiento/redes_ecografia_real/imagenes/hc18/147_HC.png (paciente HC18-P0147, partición «prueba», tamaño de píxel 0,074836 mm, CC de referencia 88,81 mm, 14 semanas según el catálogo). El diseño dice «Plano: cabeza/cerebro»: la pantalla lo llama «cerebro fetal». Las cifras usan punto decimal (88.2) en una interfaz en español. Ejecutado con Playwright: el clic abre el selector de archivos del navegador y el archivo se entrega a ese selector."
+}

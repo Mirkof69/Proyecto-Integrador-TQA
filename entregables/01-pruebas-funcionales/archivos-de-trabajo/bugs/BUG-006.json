@@ -1,0 +1,28 @@
+{
+  "tc": "TC-021",
+  "titulo": "Bishop 5 se interpreta como «Cuello intermedio» en la calculadora rápida (debería ser desfavorable)",
+  "modulo": "Calculadoras rápidas · pestaña Bishop",
+  "severidad": "Media",
+  "prioridad": "Media",
+  "precondiciones": "Sesión de médico (dra.garcia@fetalmedical.bo).",
+  "pasos": [
+    "1 Menú Calculadoras → Calculadoras rápidas → pestaña «Bishop».",
+    "2 Dilatación «1-2 cm (1)», Borramiento «40-50% (1)», Estación «-2 (1)», Consistencia «Media (1)», Posición «Intermedia (1)».",
+    "3 «Calcular».",
+    "4 Comparar con Calculadoras especializadas → «Score de Bishop» con la misma combinación."
+  ],
+  "datos": "Combinación A: 1+1+1+1+1 = 5 puntos.",
+  "esperado": "Puntaje 5 → desfavorable (Bishop ≤ 5, RF-17).",
+  "obtenido": "«Score 5/13» con la etiqueta «Cuello intermedio» y «Probabilidad moderada de parto vaginal». La calculadora especializada, con los mismos datos, dice «CÉRVIX DESFAVORABLE»: el sistema da dos interpretaciones distintas para el mismo puntaje.",
+  "evidencias": [
+    "evidencia_TC021_01.png",
+    "evidencia_TC021_03.png"
+  ],
+  "frecuencia": "Siempre",
+  "notas": "La respuesta guardada en POST /api/calculadoras/historial/ (201) trae resultado_json con «score»: 5, «interpretacion»: «Cuello intermedio»: la interpretación sale del cálculo en el navegador. Con 8 ambas calculadoras dicen favorable.",
+  "id": "BUG-006",
+  "estado": "Abierto",
+  "reportado_por": "",
+  "fecha": "18/10/2026",
+  "borrador": "borrador_TC-021.json"
+}

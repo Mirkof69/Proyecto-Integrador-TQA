@@ -1,0 +1,28 @@
+{
+  "tc": "TC-023",
+  "titulo": "El servidor rechaza un recién nacido de 300 g (exige 400 g) y la interfaz muestra «recien_nacidos: [object Object]»",
+  "modulo": "Partos · Recién nacido",
+  "severidad": "Alta",
+  "prioridad": "Media",
+  "precondiciones": "Sesión de médico. Parto #548 de Rosa López Quispe (CI 9100701) registrado con un recién nacido de 6000 g.",
+  "pasos": [
+    "1 Partos → fila #548 → «Editar».",
+    "2 En «Datos del Recién Nacido» poner Peso (g) = 300 (el campo lo acepta).",
+    "3 Pulsar «Guardar»."
+  ],
+  "datos": "Peso 300 g (límite inferior del requisito RF-11: 300–6.000 g).",
+  "esperado": "300 g se acepta y el parto se guarda; si algún valor se rechaza, el mensaje explica cuál y por qué.",
+  "obtenido": "No se guarda. La interfaz muestra «⚠️ Datos Inválidos — recien_nacidos: [object Object]», sin decir qué corregir. El mismo mensaje ilegible aparece con otros rechazos del recién nacido (p. ej. Apgar 10 al minuto y 0 a los 5 minutos).",
+  "evidencias": [
+    "evidencia_TC023_09.png",
+    "evidencia_TC023_10.png",
+    "evidencia_TC024_05.png"
+  ],
+  "frecuencia": "Siempre",
+  "notas": "Respuesta HTTP de PUT /api/partos/548/: 400 {\"recien_nacidos\":{\"bebé 1\":{\"peso_nacimiento\":[\"Peso de 300g es extremadamente bajo. Mínimo viable 400g. Verificar viabilidad.\"]}}}. El servidor usa 400 g como mínimo mientras el formulario y el requisito usan 300 g; además el error anidado no se convierte en texto legible en el diálogo.",
+  "id": "BUG-010",
+  "estado": "Abierto",
+  "reportado_por": "",
+  "fecha": "18/10/2026",
+  "borrador": "borrador_TC-023_b.json"
+}

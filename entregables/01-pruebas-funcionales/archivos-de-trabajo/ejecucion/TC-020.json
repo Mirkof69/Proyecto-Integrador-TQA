@@ -1,0 +1,50 @@
+{
+  "id": "TC-020",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:57",
+  "resultado": "PASS",
+  "que_ocurrio": "En Calculadoras rápidas → pestaña «Diabetes gestacional» (PTOG 75 g): 91/179/152 → «PTOG normal» «Ningún valor alcanza los cortes.»; 92/179/152 → «Diabetes gestacional» con la etiqueta «Ayunas 92 ≥ 92»; 91/180/152 → «Diabetes gestacional» «1 hora 180 ≥ 180»; 91/179/153 → «Diabetes gestacional» «2 horas 153 ≥ 153». Debajo: «Criterios IADPSG / OMS 2013: basta un valor igual o mayor al corte. Apoyo a la decisión, no reemplaza el criterio médico.»",
+  "comparacion": "Coincide: las cuatro reglas de la tabla de decisión dan el resultado esperado y la pantalla indica qué valor alcanzó el corte.",
+  "pasos": [
+    {
+      "accion": "Menú Calculadoras → Calculadoras rápidas → pestaña «Diabetes gestacional»; ayunas 91, 1 h 179, 2 h 152; «Evaluar»",
+      "estado": "PASS",
+      "observado": "«PTOG normal» — «Ningún valor alcanza los cortes.»"
+    },
+    {
+      "accion": "Evaluar 92 / 179 / 152",
+      "estado": "PASS",
+      "observado": "«Diabetes gestacional» — «Ayunas 92 ≥ 92»."
+    },
+    {
+      "accion": "Evaluar 91 / 180 / 152",
+      "estado": "PASS",
+      "observado": "«Diabetes gestacional» — «1 hora 180 ≥ 180»."
+    },
+    {
+      "accion": "Evaluar 91 / 179 / 153",
+      "estado": "PASS",
+      "observado": "«Diabetes gestacional» — «2 horas 153 ≥ 153»."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC020_01.png",
+      "descripcion": "91/179/152 → «PTOG normal»."
+    },
+    {
+      "archivo": "evidencia_TC020_02.png",
+      "descripcion": "92/179/152 → «Diabetes gestacional» (Ayunas 92 ≥ 92)."
+    },
+    {
+      "archivo": "evidencia_TC020_03.png",
+      "descripcion": "91/180/152 → «Diabetes gestacional» (1 hora 180 ≥ 180)."
+    },
+    {
+      "archivo": "evidencia_TC020_04.png",
+      "descripcion": "91/179/153 → «Diabetes gestacional» (2 horas 153 ≥ 153)."
+    }
+  ],
+  "desviacion": "",
+  "observaciones": "El botón se llama «Evaluar» (el diseño dice «Calcular»): diferencia solo de texto. La calculadora es la última pestaña de «Calculadoras rápidas» (no está en «Calculadoras especializadas»). Los cortes se muestran en cada etiqueta (92 / 180 / 153). No se vio petición al servidor al evaluar (el cálculo es local)."
+}

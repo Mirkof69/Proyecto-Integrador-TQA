@@ -1,0 +1,41 @@
+{
+  "id": "TC-002",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 19:58",
+  "resultado": "PASS",
+  "que_ocurrio": "Paso 1: recep.flores@fetalmedical.bo + «Incorrecta-123» → HTTP 401 y aviso «Email o contraseña incorrectos.»; sigue en /login. Paso 2: nadie@fetalmedical.bo + «Incorrecta-123» → HTTP 401 y el mismo aviso «Email o contraseña incorrectos.»; sigue en /login. El cuerpo de ambas respuestas también es idéntico: {\"error\":\"Credenciales inválidas\"}. Paso 3: recep.flores@fetalmedical.bo + contraseña vigente → HTTP 200, «Bienvenido/a Juan Carlos Flores Quispe» y entra a /dashboard («Hola, Juan Carlos Flores Quispe»).",
+  "comparacion": "Coincide: ninguna combinación inválida permite entrar, ambos errores muestran exactamente el mismo mensaje (no revela si el correo existe) y un fallo no bloquea la cuenta.",
+  "pasos": [
+    {
+      "accion": "Abrir /login e ingresar correo válido con contraseña incorrecta",
+      "estado": "PASS",
+      "observado": "Aviso «Email o contraseña incorrectos.»; URL sigue en /login (HTTP 401)."
+    },
+    {
+      "accion": "Ingresar un correo no registrado con cualquier contraseña",
+      "estado": "PASS",
+      "observado": "nadie@fetalmedical.bo → el mismo aviso «Email o contraseña incorrectos.»; URL sigue en /login (HTTP 401, mismo cuerpo)."
+    },
+    {
+      "accion": "Ingresar después las credenciales correctas",
+      "estado": "PASS",
+      "observado": "Entra al Panel Principal (/dashboard) como Juan Carlos Flores Quispe."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC002_01.png",
+      "descripcion": "Correo válido + contraseña incorrecta: aviso «Email o contraseña incorrectos.» en /login."
+    },
+    {
+      "archivo": "evidencia_TC002_02.png",
+      "descripcion": "Correo inexistente: el mismo aviso «Email o contraseña incorrectos.»."
+    },
+    {
+      "archivo": "evidencia_TC002_03.png",
+      "descripcion": "Con las credenciales correctas entra al Panel Principal."
+    }
+  ],
+  "desviacion": "",
+  "observaciones": "El caso se ejecutó dos veces seguidas (19:57 y 19:58) porque en la primera las capturas se tomaron antes de que el aviso terminara de aparecer; los resultados fueron idénticos. En cada corrida la cuenta recibió 1 solo fallo, seguido de un ingreso correcto. Al entrar (paso 3) aparecen las ventanas «Acceso Denegado» descritas en TC-001; se cerraron antes de la captura y no forman parte de este caso."
+}

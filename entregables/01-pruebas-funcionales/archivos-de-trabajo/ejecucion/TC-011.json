@@ -1,0 +1,22 @@
+{
+  "id": "TC-011",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:01",
+  "resultado": "PASS",
+  "que_ocurrio": "En Pacientes, cuadro «Buscar por nombre, CI o ID…»: (1) «Lopez» (sin tilde) devolvió 168 pacientes (contador «Total Pacientes 168»), la primera fila es «Rosa López Quispe · 9100701» y las demás son pacientes con «López» con tilde; (2) «Kispe» devolvió 196 pacientes, la primera fila es «Rosa López Quispe · 9100701» y las demás son «Quispe»; (3) «9100701» devolvió un único registro, «Rosa López Quispe»; (4) «Zzyxw» mostró la tabla vacía con el mensaje «No hay pacientes registrados», contadores en 0, sin ningún mensaje de error.",
+  "comparacion": "Coincide con lo esperado: las tres variantes (sin tilde, grafía Kispe y CI) encuentran a Rosa López Quispe y la búsqueda sin coincidencias muestra un listado vacío con mensaje, sin error.",
+  "pasos": [
+    {"accion": "Buscar «Lopez» en Pacientes", "estado": "PASS", "observado": "Aparece «Rosa López Quispe» (CI 9100701) en la primera fila, junto con otras pacientes «López»."},
+    {"accion": "Buscar «Kispe»", "estado": "PASS", "observado": "Aparece «Rosa López Quispe» en la primera fila, junto con otras pacientes «Quispe»."},
+    {"accion": "Buscar «9100701»", "estado": "PASS", "observado": "1 registro: «Rosa López Quispe», 31 años."},
+    {"accion": "Buscar «Zzyxw»", "estado": "PASS", "observado": "Listado vacío con «No hay pacientes registrados»; no aparece error."}
+  ],
+  "evidencias": [
+    {"archivo": "evidencia_TC011_01.png", "descripcion": "Búsqueda «Lopez»: Rosa López Quispe en la primera fila."},
+    {"archivo": "evidencia_TC011_02.png", "descripcion": "Búsqueda «Kispe»: Rosa López Quispe en la primera fila, seguida de pacientes «Quispe»."},
+    {"archivo": "evidencia_TC011_03.png", "descripcion": "Búsqueda «9100701»: un único registro, Rosa López Quispe."},
+    {"archivo": "evidencia_TC011_04.png", "descripcion": "Búsqueda «Zzyxw»: tabla vacía con «No hay pacientes registrados», sin error."}
+  ],
+  "desviacion": "",
+  "observaciones": "El mensaje de listado vacío dice «No hay pacientes registrados» aunque se trata de una búsqueda sin coincidencias (sería más preciso «Sin resultados para…»); el diseño solo pide «listado vacío con mensaje, sin error». Hallazgo fuera del alcance de este caso: en la captura 01 la paciente «Teresa López Suárez» muestra la etiqueta «IMC: 30.0 - Sobrepeso», cuando según la OMS un IMC de 30,0 es obesidad (relacionado con TC-019)."
+}

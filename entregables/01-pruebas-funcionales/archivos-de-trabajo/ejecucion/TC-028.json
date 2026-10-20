@@ -1,0 +1,45 @@
+{
+  "id": "TC-028",
+  "ejecutado_por": "",
+  "fecha_hora": "18/10/2026 20:03",
+  "resultado": "PASS",
+  "que_ocurrio": "En Análisis CNN (IA) → pestaña «Cardiotocografía» («Cardiotocografía: datos del registro», 21 campos) se cargaron los valores de un registro patológico del conjunto de prueba y se pulsó «Clasificar». Resultado: «Patológica» (barras Normal 0 %, Sospechosa 0 %, Patológica completa) y el aviso «Apoyo a la lectura del trazado: la conducta se decide con la clasificación FIGO y el criterio del obstetra.» La tarjeta «Fiabilidad medida del modelo» muestra «Exactitud en registros no vistos 96.0 % (IC95 94.1 %–97.6 %)», «Detecta patológicas 94.3 % (IC95 85.7 %–100.0 %)», «Detecta sospechosas 82.8 %», «Registros de prueba 423», y la tarjeta «Límites» con sus tres límites.",
+  "comparacion": "Coincide: el resultado es «Patológica» y se informa la exactitud medida (96 %) con su intervalo y sus límites.",
+  "pasos": [
+    {
+      "accion": "Menú «Análisis CNN (IA)» → pestaña «Cardiotocografía»",
+      "estado": "PASS",
+      "observado": "Formulario con los 21 parámetros del monitoreo (línea de base, aceleraciones, ..., histograma: tendencia) y botón «Clasificar»."
+    },
+    {
+      "accion": "Ingresar los valores del registro patológico y pulsar «Clasificar»",
+      "estado": "PASS",
+      "observado": "POST /api/ia/cardiotocografia/ → 200 {\"clase\":\"patologica\",\"clase_nombre\":\"Patológica\",...}; en pantalla «Patológica»."
+    },
+    {
+      "accion": "Leer la información de fiabilidad",
+      "estado": "PASS",
+      "observado": "«Exactitud en registros no vistos 96.0 % (IC95 94.1 %–97.6 %)», «Detecta patológicas 94.3 %», «Registros de prueba 423» y la tarjeta «Límites»."
+    }
+  ],
+  "evidencias": [
+    {
+      "archivo": "evidencia_TC028_01.png",
+      "descripcion": "Pestaña Cardiotocografía con el formulario de parámetros."
+    },
+    {
+      "archivo": "evidencia_TC028_02.png",
+      "descripcion": "Formulario completo con los valores del registro patológico, antes de «Clasificar»."
+    },
+    {
+      "archivo": "evidencia_TC028_03.png",
+      "descripcion": "Resultado «Patológica» con las probabilidades y el aviso de apoyo."
+    },
+    {
+      "archivo": "evidencia_TC028_04.png",
+      "descripcion": "«Fiabilidad medida del modelo»: exactitud 96.0 % (IC95 94.1–97.6 %), 423 registros de prueba, y «Límites»."
+    }
+  ],
+  "desviacion": "",
+  "observaciones": "Registro usado: línea 22 de Backend/ia_medica/ml/datos/fetal_health.csv (fetal_health = 3, patológico por consenso de 3 obstetras): línea de base 129; aceleraciones 0; movimientos 0.34; contracciones 0.004; desac. leves 0.002; severas 0; prolongadas 0.003; VCP anormal 30 %; VCP media 2.1; VLP anormal 0 %; VLP media 8.5; histograma ancho 128, mín 54, máx 182, picos 13, ceros 0, moda 129, media 104, mediana 120, varianza 138, tendencia 0. Se comprobó que pertenece al conjunto de prueba reproduciendo, fuera del sistema, la partición del entrenamiento (sin duplicados, 20 % estratificado, semilla 2026, como en cardiotocografia.py): da 423 registros de prueba, el mismo número que muestra la pantalla. No se usó el primer patológico del archivo (línea 7, el que usa ia-modelos.spec.js) porque no se verificó que sea de prueba. La barra «Patológica» no muestra su porcentaje (muestra un ícono de visto); la respuesta da probabilidad 1.0."
+}
