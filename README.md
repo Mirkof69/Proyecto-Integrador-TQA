@@ -1,10 +1,12 @@
-# Proyecto Integrador · TQA
+# Proyecto Integrador · Testing, Quality Assurance
 
 Documentos, evidencias y entregables del Proyecto Integrador de la materia
-**Testing y Aseguramiento de la Calidad (TQA)** — UNIFRANZ.
+**Testing, Quality Assurance (TQA)** — Universidad Privada Franz Tamayo (UNIFRANZ).
 
-**Sistema bajo prueba:** Fetal Medical Bolivia, historia clínica perinatal con
-apoyo de inteligencia artificial (React + Django + PostgreSQL + servicio de IA).
+**Sistema bajo prueba:** Fetal Medical Bolivia, historia clínica gineco-obstétrica con análisis de ecografías
+mediante redes neuronales (React + Django REST + PostgreSQL + microservicio de IA).
+
+**Automatización:** [Proyecto-Automatizacion-TQA](https://github.com/Mirkof69/Proyecto-Automatizacion-TQA)
 
 ## Contenido
 
@@ -13,8 +15,9 @@ apoyo de inteligencia artificial (React + Django + PostgreSQL + servicio de IA).
 | `entregables/01-pruebas-funcionales/` | **Entregable 1 · Pruebas funcionales**: documento en PDF y Word, 28 casos de prueba con la plantilla del curso, ejecución, 11 bug reports, métricas, matriz de trazabilidad y conclusiones |
 | `entregables/01-pruebas-funcionales/anexos/evidencias/` | 176 capturas de la ejecución (Anexo B) |
 | `entregables/01-pruebas-funcionales/archivos-de-trabajo/` | Diseño de los casos (`casos_diseno.py`), registro de cada ejecución (`ejecucion/TC-0NN.json`), bug reports (`bugs/BUG-0NN.json`) y el generador del documento |
+| `entregables/02-capitulo-6-automatizacion/` | **Entregable 2 · Capítulo 6, Estrategia y ejecución de pruebas**: documento final en PDF (128 hojas) y Word |
 | `documentacion/casos-de-uso-uml/` | Casos de uso UML: 12 diagramas, 69 casos de uso y 30 especificaciones (PDF y Word) y el proyecto de **StarUML** (`Casos_de_Uso_FetalMedical.mdj`) |
-| `documentacion/` | Capítulo 6 del documento del proyecto |
+| `documentacion/` | Versión anterior del Capítulo 6 |
 
 ## Resultados del Entregable 1
 
@@ -23,15 +26,45 @@ apoyo de inteligencia artificial (React + Django + PostgreSQL + servicio de IA).
 equivalencia, valores límite, tabla de decisión y caso de uso; los valores
 límite encontraron 7 de los 8 fallos.
 
+## Resultados del Entregable 2 · Capítulo 6
+
+Plan de pruebas, pruebas funcionales, automatización, pruebas no funcionales, ejecución, resultados, conclusiones y
+recomendaciones, con datos de ejecuciones reales sobre el sistema en marcha y los cinco roles.
+
+| Indicador | Valor |
+|---|---|
+| Casos de prueba diseñados | 172 |
+| Casos automatizados | 145 de 145 seleccionados (100 %) |
+| Por herramienta | 54 API (pytest + requests) · 52 Selenium WebDriver · 35 Selenium IDE · 4 Locust |
+| Regresión final (`20261115-091110`) | 572 pruebas: 568 PASS · 0 FAIL · 0 BLOCKED · 4 NOT RUN |
+| Porcentaje de salud | 100 % (PASS sobre pruebas ejecutadas) |
+| Cobertura de requisitos | 40 de 50 (80 %) |
+| Carga con Locust (40 usuarios, 3 min) | 3 352 peticiones · p95 89 ms · 0 % de errores |
+| Defectos | 8 encontrados por la automatización: 7 corregidos y verificados, 1 de severidad baja abierto con propuesta |
+
+Los defectos del Capítulo 6 están registrados como *Issues* con la etiqueta
+[`capitulo-6`](https://github.com/Mirkof69/Proyecto-Integrador-TQA/issues?q=label%3Acapitulo-6) y el prefijo
+**Cap6-**, para distinguirlos de los del Entregable 1. Cada uno tiene pasos, resultado esperado y obtenido, causa raíz,
+corrección, commit, retesting y regresión.
+
 ## Seguimiento
 
 Las tareas, los bugs y las correcciones se registran como *Issues* y se siguen
 en el tablero del proyecto (GitHub Projects): Backlog → To Do → In Progress →
 In Review → Done.
 
+## Ramas (gitflow)
+
+| Rama | Uso |
+|---|---|
+| `main` | Entregas (etiquetas `v2.0.0` y siguientes) |
+| `develop` | Integración |
+| `feature/*` | Un cambio por rama, con su issue y su pull request hacia `develop` |
+| `release/*` | Preparación de cada entrega, unida a `main` y de vuelta a `develop` |
+
 ## Equipo
 
 - Mirkof Guzman — [@Mirkof69](https://github.com/Mirkof69)
 - [Integrantes del equipo]
 
-Docente: Reynel Sánchez
+Docente: Reynel Sánchez Chuquimia
