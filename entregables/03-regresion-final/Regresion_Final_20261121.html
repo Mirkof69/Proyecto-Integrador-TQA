@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ejecución 20261121-031428 · Fetal Medical</title>
+<style>
+:root{
+  --fondo:#f6f8f8; --panel:#ffffff; --borde:#d9e2e2; --texto:#1b2a2c; --suave:#5b6e70;
+  --acento:#1f7a80; --pass:#1e7f4f; --fail:#b3261e; --blocked:#a15c00; --notrun:#6b7280;
+  --pass-bg:#e3f4ea; --fail-bg:#fbe4e2; --blocked-bg:#fdf0dc; --notrun-bg:#eceef1;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --fondo:#0f1718; --panel:#162224; --borde:#26393b; --texto:#e3ecec; --suave:#9db1b3;
+    --acento:#5cc2c8; --pass:#5fd39a; --fail:#ff8a80; --blocked:#f2b45a; --notrun:#a3aab5;
+    --pass-bg:#173528; --fail-bg:#3d1c1a; --blocked-bg:#3a2a12; --notrun-bg:#232a31;
+  }
+}
+:root[data-theme="dark"]{
+  --fondo:#0f1718; --panel:#162224; --borde:#26393b; --texto:#e3ecec; --suave:#9db1b3;
+  --acento:#5cc2c8; --pass:#5fd39a; --fail:#ff8a80; --blocked:#f2b45a; --notrun:#a3aab5;
+  --pass-bg:#173528; --fail-bg:#3d1c1a; --blocked-bg:#3a2a12; --notrun-bg:#232a31;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--texto);font:15px/1.55 "Segoe UI",system-ui,-apple-system,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:28px 16px 64px;display:grid;gap:22px}
+h1{font-size:1.65rem;margin:0;text-wrap:balance}
+h2{font-size:1.15rem;margin:0 0 12px;text-wrap:balance}
+.sub{color:var(--suave);margin:4px 0 0}
+section,header{background:var(--panel);border:1px solid var(--borde);border-radius:10px;padding:18px 20px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.kpi{border:1px solid var(--borde);border-radius:8px;padding:12px 14px}
+.kpi b{display:block;font-size:1.7rem;font-variant-numeric:tabular-nums}
+.kpi span{color:var(--suave);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
+.kpi.pass b{color:var(--pass)} .kpi.fail b{color:var(--fail)} .kpi.blocked b{color:var(--blocked)} .kpi.notrun b{color:var(--notrun)}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px 18px;margin-top:14px;font-size:.88rem;color:var(--suave)}
+.meta b{color:var(--texto);font-weight:600}
+.tabla{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--borde);vertical-align:top}
+th{font-size:.76rem;text-transform:uppercase;letter-spacing:.04em;color:var(--suave)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.chip{display:inline-block;padding:1px 8px;border-radius:999px;font-size:.76rem;font-weight:600;white-space:nowrap}
+.chip.PASS{background:var(--pass-bg);color:var(--pass)} .chip.FAIL{background:var(--fail-bg);color:var(--fail)}
+.chip.BLOCKED{background:var(--blocked-bg);color:var(--blocked)} .chip.NOT\ RUN{background:var(--notrun-bg);color:var(--notrun)}
+.barra{display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--notrun-bg);min-width:120px}
+.barra i{display:block;height:100%}
+.barra .p{background:var(--pass)} .barra .f{background:var(--fail)} .barra .b{background:var(--blocked)}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.filtros button{border:1px solid var(--borde);background:var(--panel);color:var(--texto);border-radius:999px;padding:4px 12px;cursor:pointer;font:inherit;font-size:.85rem}
+.filtros button[aria-pressed="true"]{border-color:var(--acento);color:var(--acento);font-weight:600}
+.filtros button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--acento);outline-offset:2px}
+.fallo{border:1px solid var(--borde);border-left:4px solid var(--fail);border-radius:8px;padding:12px 14px;margin-bottom:12px}
+.fallo pre{white-space:pre-wrap;word-break:break-word;background:var(--fondo);padding:8px 10px;border-radius:6px;font-size:.8rem;max-height:220px;overflow:auto}
+.evs{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.evs figure{margin:0;width:220px}
+.evs img{width:100%;border:1px solid var(--borde);border-radius:6px;display:block}
+.evs figcaption{font-size:.74rem;color:var(--suave);margin-top:3px;word-break:break-all}
+a{color:var(--acento)}
+details summary{cursor:pointer;color:var(--acento)}
+.nota{font-size:.84rem;color:var(--suave)}
+.ia{border-left:4px solid var(--acento);padding-left:12px}
+@media (max-width:640px){ .evs figure{width:100%} h1{font-size:1.35rem} }
+@media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Reporte de ejecución de pruebas automatizadas</h1>
+  <p class="sub">Fetal Medical Bolivia · Sistema de historia clínica obstétrica · Corrida 20261121-031428</p>
+  <div class="kpis" style="margin-top:16px">
+    <div class="kpi"><b>581</b><span>Pruebas</span></div>
+    <div class="kpi pass"><b>575</b><span>PASS</span></div>
+    <div class="kpi fail"><b>1</b><span>FAIL</span></div>
+    <div class="kpi blocked"><b>0</b><span>BLOCKED</span></div>
+    <div class="kpi notrun"><b>5</b><span>NOT RUN</span></div>
+    <div class="kpi"><b>99.8 %</b><span>Éxito sobre ejecutadas</span></div>
+  </div>
+  <div class="meta">
+    <div>Suite: <b>completa</b></div>
+    <div>Inicio: <b>2026-11-21 03:14:28</b></div>
+    <div>Duración: <b>19 min 11 s</b></div>
+    <div>Casos (TC) con resultado: <b>154</b></div>
+    <div>Sistema: <b>http://localhost:3000</b></div>
+    <div>Navegador: <b>chrome (headless)</b></div>
+    <div>Equipo: <b>Windows 11 · Python 3.12.10</b></div>
+    <div>Cobertura del catálogo automatizable: <b>149 / 154 (96.8 %)</b></div>
+  </div>
+</header>
+
+
+
+<section>
+  <h2>Resultados por tipo de prueba</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Tipo</th><th>Qué prueba</th><th class="num">Pruebas</th><th class="num">PASS</th><th class="num">FAIL</th><th class="num">BLOCKED</th><th class="num">NOT RUN</th><th class="num">Salud</th><th>Distribución</th></tr></thead>
+    <tbody>
+    
+      <tr><td><b>Humo (smoke)</b></td><td>Camino crítico rápido</td><td class="num">26</td><td class="num">26</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="26 PASS, 0 FAIL, 0 BLOCKED de 26">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td><b>Regresión</b></td><td>Lo que ya funcionaba sigue funcionando</td><td class="num">294</td><td class="num">294</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="294 PASS, 0 FAIL, 0 BLOCKED de 294">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td><b>Extremo a extremo (E2E)</b></td><td>Un flujo completo de atención, de punta a punta</td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="1 PASS, 0 FAIL, 0 BLOCKED de 1">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td><b>API</b></td><td>Servicios REST con pytest + requests</td><td class="num">467</td><td class="num">465</td><td class="num">1</td><td class="num">0</td><td class="num">1</td><td class="num">99.8 %</td>
+        <td><div class="barra" role="img" aria-label="465 PASS, 1 FAIL, 0 BLOCKED de 467">
+          <i class="p" style="width:99.57173447537473%"></i><i class="f" style="width:0.21413276231263384%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td><b>Interfaz (WebDriver)</b></td><td>Pantallas con Selenium WebDriver</td><td class="num">74</td><td class="num">73</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="73 PASS, 0 FAIL, 0 BLOCKED de 74">
+          <i class="p" style="width:98.64864864864865%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td><b>Selenium IDE</b></td><td>Grabaciones .side reproducidas</td><td class="num">35</td><td class="num">35</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="35 PASS, 0 FAIL, 0 BLOCKED de 35">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td><b>Rendimiento (Locust)</b></td><td>Carga con usuarios simultáneos</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">3</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="1 PASS, 0 FAIL, 0 BLOCKED de 4">
+          <i class="p" style="width:25.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+    </tbody>
+  </table></div>
+  <p class="nota">Una prueba puede ser de más de un tipo (por ejemplo, humo y API): las filas no se suman.</p>
+</section>
+
+<section>
+  <h2>Resultados por módulo</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Módulo</th><th class="num">Pruebas</th><th class="num">PASS</th><th class="num">FAIL</th><th class="num">BLOCKED</th><th class="num">NOT RUN</th><th class="num">Éxito</th><th>Distribución</th></tr></thead>
+    <tbody>
+    
+      <tr><td>API</td><td class="num">290</td><td class="num">290</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="290 PASS, 0 FAIL, 0 BLOCKED de 290">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Alertas</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="2 PASS, 0 FAIL, 0 BLOCKED de 2">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Antecedentes</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="2 PASS, 0 FAIL, 0 BLOCKED de 2">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Auditoría</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="3 PASS, 0 FAIL, 0 BLOCKED de 3">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Autenticación</td><td class="num">33</td><td class="num">32</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="32 PASS, 0 FAIL, 0 BLOCKED de 33">
+          <i class="p" style="width:96.96969696969697%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Calculadoras</td><td class="num">7</td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="7 PASS, 0 FAIL, 0 BLOCKED de 7">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Citas</td><td class="num">7</td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="7 PASS, 0 FAIL, 0 BLOCKED de 7">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Configuración</td><td class="num">8</td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="7 PASS, 0 FAIL, 0 BLOCKED de 8">
+          <i class="p" style="width:87.5%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Consultorios</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="2 PASS, 0 FAIL, 0 BLOCKED de 2">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Control prenatal</td><td class="num">16</td><td class="num">16</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="16 PASS, 0 FAIL, 0 BLOCKED de 16">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Ecografía</td><td class="num">6</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="6 PASS, 0 FAIL, 0 BLOCKED de 6">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Embarazo</td><td class="num">6</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="6 PASS, 0 FAIL, 0 BLOCKED de 6">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Historia clínica</td><td class="num">4</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="4 PASS, 0 FAIL, 0 BLOCKED de 4">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>IA</td><td class="num">15</td><td class="num">15</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="15 PASS, 0 FAIL, 0 BLOCKED de 15">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Interfaz</td><td class="num">5</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="5 PASS, 0 FAIL, 0 BLOCKED de 5">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Laboratorio</td><td class="num">10</td><td class="num">10</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="10 PASS, 0 FAIL, 0 BLOCKED de 10">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Notas de evolución</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="3 PASS, 0 FAIL, 0 BLOCKED de 3">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Notificaciones</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="3 PASS, 0 FAIL, 0 BLOCKED de 3">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Pacientes</td><td class="num">18</td><td class="num">18</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="18 PASS, 0 FAIL, 0 BLOCKED de 18">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Partos</td><td class="num">6</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="6 PASS, 0 FAIL, 0 BLOCKED de 6">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Rendimiento</td><td class="num">20</td><td class="num">16</td><td class="num">1</td><td class="num">0</td><td class="num">3</td><td class="num">94.1 %</td>
+        <td><div class="barra" role="img" aria-label="16 PASS, 1 FAIL, 0 BLOCKED de 20">
+          <i class="p" style="width:80.0%"></i><i class="f" style="width:5.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Reportes</td><td class="num">5</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="5 PASS, 0 FAIL, 0 BLOCKED de 5">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Roles y permisos</td><td class="num">95</td><td class="num">95</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="95 PASS, 0 FAIL, 0 BLOCKED de 95">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Triaje</td><td class="num">8</td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="8 PASS, 0 FAIL, 0 BLOCKED de 8">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Usuarios</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="3 PASS, 0 FAIL, 0 BLOCKED de 3">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+      <tr><td>Vacunas</td><td class="num">4</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">100.0 %</td>
+        <td><div class="barra" role="img" aria-label="4 PASS, 0 FAIL, 0 BLOCKED de 4">
+          <i class="p" style="width:100.0%"></i><i class="f" style="width:0.0%"></i><i class="b" style="width:0.0%"></i></div></td></tr>
+    
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Fallos (1)</h2>
+  
+  <p class="nota">Clasificación inicial: sistema 1 (sistema = defecto del producto; script = de la prueba; datos; ambiente).</p>
+  
+  <article class="fallo">
+    <strong>TC-116</strong> · Percentil 95 de los listados principales (20 repeticiones, criterio p95 &lt; 200 ms de RNF-01). <span class="chip FAIL">FAIL</span> <span class="nota">Rendimiento · sistema</span>
+    <pre>/pacientes/?search=quispe&amp;page=1&amp;page_size=20: p95 = 221 ms (≥ 200 ms)
+assert 220.59739999531303 &lt; 200</pre>
+    
+    
+    <details><summary>Traza</summary><pre>ruta = &#39;/pacientes/?search=quispe&amp;page=1&amp;page_size=20&#39;
+
+    @pytest.mark.tc(&#34;TC-116&#34;)
+    @pytest.mark.parametrize(&#34;ruta&#34;, LATENCIA)
+    def test_tc116_latencia_p95_de_los_listados(ruta):
+        &#34;&#34;&#34;Percentil 95 de los listados principales (20 repeticiones, criterio p95 &lt; 200 ms de RNF-01).&#34;&#34;&#34;
+        admin = cliente(&#34;administrador&#34;)
+        admin.get(ruta)   # calentamiento: la primera petición carga cachés y no representa el uso normal
+        tiempos = []
+        for _ in range(20):
+            r = admin.get(ruta)
+            assert r.status_code == 200, f&#34;{ruta}: HTTP {r.status_code}&#34;
+            tiempos.append(admin.ultima_duracion_ms)
+        tiempos.sort()
+        p95 = tiempos[int(round(0.95 * len(tiempos))) - 1]
+        _MEDIDAS[ruta] = {&#34;mediana_ms&#34;: round(statistics.median(tiempos), 1), &#34;p95_ms&#34;: round(p95, 1), &#34;max_ms&#34;: round(max(tiempos), 1)}
+        salida = Path(__file__).resolve().parents[2] / &#34;reports&#34; / &#34;latencia_api.json&#34;
+        salida.parent.mkdir(exist_ok=True)
+        salida.write_text(json.dumps(_MEDIDAS, ensure_ascii=False, indent=1), encoding=&#34;utf-8&#34;)
+&gt;       assert p95 &lt; 200, f&#34;{ruta}: p95 = {p95:.0f} ms (≥ 200 ms)&#34;
+E       AssertionError: /pacientes/?search=quispe&amp;page=1&amp;page_size=20: p95 = 221 ms (≥ 200 ms)
+E       assert 220.59739999531303 &lt; 200
+
+tests\api\test_robustez_api.py:86: AssertionError</pre></details>
+  </article>
+  
+</section>
+
+<section>
+  <h2>Casos de prueba ejecutados</h2>
+  <div class="filtros" role="group" aria-label="Filtrar por estado">
+    <button type="button" data-f="" aria-pressed="true">Todos</button>
+    <button type="button" data-f="PASS" aria-pressed="false">PASS</button><button type="button" data-f="FAIL" aria-pressed="false">FAIL</button><button type="button" data-f="BLOCKED" aria-pressed="false">BLOCKED</button><button type="button" data-f="NOT RUN" aria-pressed="false">NOT RUN</button>
+  </div>
+  <div class="tabla"><table id="casos">
+    <thead><tr><th>Caso</th><th>Título</th><th>Módulo</th><th>Prioridad</th><th class="num">Pruebas</th><th class="num">Tiempo</th><th>Estado</th><th>Evidencias</th></tr></thead>
+    <tbody>
+    
+      <tr data-estado="PASS"><td>TC-001</td><td>Inicio de sesión exitoso de los roles sin doble factor</td><td>Autenticación</td><td>Alta</td><td class="num">3</td><td class="num">5.72 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-001-login-enfermera-20261121032508515.png">login</a> <a href="evidencias/EV-TC-001-panel-enfermera-20261121032509712.png">panel</a> <a href="evidencias/EV-TC-001-login-laboratorista-20261121032512921.png">login</a> <a href="evidencias/EV-TC-001-panel-laboratorista-20261121032514587.png">panel</a> +2</td></tr>
+    
+      <tr data-estado="PASS"><td>TC-002</td><td>Inicio de sesión del administrador con código de Google Authenticator</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">3.62 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-002-pide-codigo-20261121032523788.png">pide</a> <a href="evidencias/EV-TC-002-panel-admin-20261121032525255.png">panel</a></td></tr>
+    
+      <tr data-estado="NOT RUN"><td>TC-003</td><td>Primer ingreso del médico: configuración de Google Authenticator</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">0.0 s</td><td><span class="chip NOT RUN">NOT RUN</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-004</td><td>Contraseña incorrecta</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">2.74 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-004-error-clave-20261121032532213.png">error</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-005</td><td>Correo no registrado</td><td>Autenticación</td><td>Media</td><td class="num">1</td><td class="num">1.19 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-005-error-correo-20261121032537205.png">error</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-006</td><td>Envío del formulario de login vacío y con correo mal formado</td><td>Autenticación</td><td>Media</td><td class="num">1</td><td class="num">0.92 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-006-vacio-20261121032541038.png">vacio</a> <a href="evidencias/EV-TC-006-correo-invalido-20261121032541322.png">correo</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-007</td><td>Código TOTP incorrecto</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">2.91 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-007-totp-incorrecto-20261121032546230.png">totp</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-008</td><td>Cerrar sesión y volver atrás con el navegador</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">7.19 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-008-sesion-cerrada-20261121032553557.png">sesion</a> <a href="evidencias/EV-TC-008-atras-20261121032553716.png">atras</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-009</td><td>Abrir una pantalla interna sin sesión</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">0.53 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-009-redirige-login-20261121032559991.png">redirige</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-010</td><td>Recargar la página con la sesión iniciada</td><td>Autenticación</td><td>Media</td><td class="num">1</td><td class="num">3.23 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-010-tras-recargar-20261121032605875.png">tras</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-011</td><td>El token temporal del MFA no sirve como sesión</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">4.82 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-012</td><td>Bloqueo de la cuenta tras 5 contraseñas erróneas</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">12.44 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-013</td><td>Endpoints protegidos sin sesión</td><td>Autenticación</td><td>Alta</td><td class="num">10</td><td class="num">20.9 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-014</td><td>Cada rol ve solo los módulos que le corresponden</td><td>Roles y permisos</td><td>Alta</td><td class="num">5</td><td class="num">4.59 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-014-menu-administrador-20261121033239582.png">menu</a> <a href="evidencias/EV-TC-014-menu-medico-20261121033240456.png">menu</a> <a href="evidencias/EV-TC-014-menu-enfermera-20261121033241292.png">menu</a> <a href="evidencias/EV-TC-014-menu-laboratorista-20261121033242087.png">menu</a> +1</td></tr>
+    
+      <tr data-estado="PASS"><td>TC-015</td><td>Un rol sin permiso abre una pantalla prohibida por su URL</td><td>Roles y permisos</td><td>Alta</td><td class="num">9</td><td class="num">29.64 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-015-denegada-recepcion-20261121033243161.png">denegada</a> <a href="evidencias/EV-TC-015-denegada-recepcion-20261121033246448.png">denegada</a> <a href="evidencias/EV-TC-015-denegada-recepcion-20261121033249738.png">denegada</a> <a href="evidencias/EV-TC-015-denegada-enfermera-20261121033253031.png">denegada</a> +5</td></tr>
+    
+      <tr data-estado="PASS"><td>TC-016</td><td>Matriz rol × endpoint de la API</td><td>Roles y permisos</td><td>Alta</td><td class="num">74</td><td class="num">5.5 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-017</td><td>Recepción intenta registrar un triaje y un control prenatal</td><td>Roles y permisos</td><td>Alta</td><td class="num">1</td><td class="num">0.05 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-018</td><td>Enfermería intenta registrar un parto</td><td>Roles y permisos</td><td>Alta</td><td class="num">1</td><td class="num">0.01 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-020</td><td>Todo permiso que pide la pantalla existe</td><td>Roles y permisos</td><td>Alta</td><td class="num">1</td><td class="num">0.0 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-021</td><td>Registrar una paciente con consentimiento</td><td>Pacientes</td><td>Alta</td><td class="num">1</td><td class="num">2.79 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-021-paso-1-20261121033224696.png">paso</a> <a href="evidencias/EV-TC-021-paso-3-20261121033225127.png">paso</a> <a href="evidencias/EV-TC-021-registrada-20261121033225857.png">registrada</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-022</td><td>Registrar una paciente sin consentimiento de datos (Ley 164)</td><td>Pacientes</td><td>Alta</td><td class="num">1</td><td class="num">0.01 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-023</td><td>CI duplicada y fecha de nacimiento futura</td><td>Pacientes</td><td>Alta</td><td class="num">1</td><td class="num">0.03 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-024</td><td>Campos obligatorios vacíos en el asistente de registro</td><td>Pacientes</td><td>Media</td><td class="num">2</td><td class="num">2.47 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-024-obligatorios-20261121033226890.png">obligatorios</a> <a href="evidencias/EV-TC-024-ci-invalida-20261121033228382.png">ci</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-025</td><td>Nombres con tildes, ñ y espacios al inicio o final</td><td>Pacientes</td><td>Media</td><td class="num">1</td><td class="num">0.18 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-026</td><td>Buscar por apellido sin tilde (datos cifrados)</td><td>Pacientes</td><td>Alta</td><td class="num">2</td><td class="num">2.92 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-026-busqueda-20261121033232422.png">busqueda</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-027</td><td>Una CI parcial no devuelve a otra paciente</td><td>Pacientes</td><td>Alta</td><td class="num">1</td><td class="num">0.24 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-028</td><td>Editar el teléfono de una paciente</td><td>Pacientes</td><td>Media</td><td class="num">1</td><td class="num">1.67 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-028-editando-20261121033235018.png">editando</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-029</td><td>Listado paginado en el servidor</td><td>Pacientes</td><td>Alta</td><td class="num">1</td><td class="num">0.04 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-031</td><td>Doble clic en Guardar no duplica la paciente</td><td>Pacientes</td><td>Media</td><td class="num">1</td><td class="num">2.98 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-031-doble-clic-20261121033231449.png">doble</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-032</td><td>Abrir la historia clínica de una paciente</td><td>Pacientes</td><td>Alta</td><td class="num">1</td><td class="num">0.85 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-032-historia-20261121033236633.png">historia</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-033</td><td>Registrar un embarazo y calcular EG y FPP (Naegele)</td><td>Embarazo</td><td>Alta</td><td class="num">1</td><td class="num">0.32 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-034</td><td>FUM futura rechazada</td><td>Embarazo</td><td>Alta</td><td class="num">1</td><td class="num">0.08 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-035</td><td>Segundo embarazo activo de la misma paciente</td><td>Embarazo</td><td>Alta</td><td class="num">1</td><td class="num">0.03 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-036</td><td>Registrar un embarazo desde la pantalla</td><td>Embarazo</td><td>Alta</td><td class="num">1</td><td class="num">6.26 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-036-formulario-20261121033201762.png">formulario</a> <a href="evidencias/EV-TC-036-guardado-20261121033204524.png">guardado</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-040</td><td>Registrar un control desde la pantalla</td><td>Control prenatal</td><td>Alta</td><td class="num">1</td><td class="num">2.28 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-040-formulario-20261121033206534.png">formulario</a> <a href="evidencias/EV-TC-040-guardado-20261121033206801.png">guardado</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-041</td><td>Valores límite de la presión arterial</td><td>Control prenatal</td><td>Alta</td><td class="num">4</td><td class="num">1.67 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-042</td><td>Valores límite de la frecuencia cardiaca fetal</td><td>Control prenatal</td><td>Alta</td><td class="num">4</td><td class="num">1.57 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-043</td><td>Control con fecha futura, presión invertida o FCF imposible</td><td>Control prenatal</td><td>Alta</td><td class="num">3</td><td class="num">0.04 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-044</td><td>Filtro «con alertas» del listado de controles</td><td>Control prenatal</td><td>Alta</td><td class="num">1</td><td class="num">0.25 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-045</td><td>Un control con presión alta muestra la alerta</td><td>Control prenatal</td><td>Alta</td><td class="num">1</td><td class="num">3.61 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-045-alerta-20261121033210454.png">alerta</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-046</td><td>Recepción agenda una cita en un turno libre</td><td>Citas</td><td>Alta</td><td class="num">1</td><td class="num">0.35 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-047</td><td>Cita en un turno ya ocupado</td><td>Citas</td><td>Alta</td><td class="num">1</td><td class="num">0.15 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-048</td><td>Agenda de citas y vista de hoy</td><td>Citas</td><td>Media</td><td class="num">3</td><td class="num">2.12 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-048-citas-20261121033313103.png">citas</a> <a href="evidencias/EV-TC-048-hoy-20261121033313889.png">hoy</a> <a href="evidencias/EV-TC-048-calendario-20261121033314853.png">calendario</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-049</td><td>Registrar un triaje con prioridad</td><td>Triaje</td><td>Alta</td><td class="num">1</td><td class="num">0.04 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-050</td><td>Signos vitales imposibles en el triaje</td><td>Triaje</td><td>Alta</td><td class="num">3</td><td class="num">0.03 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-051</td><td>Formulario de triaje desde la pantalla</td><td>Triaje</td><td>Alta</td><td class="num">1</td><td class="num">5.73 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-051-paso-1-20261121033211501.png">paso</a> <a href="evidencias/EV-TC-051-paso-2-20261121033213243.png">paso</a> <a href="evidencias/EV-TC-051-paso-3-20261121033213519.png">paso</a> <a href="evidencias/EV-TC-051-guardado-20261121033216199.png">guardado</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-052</td><td>Solicitar un examen y guardar su resultado</td><td>Laboratorio</td><td>Alta</td><td class="num">1</td><td class="num">0.35 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-053</td><td>Evaluar un resultado contra su rango de referencia</td><td>Laboratorio</td><td>Alta</td><td class="num">4</td><td class="num">0.92 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-054</td><td>Catálogo de parámetros con rangos</td><td>Laboratorio</td><td>Alta</td><td class="num">1</td><td class="num">1.92 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-058</td><td>Listado de laboratorio para el rol laboratorista</td><td>Laboratorio</td><td>Media</td><td class="num">1</td><td class="num">0.74 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-058-laboratorio-20261121033315556.png">laboratorio</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-059</td><td>Registrar una dosis de vacuna</td><td>Vacunas</td><td>Media</td><td class="num">1</td><td class="num">0.09 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-060</td><td>Listado y cifras con más de 200 vacunas</td><td>Vacunas</td><td>Media</td><td class="num">1</td><td class="num">0.04 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-062</td><td>Registrar una nota de evolución</td><td>Notas de evolución</td><td>Media</td><td class="num">1</td><td class="num">0.21 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-064</td><td>Peso fetal estimado (Hadlock) con medidas en mm</td><td>Ecografía</td><td>Alta</td><td class="num">1</td><td class="num">0.23 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-065</td><td>Imágenes de ecografía protegidas</td><td>Ecografía</td><td>Alta</td><td class="num">1</td><td class="num">2.26 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-066</td><td>Un HTML disfrazado de PDF se rechaza</td><td>Ecografía</td><td>Alta</td><td class="num">1</td><td class="num">0.08 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-067</td><td>Registrar una ecografía desde la pantalla</td><td>Ecografía</td><td>Alta</td><td class="num">1</td><td class="num">3.83 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-067-biometria-20261121033218197.png">biometria</a> <a href="evidencias/EV-TC-067-guardado-20261121033219997.png">guardado</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-068</td><td>Analizar una ecografía de cerebro fetal con la cascada de redes</td><td>IA</td><td>Alta</td><td class="num">1</td><td class="num">0.63 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-069</td><td>Analizar una ecografía desde la pantalla de IA</td><td>IA</td><td>Alta</td><td class="num">1</td><td class="num">1.34 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-069-subida-20261121033222585.png">subida</a> <a href="evidencias/EV-TC-069-resultado-20261121033223047.png">resultado</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-070</td><td>Exactitud del plano anatómico en una muestra de la partición de prueba</td><td>IA</td><td>Alta</td><td class="num">1</td><td class="num">1.88 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-071</td><td>La red de anomalías no da alarma en imágenes que no son cabezas</td><td>IA</td><td>Alta</td><td class="num">1</td><td class="num">5.76 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-073</td><td>Predicción del peso al nacer</td><td>IA</td><td>Alta</td><td class="num">1</td><td class="num">1.21 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-074</td><td>Clasificar una cardiotocografía</td><td>IA</td><td>Alta</td><td class="num">1</td><td class="num">1.91 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-075</td><td>CTG con un dato faltante</td><td>IA</td><td>Media</td><td class="num">1</td><td class="num">0.01 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-076</td><td>Masa ovárica, mioma y ovario poliquístico</td><td>IA</td><td>Alta</td><td class="num">4</td><td class="num">1.01 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-077</td><td>Longitud del fémur desde la imagen</td><td>IA</td><td>Alta</td><td class="num">1</td><td class="num">0.47 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-078</td><td>Guía de IA con la fiabilidad de cada modelo</td><td>IA</td><td>Alta</td><td class="num">1</td><td class="num">0.78 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-078-guia-20261121033316222.png">guia</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-084</td><td>Parto con recién nacido y epicrisis: el embarazo queda finalizado</td><td>Partos</td><td>Alta</td><td class="num">1</td><td class="num">0.23 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-085</td><td>Parto a las 50 semanas, RN de 50 g y Apgar 11</td><td>Partos</td><td>Alta</td><td class="num">1</td><td class="num">0.02 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-087</td><td>Epicrisis firmada no se edita</td><td>Partos</td><td>Alta</td><td class="num">1</td><td class="num">0.1 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-090</td><td>Listado y detalle de partos para el médico</td><td>Partos</td><td>Media</td><td class="num">1</td><td class="num">1.52 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-090-detalle-20261121033317929.png">detalle</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-091</td><td>PTOG 75 g con criterios IADPSG</td><td>Calculadoras</td><td>Alta</td><td class="num">5</td><td class="num">1.09 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-094</td><td>Calculadora de Bishop desde la pantalla</td><td>Calculadoras</td><td>Media</td><td class="num">1</td><td class="num">1.71 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-094-puntaje-20261121033221756.png">puntaje</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-095</td><td>Centro de reportes y KPIs</td><td>Reportes</td><td>Media</td><td class="num">1</td><td class="num">0.02 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-096</td><td>Natalidad del período</td><td>Reportes</td><td>Media</td><td class="num">1</td><td class="num">0.05 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-097</td><td>Exportar el listado de pacientes a Excel y quedar auditado</td><td>Reportes</td><td>Media</td><td class="num">1</td><td class="num">1.14 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-098</td><td>El inicio de sesión queda auditado</td><td>Auditoría</td><td>Alta</td><td class="num">1</td><td class="num">0.02 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-099</td><td>Centro de reportes desde la pantalla</td><td>Reportes</td><td>Media</td><td class="num">1</td><td class="num">7.02 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-099-pestana-1-20261121033319988.png">pestana</a> <a href="evidencias/EV-TC-099-pestana-2-20261121033320799.png">pestana</a> <a href="evidencias/EV-TC-099-pestana-3-20261121033321618.png">pestana</a> <a href="evidencias/EV-TC-099-pestana-4-20261121033322430.png">pestana</a> +4</td></tr>
+    
+      <tr data-estado="PASS"><td>TC-101</td><td>Listado de notificaciones del usuario</td><td>Notificaciones</td><td>Baja</td><td class="num">1</td><td class="num">0.11 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-102</td><td>Cada pantalla de cada rol carga sin error de JavaScript ni 500</td><td>Interfaz</td><td>Alta</td><td class="num">5</td><td class="num">263.98 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-103</td><td>Ningún listado de la API responde 500</td><td>API</td><td>Alta</td><td class="num">289</td><td class="num">23.83 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-104</td><td>Esquema de respuesta de los endpoints principales</td><td>API</td><td>Media</td><td class="num">1</td><td class="num">0.31 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-109</td><td>Inicio de sesión exitoso de recepción (Selenium IDE)</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">8.89 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-109-ejecucion-20261121031811482.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-110</td><td>Inicio de sesión fallido con una cuenta que no existe (Selenium IDE)</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">5.02 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-110-ejecucion-20261121031816545.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-111</td><td>Buscador del listado de pacientes (Selenium IDE)</td><td>Pacientes</td><td>Alta</td><td class="num">1</td><td class="num">8.1 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-111-ejecucion-20261121031824657.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-112</td><td>Carga esperada de una clínica (40 usuarios)</td><td>Rendimiento</td><td>Alta</td><td class="num">1</td><td class="num">181.14 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="NOT RUN"><td>TC-113</td><td>Incremento progresivo hasta degradación</td><td>Rendimiento</td><td>Media</td><td class="num">1</td><td class="num">0.0 s</td><td><span class="chip NOT RUN">NOT RUN</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="NOT RUN"><td>TC-114</td><td>Pico repentino de usuarios</td><td>Rendimiento</td><td>Media</td><td class="num">1</td><td class="num">0.0 s</td><td><span class="chip NOT RUN">NOT RUN</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="NOT RUN"><td>TC-115</td><td>Carga estable durante 15 minutos</td><td>Rendimiento</td><td>Media</td><td class="num">1</td><td class="num">0.0 s</td><td><span class="chip NOT RUN">NOT RUN</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="FAIL"><td>TC-116</td><td>Percentil 95 de los listados principales</td><td>Rendimiento</td><td>Alta</td><td class="num">16</td><td class="num">16.47 s</td><td><span class="chip FAIL">FAIL</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-118</td><td>Editar un resultado de laboratorio</td><td>Laboratorio</td><td>Media</td><td class="num">1</td><td class="num">0.31 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-119</td><td>Pedir un QR nuevo con el doble factor ya activo no cambia la clave</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">9.98 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-120</td><td>El detalle de una nota de evolución abre sin error</td><td>Historia clínica</td><td>Alta</td><td class="num">1</td><td class="num">0.91 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-120-detalle-20261121033237549.png">detalle</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-121</td><td>Un triaje sin saturación registrada muestra «Sin dato»</td><td>Triaje</td><td>Media</td><td class="num">1</td><td class="num">0.64 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-121-sin-dato-20261121033238175.png">sin</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-122</td><td>Inicio de sesión de médico con doble factor (Selenium IDE)</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">5.66 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-122-ejecucion-20261121031830333.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-123</td><td>Inicio de sesión de administrador con doble factor (Selenium IDE)</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">6.26 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-123-ejecucion-20261121031836609.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-124</td><td>Inicio de sesión de enfermería (Selenium IDE)</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">5.2 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-124-ejecucion-20261121031841823.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-125</td><td>Inicio de sesión de laboratorio (Selenium IDE)</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">5.22 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-125-ejecucion-20261121031847057.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-126</td><td>Formulario de inicio de sesión vacío (Selenium IDE)</td><td>Autenticación</td><td>Media</td><td class="num">1</td><td class="num">3.67 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-126-ejecucion-20261121031850747.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-127</td><td>Cerrar sesión desde el menú del usuario (Selenium IDE)</td><td>Autenticación</td><td>Alta</td><td class="num">1</td><td class="num">5.76 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-127-ejecucion-20261121031856522.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-128</td><td>El menú de recepción muestra solo sus módulos (Selenium IDE)</td><td>Roles y permisos</td><td>Alta</td><td class="num">1</td><td class="num">4.95 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-128-ejecucion-20261121031901485.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-129</td><td>El menú de enfermería muestra solo sus módulos (Selenium IDE)</td><td>Roles y permisos</td><td>Alta</td><td class="num">1</td><td class="num">5.04 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-129-ejecucion-20261121031906535.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-130</td><td>Recepción escribe la URL de un módulo prohibido (Selenium IDE)</td><td>Roles y permisos</td><td>Alta</td><td class="num">1</td><td class="num">5.17 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-130-ejecucion-20261121031911731.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-131</td><td>Laboratorio escribe la URL de un módulo prohibido (Selenium IDE)</td><td>Roles y permisos</td><td>Alta</td><td class="num">1</td><td class="num">5.09 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-131-ejecucion-20261121031916837.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-132</td><td>Buscador y filtro del listado de citas (Selenium IDE)</td><td>Citas</td><td>Alta</td><td class="num">1</td><td class="num">7.63 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-132-ejecucion-20261121031924481.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-133</td><td>Buscador y filtro del listado de consultorios (Selenium IDE)</td><td>Consultorios</td><td>Alta</td><td class="num">1</td><td class="num">6.6 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-133-ejecucion-20261121031931105.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-134</td><td>Buscador del listado de triaje (Selenium IDE)</td><td>Triaje</td><td>Alta</td><td class="num">1</td><td class="num">7.19 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-134-ejecucion-20261121031938309.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-135</td><td>Buscador y filtro del listado de vacunas (Selenium IDE)</td><td>Vacunas</td><td>Alta</td><td class="num">1</td><td class="num">9.13 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-135-ejecucion-20261121031947453.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-136</td><td>Buscador del listado de notas de evolución (Selenium IDE)</td><td>Notas de evolución</td><td>Alta</td><td class="num">1</td><td class="num">7.04 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-136-ejecucion-20261121031954505.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-137</td><td>Buscador del listado de control prenatal (Selenium IDE)</td><td>Control prenatal</td><td>Alta</td><td class="num">1</td><td class="num">7.7 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-137-ejecucion-20261121032002223.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-138</td><td>Buscador y filtro del listado de laboratorio (Selenium IDE)</td><td>Laboratorio</td><td>Alta</td><td class="num">1</td><td class="num">7.39 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-138-ejecucion-20261121032009631.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-139</td><td>Buscador y filtro del listado de embarazo (Selenium IDE)</td><td>Embarazo</td><td>Alta</td><td class="num">1</td><td class="num">7.92 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-139-ejecucion-20261121032017544.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-140</td><td>Buscador del listado de ecografía (Selenium IDE)</td><td>Ecografía</td><td>Alta</td><td class="num">1</td><td class="num">7.21 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-140-ejecucion-20261121032024789.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-141</td><td>Buscador y filtro del listado de partos (Selenium IDE)</td><td>Partos</td><td>Alta</td><td class="num">1</td><td class="num">8.11 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-141-ejecucion-20261121032032919.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-142</td><td>Buscador del listado de historia clínica (Selenium IDE)</td><td>Historia clínica</td><td>Alta</td><td class="num">1</td><td class="num">7.06 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-142-ejecucion-20261121032039997.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-143</td><td>Buscador del listado de antecedentes (Selenium IDE)</td><td>Antecedentes</td><td>Alta</td><td class="num">1</td><td class="num">7.08 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-143-ejecucion-20261121032047082.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-144</td><td>Buscador y filtro del listado de alertas (Selenium IDE)</td><td>Alertas</td><td>Alta</td><td class="num">1</td><td class="num">7.8 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-144-ejecucion-20261121032054907.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-145</td><td>Buscador y filtro del listado de usuarios (Selenium IDE)</td><td>Usuarios</td><td>Alta</td><td class="num">1</td><td class="num">6.65 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-145-ejecucion-20261121032101574.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-146</td><td>Buscador y filtro del listado de auditoría (Selenium IDE)</td><td>Auditoría</td><td>Alta</td><td class="num">1</td><td class="num">6.93 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-146-ejecucion-20261121032108515.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-147</td><td>Buscador y filtro del listado de notificaciones (Selenium IDE)</td><td>Notificaciones</td><td>Alta</td><td class="num">1</td><td class="num">7.58 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-147-ejecucion-20261121032116118.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-148</td><td>Búsqueda avanzada de pacientes por nombre (Selenium IDE)</td><td>Pacientes</td><td>Media</td><td class="num">1</td><td class="num">18.32 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-148-ejecucion-20261121032134455.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-149</td><td>Registrar una paciente con el asistente y buscarla (Selenium IDE)</td><td>Pacientes</td><td>Alta</td><td class="num">1</td><td class="num">8.79 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-149-ejecucion-20261121032143259.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-150</td><td>La Guía de IA lista los modelos disponibles (Selenium IDE)</td><td>IA</td><td>Media</td><td class="num">1</td><td class="num">5.45 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-150-ejecucion-20261121032148720.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-151</td><td>El Centro de reportes cambia de pestaña (Selenium IDE)</td><td>Reportes</td><td>Media</td><td class="num">1</td><td class="num">6.08 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-151-ejecucion-20261121032154815.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-152</td><td>Calculadora de IMC y ganancia ponderal (Selenium IDE)</td><td>Calculadoras</td><td>Media</td><td class="num">1</td><td class="num">6.12 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-152-ejecucion-20261121032200954.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-153</td><td>El perfil muestra el correo de la cuenta (Selenium IDE)</td><td>Usuarios</td><td>Baja</td><td class="num">1</td><td class="num">5.41 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-153-ejecucion-20261121032206380.png">ejecucion</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-154</td><td>Buscador del listado de pacientes (Selenium WebDriver)</td><td>Pacientes</td><td>Alta</td><td class="num">1</td><td class="num">3.55 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-154-busqueda-20261121033038175.png">busqueda</a> <a href="evidencias/EV-TC-154-sin-resultados-20261121033039301.png">sin</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-155</td><td>Buscador y filtro del listado de citas (Selenium WebDriver)</td><td>Citas</td><td>Alta</td><td class="num">1</td><td class="num">3.06 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-155-busqueda-20261121033040462.png">busqueda</a> <a href="evidencias/EV-TC-155-sin-resultados-20261121033041622.png">sin</a> <a href="evidencias/EV-TC-155-filtro-20261121033042377.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-156</td><td>Buscador y filtro del listado de consultorios (Selenium WebDriver)</td><td>Consultorios</td><td>Alta</td><td class="num">1</td><td class="num">2.5 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-156-busqueda-20261121033043559.png">busqueda</a> <a href="evidencias/EV-TC-156-sin-resultados-20261121033043898.png">sin</a> <a href="evidencias/EV-TC-156-filtro-20261121033044887.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-157</td><td>Buscador del listado de triaje (Selenium WebDriver)</td><td>Triaje</td><td>Alta</td><td class="num">1</td><td class="num">5.17 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-157-busqueda-20261121033048773.png">busqueda</a> <a href="evidencias/EV-TC-157-sin-resultados-20261121033050069.png">sin</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-158</td><td>Buscador y filtro del listado de vacunas (Selenium WebDriver)</td><td>Vacunas</td><td>Alta</td><td class="num">1</td><td class="num">4.18 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-158-busqueda-20261121033051680.png">busqueda</a> <a href="evidencias/EV-TC-158-sin-resultados-20261121033052802.png">sin</a> <a href="evidencias/EV-TC-158-filtro-20261121033054234.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-159</td><td>Buscador del listado de notas de evolución (Selenium WebDriver)</td><td>Notas de evolución</td><td>Alta</td><td class="num">1</td><td class="num">2.43 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-159-busqueda-20261121033055508.png">busqueda</a> <a href="evidencias/EV-TC-159-sin-resultados-20261121033056714.png">sin</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-160</td><td>Buscador del listado de control prenatal (Selenium WebDriver)</td><td>Control prenatal</td><td>Alta</td><td class="num">1</td><td class="num">2.39 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-160-busqueda-20261121033058170.png">busqueda</a> <a href="evidencias/EV-TC-160-sin-resultados-20261121033059109.png">sin</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-161</td><td>Buscador y filtro del listado de laboratorio (Selenium WebDriver)</td><td>Laboratorio</td><td>Alta</td><td class="num">1</td><td class="num">6.72 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-161-busqueda-20261121033102928.png">busqueda</a> <a href="evidencias/EV-TC-161-sin-resultados-20261121033104170.png">sin</a> <a href="evidencias/EV-TC-161-filtro-20261121033105835.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-162</td><td>Buscador y filtro del listado de embarazo (Selenium WebDriver)</td><td>Embarazo</td><td>Alta</td><td class="num">1</td><td class="num">3.83 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-162-busqueda-20261121033107180.png">busqueda</a> <a href="evidencias/EV-TC-162-sin-resultados-20261121033108484.png">sin</a> <a href="evidencias/EV-TC-162-filtro-20261121033109684.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-163</td><td>Buscador del listado de ecografía (Selenium WebDriver)</td><td>Ecografía</td><td>Alta</td><td class="num">1</td><td class="num">2.86 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-163-busqueda-20261121033110863.png">busqueda</a> <a href="evidencias/EV-TC-163-sin-resultados-20261121033112554.png">sin</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-164</td><td>Buscador y filtro del listado de partos (Selenium WebDriver)</td><td>Partos</td><td>Alta</td><td class="num">1</td><td class="num">3.54 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-164-busqueda-20261121033113869.png">busqueda</a> <a href="evidencias/EV-TC-164-sin-resultados-20261121033114842.png">sin</a> <a href="evidencias/EV-TC-164-filtro-20261121033116105.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-165</td><td>Buscador del listado de historia clínica (Selenium WebDriver)</td><td>Historia clínica</td><td>Alta</td><td class="num">1</td><td class="num">2.48 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-165-busqueda-20261121033118261.png">busqueda</a> <a href="evidencias/EV-TC-165-sin-resultados-20261121033118598.png">sin</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-166</td><td>Buscador del listado de antecedentes (Selenium WebDriver)</td><td>Antecedentes</td><td>Alta</td><td class="num">1</td><td class="num">2.11 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-166-busqueda-20261121033119510.png">busqueda</a> <a href="evidencias/EV-TC-166-sin-resultados-20261121033120724.png">sin</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-167</td><td>Buscador y filtro del listado de alertas (Selenium WebDriver)</td><td>Alertas</td><td>Alta</td><td class="num">1</td><td class="num">3.15 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-167-busqueda-20261121033121940.png">busqueda</a> <a href="evidencias/EV-TC-167-sin-resultados-20261121033123171.png">sin</a> <a href="evidencias/EV-TC-167-filtro-20261121033123883.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-168</td><td>Buscador y filtro del listado de usuarios (Selenium WebDriver)</td><td>Usuarios</td><td>Alta</td><td class="num">1</td><td class="num">4.96 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-168-busqueda-20261121033127656.png">busqueda</a> <a href="evidencias/EV-TC-168-sin-resultados-20261121033128196.png">sin</a> <a href="evidencias/EV-TC-168-filtro-20261121033128867.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-169</td><td>Buscador y filtro del listado de auditoría (Selenium WebDriver)</td><td>Auditoría</td><td>Alta</td><td class="num">1</td><td class="num">3.32 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-169-busqueda-20261121033131132.png">busqueda</a> <a href="evidencias/EV-TC-169-filtro-20261121033132207.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-170</td><td>Buscador y filtro del listado de notificaciones (Selenium WebDriver)</td><td>Notificaciones</td><td>Alta</td><td class="num">1</td><td class="num">2.95 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-170-busqueda-20261121033133374.png">busqueda</a> <a href="evidencias/EV-TC-170-sin-resultados-20261121033134496.png">sin</a> <a href="evidencias/EV-TC-170-filtro-20261121033135176.png">filtro</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-171</td><td>Inicio de sesión y análisis de ecografía con localizadores por ID, Name, XPath y CSS Selector</td><td>IA</td><td>Alta</td><td class="num">1</td><td class="num">6.69 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-171-panel-20261121033137917.png">panel</a> <a href="evidencias/EV-TC-171-imagen-20261121033138831.png">imagen</a> <a href="evidencias/EV-TC-171-resultado-20261121033139212.png">resultado</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-172</td><td>Búsqueda avanzada de pacientes por nombre (Selenium WebDriver)</td><td>Pacientes</td><td>Media</td><td class="num">1</td><td class="num">13.42 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-172-avanzada-20261121033155308.png">avanzada</a></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-173</td><td>Atención completa de punta a punta: registro, embarazo, control prenatal, ecografía con IA e historia</td><td>Historia clínica</td><td>Alta</td><td class="num">1</td><td class="num">17.09 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-173-1-registro-20261121031750627.png">1</a> <a href="evidencias/EV-TC-173-2-embarazo-20261121031755309.png">2</a> <a href="evidencias/EV-TC-173-3-control-20261121031758755.png">3</a> <a href="evidencias/EV-TC-173-4-ecografia-20261121031800776.png">4</a> +2</td></tr>
+    
+      <tr data-estado="PASS"><td>TC-174</td><td>Editar la configuración general del sistema y revertir el cambio</td><td>Configuración</td><td>Media</td><td class="num">1</td><td class="num">0.08 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-175</td><td>Configuración general, horarios y respaldos solo para el administrador</td><td>Configuración</td><td>Alta</td><td class="num">1</td><td class="num">5.89 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-176</td><td>Umbrales de alertas: todos los leen, solo médico y administrador los cambian</td><td>Configuración</td><td>Alta</td><td class="num">1</td><td class="num">0.39 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-177</td><td>Guardar los horarios de atención sin cambiarlos</td><td>Configuración</td><td>Baja</td><td class="num">1</td><td class="num">0.09 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-178</td><td>Respaldo: crear, descargar, cargar desde otro equipo y eliminar</td><td>Configuración</td><td>Alta</td><td class="num">1</td><td class="num">51.6 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-179</td><td>Respaldos prohibidos a los roles que no administran</td><td>Configuración</td><td>Alta</td><td class="num">1</td><td class="num">1.46 s</td><td><span class="chip PASS">PASS</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="NOT RUN"><td>TC-180</td><td>Restaurar un respaldo recién creado</td><td>Configuración</td><td>Alta</td><td class="num">1</td><td class="num">0.0 s</td><td><span class="chip NOT RUN">NOT RUN</span></td>
+        <td></td></tr>
+    
+      <tr data-estado="PASS"><td>TC-181</td><td>Configuración y Copias de seguridad en pantalla, y acceso denegado al médico</td><td>Configuración</td><td>Media</td><td class="num">1</td><td class="num">2.94 s</td><td><span class="chip PASS">PASS</span></td>
+        <td><a href="evidencias/EV-TC-181-configuracion-20261121033156198.png">configuracion</a> <a href="evidencias/EV-TC-181-respaldos-20261121033157533.png">respaldos</a></td></tr>
+    
+    </tbody>
+  </table></div>
+</section>
+
+
+<section>
+  <h2>Rendimiento (Locust)</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Escenario</th><th class="num">Peticiones</th><th class="num">Errores</th><th class="num">p50</th><th class="num">p95</th><th class="num">p99</th><th class="num">Peticiones/s</th><th>Detalle</th></tr></thead>
+    <tbody><tr><td>carga</td><td class="num">3231</td><td class="num">0.0 %</td><td class="num">38 ms</td><td class="num">160 ms</td><td class="num">630 ms</td><td class="num">18.083408308927183</td><td><a href="locust/carga.html">reporte de Locust</a></td></tr></tbody>
+  </table></div>
+</section>
+
+
+<section>
+  <h2>Defectos registrados</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Defecto</th><th>Título</th><th>Severidad</th><th>Estado</th><th>Caso</th><th>Commit</th></tr></thead>
+    <tbody><tr><td>BUG-001</td><td>La API no aplica la tabla de roles: enfermería y laboratorio escriben en módulos de solo lectura y el laboratorista lee módulos ajenos</td><td>Alta</td><td>Verificado</td><td>TC-016</td><td>2f7cd6a</td></tr><tr><td>BUG-002</td><td>Cualquier rol lista todas las cuentas del sistema con correo, teléfono y si son superusuarios</td><td>Media</td><td>Verificado</td><td>TC-016</td><td>32de93d</td></tr><tr><td>BUG-003</td><td>Glucosa en ayunas de 100 a 125 mg/dL en una gestante se informa como «prediabetes» y no como diabetes gestacional (IADPSG)</td><td>Alta</td><td>Verificado</td><td>TC-091</td><td>deede8f</td></tr><tr><td>BUG-004</td><td>Abrir /setup-mfa con el doble factor ya activo reemplaza la clave del MFA y deja la cuenta sin acceso</td><td>Crítica</td><td>Verificado</td><td>TC-002</td><td>445f6f3</td></tr><tr><td>BUG-005</td><td>El detalle de una nota de evolución se cae con «Objects are not valid as a React child»</td><td>Alta</td><td>Verificado</td><td>TC-102</td><td>3379295</td></tr><tr><td>BUG-006</td><td>Pantallas permitidas al rol piden a la API datos que el rol no puede leer (403 en la consola y secciones vacías)</td><td>Media</td><td>Verificado</td><td>TC-102</td><td>a3864a8, e833f3c</td></tr><tr><td>BUG-007</td><td>Botones de solo ícono sin nombre accesible en 207 pantallas</td><td>Baja</td><td>Abierto con propuesta</td><td>TC-102</td><td>—</td></tr><tr><td>BUG-008</td><td>El detalle del triaje muestra «Oxigenación periférica 0 %» cuando la saturación no se registró</td><td>Baja</td><td>Verificado</td><td>TC-102</td><td>3447380</td></tr></tbody>
+  </table></div>
+</section>
+
+<p class="nota">Generado el 21/11/2026 03:35 por la automatización de Fetal Medical (pytest + Selenium WebDriver + requests + Locust + Selenium IDE). Datos sintéticos con prefijo QA; ningún dato de pacientes reales.</p>
+</main>
+<script>
+document.querySelectorAll('.filtros button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.filtros button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  const f = b.dataset.f;
+  document.querySelectorAll('#casos tbody tr').forEach(tr => { tr.hidden = f && tr.dataset.estado !== f; });
+}));
+</script>
+</body>
+</html>
