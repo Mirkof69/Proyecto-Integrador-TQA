@@ -72,5 +72,5 @@ Docente: Reynel Sánchez Chuquimia
 
 ## Resultados del Entregable 3 · Regresión final
 
-181 casos en el catálogo · 581 pruebas ejecutadas el 21/11/2026: 575 PASS, 1 FAIL (latencia, repetida y aprobada) y
-5 NOT RUN por diseño. Detalle en [entregables/03-regresion-final](entregables/03-regresion-final/).
+182 casos en el catálogo · 582 pruebas el 21/11/2026: 577 PASS, 0 FAIL y 5 NOT RUN que se corrieron aparte con
+autorización (restauración real y estrés, pico y resistencia con Locust: todas PASS, 0 errores en 45.665 peticiones). Detalle en [entregables/03-regresion-final](entregables/03-regresion-final/).

@@ -1,0 +1,110 @@
+{
+ "escenario": "estres",
+ "peticiones": 24659,
+ "fallas": 0,
+ "error_pct": 0.0,
+ "p50_ms": 210.0,
+ "p95_ms": 1800.0,
+ "p99_ms": 2500.0,
+ "rps": 41.136889064798986,
+ "html": "locust/estres.html",
+ "por_endpoint": [
+  {
+   "nombre": "/api/auditoria/",
+   "peticiones": 1515,
+   "fallas": 0,
+   "p95_ms": 1300.0
+  },
+  {
+   "nombre": "/api/citas/citas/?fecha",
+   "peticiones": 2121,
+   "fallas": 0,
+   "p95_ms": 990.0
+  },
+  {
+   "nombre": "/api/controles/",
+   "peticiones": 3249,
+   "fallas": 0,
+   "p95_ms": 1800.0
+  },
+  {
+   "nombre": "/api/controles/?paciente",
+   "peticiones": 1444,
+   "fallas": 0,
+   "p95_ms": 1000.0
+  },
+  {
+   "nombre": "/api/ecografias/?paciente",
+   "peticiones": 1440,
+   "fallas": 0,
+   "p95_ms": 940.0
+  },
+  {
+   "nombre": "/api/embarazos/",
+   "peticiones": 2269,
+   "fallas": 0,
+   "p95_ms": 2700.0
+  },
+  {
+   "nombre": "/api/laboratorios/examenes/",
+   "peticiones": 2174,
+   "fallas": 0,
+   "p95_ms": 1400.0
+  },
+  {
+   "nombre": "/api/pacientes/ (inicio)",
+   "peticiones": 200,
+   "fallas": 0,
+   "p95_ms": 2300.0
+  },
+  {
+   "nombre": "/api/pacientes/?search",
+   "peticiones": 3333,
+   "fallas": 0,
+   "p95_ms": 1700.0
+  },
+  {
+   "nombre": "/api/pacientes/{id}/",
+   "peticiones": 2546,
+   "fallas": 0,
+   "p95_ms": 1200.0
+  },
+  {
+   "nombre": "/api/reportes/dashboard-kpis/",
+   "peticiones": 706,
+   "fallas": 0,
+   "p95_ms": 920.0
+  },
+  {
+   "nombre": "/api/token/csrf/",
+   "peticiones": 200,
+   "fallas": 0,
+   "p95_ms": 3600.0
+  },
+  {
+   "nombre": "/api/triaje/triajes/",
+   "peticiones": 2451,
+   "fallas": 0,
+   "p95_ms": 1700.0
+  },
+  {
+   "nombre": "/api/usuarios/",
+   "peticiones": 731,
+   "fallas": 0,
+   "p95_ms": 1100.0
+  },
+  {
+   "nombre": "/api/usuarios/login/",
+   "peticiones": 200,
+   "fallas": 0,
+   "p95_ms": 1600.0
+  },
+  {
+   "nombre": "/api/usuarios/mfa-verify/",
+   "peticiones": 80,
+   "fallas": 0,
+   "p95_ms": 1600.0
+  }
+ ],
+ "codigo_salida": 0
+}
