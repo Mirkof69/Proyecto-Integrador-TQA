@@ -16,6 +16,7 @@ mediante redes neuronales (React + Django REST + PostgreSQL + microservicio de I
 | `entregables/01-pruebas-funcionales/anexos/evidencias/` | 176 capturas de la ejecución (Anexo B) |
 | `entregables/01-pruebas-funcionales/archivos-de-trabajo/` | Diseño de los casos (`casos_diseno.py`), registro de cada ejecución (`ejecucion/TC-0NN.json`), bug reports (`bugs/BUG-0NN.json`) y el generador del documento |
 | `entregables/02-capitulo-6-automatizacion/` | **Entregable 2 · Capítulo 6, Estrategia y ejecución de pruebas**: documento final en PDF (128 hojas) y Word |
+| `entregables/03-regresion-final/` | **Entregable 3 · Regresión final (21/11/2026)**: reporte de la corrida completa sobre el sistema reorganizado en microservicios, con la verificación de las redes neuronales y las notificaciones |
 | `documentacion/casos-de-uso-uml/` | Casos de uso UML: 12 diagramas, 69 casos de uso y 30 especificaciones (PDF y Word) y el proyecto de **StarUML** (`Casos_de_Uso_FetalMedical.mdj`) |
 | `documentacion/` | Versión anterior del Capítulo 6 |
 
@@ -68,3 +69,8 @@ In Review → Done.
 - [Integrantes del equipo]
 
 Docente: Reynel Sánchez Chuquimia
+
+## Resultados del Entregable 3 · Regresión final
+
+181 casos en el catálogo · 581 pruebas ejecutadas el 21/11/2026: 575 PASS, 1 FAIL (latencia, repetida y aprobada) y
+5 NOT RUN por diseño. Detalle en [entregables/03-regresion-final](entregables/03-regresion-final/).
